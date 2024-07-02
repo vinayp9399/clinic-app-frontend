@@ -8,12 +8,12 @@ const Header = ()=>{
     const usertype = localStorage.getItem('usertype');
     const id = localStorage.getItem('id');
     const firstname = localStorage.getItem('name');
-    const [imageurl, setImageurl]= useState("https://clinic-app-backend.vercel.app/");
+    const [imageurl, setImageurl]= useState("http://clinic-app-backend.vercel.app/");
     const [image1, setImage1] = useState("");
     const [phoneno, setphoneno] = useState('');
 
     const profileImage =()=>{
-        axios.get(`https://clinic-app-backend.vercel.app/users/singleuser/${id}`).then((response)=>{
+        axios.get(`http://clinic-app-backend.vercel.app/users/singleuser/${id}`).then((response)=>{
           setImage1(response.data.message.image);
         })
       }

@@ -39,7 +39,7 @@ const Bookappointment = ()=>{
         event.preventDefault();
             
             let appointmentData ={doctorid:doctorid,name:name,age:age,phoneno:phoneno,gender:gender,symptoms:symptoms,prescription:prescription}
-            axios.post(`https://clinic-app-backend.vercel.app/appointments/addappointment`,appointmentData).then((response)=>{
+            axios.post(`http://clinic-app-backend.vercel.app/appointments/addappointment`,appointmentData).then((response)=>{
                 //console.log(response)
                 if(usertype==="doctor"){
                 navigate('/appointments')}
