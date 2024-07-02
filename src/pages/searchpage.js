@@ -9,7 +9,7 @@ const Searchpage = ()=>{
     const phoneno = localStorage.getItem('phoneno');
     const [data1, setdata1] = useState('');
     useEffect(()=>{
-        axios.get(`http://localhost:8080/appointments/findpatient/${doctorid}/${phoneno}`).then((response)=>{
+        axios.get(`https://clinic-app-backend.vercel.app/appointments/findpatient/${doctorid}/${phoneno}`).then((response)=>{
             setdata1(response.data.message);
         })
     })

@@ -6,13 +6,13 @@ const Doctorprofile=()=>{
     const name = localStorage.getItem('name');
     const id = localStorage.getItem('id');
     const navigate = useNavigate();
-    const [imageurl, setImageurl]= useState("http://localhost:8080/");
+    const [imageurl, setImageurl]= useState("https://clinic-app-backend.vercel.app/");
     const [image1, setImage1] = useState("")
     const [image, setImage] = useState({ preview: '', data: '' })
     const [status, setStatus] = useState('')
 
     const currentImage =()=>{
-      axios.get(`http://localhost:8080/users/singleuser/${id}`).then((response)=>{
+      axios.get(`https://clinic-app-backend.vercel.app/users/singleuser/${id}`).then((response)=>{
         setImage1(response.data.message.image);
       })
     }
@@ -39,10 +39,10 @@ const Doctorprofile=()=>{
                   'content-type': 'multipart/form-data',
                 },
               };
-      axios.put(`http://localhost:8080/image/${id}`,imageData,config).then((response)=>{
+      axios.put(`https://clinic-app-backend.vercel.app/image/${id}`,imageData,config).then((response)=>{
         console.log(response);
       })
-        // axios.put(`http://localhost:8080/users/updateimage/${id}`,imageData).then((response)=>{
+        // axios.put(`https://clinic-app-backend.vercel.app/users/updateimage/${id}`,imageData).then((response)=>{
         //     //console.log(response)
         //     navigate('/doctorprofile')
         //     console.log(response);

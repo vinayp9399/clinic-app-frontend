@@ -12,7 +12,7 @@ const Appointmentspage =()=>{
     const navigate = useNavigate();
 
     const getallpatientData =()=>{
-        axios.get(`http://localhost:8080/appointments/findappointments/${doctorid}`).then((response)=>{
+        axios.get(`https://clinic-app-backend.vercel.app/appointments/findappointments/${doctorid}`).then((response)=>{
             setdata(response.data.message)
         })
     }
@@ -22,7 +22,7 @@ const Appointmentspage =()=>{
     })
 
     const handleDelete = (patientId)=>{
-        axios.delete(`http://localhost:8080/appointments/deleteappointment/${patientId}`).then((response)=>{
+        axios.delete(`https://clinic-app-backend.vercel.app/appointments/deleteappointment/${patientId}`).then((response)=>{
             console.log(response);
             getallpatientData();
         })

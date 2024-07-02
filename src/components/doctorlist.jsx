@@ -7,11 +7,11 @@ const Doctorlist = ()=>{
     const params = useParams();
     const navigate = useNavigate();
     const [doctordata, setdoctordata] = useState('');
-    const [imageurl, setImageurl]= useState("http://localhost:8080/");
+    const [imageurl, setImageurl]= useState("https://clinic-app-backend.vercel.app/");
 
     const userid = localStorage.getItem('id');
     const getalldoctorData = ()=>{
-        axios.get('http://localhost:8080/users/finddoctors/').then((response)=>{
+        axios.get('https://clinic-app-backend.vercel.app/users/finddoctors/').then((response)=>{
             setdoctordata(response.data.message)
         })
     }
@@ -28,7 +28,7 @@ const Doctorlist = ()=>{
         getalldoctorData();
     })
     // const handleDelete = (userId)=>{
-    //     axios.delete(`http://localhost:8080/users/deleteuser/${userId})`).then((response)=>{
+    //     axios.delete(`https://clinic-app-backend.vercel.app/users/deleteuser/${userId})`).then((response)=>{
     //         console.log(response)
     //         getalluserData();
     //     })
