@@ -35,7 +35,7 @@ const Registration = ()=>{
 
         if(location.pathname === '/'){
             let registrationData ={phoneno:phoneno,password:password}
-            axios.post('http://clinic-app-backend.vercel.app/users/login',registrationData).then((response)=>{
+            axios.post('https://clinic-app-backend.vercel.app/users/login',registrationData).then((response)=>{
                 if(response.data.message == 'phoneno or password does not match'){
                     //getformerror('Email or password is wrong');
                     console.log('Email or password is wrong');
@@ -71,7 +71,7 @@ const Registration = ()=>{
             if(count==0){
             let newpassword= phoneno.slice(-3,);
             let registrationData ={phoneno:phoneno,email:email,password:newpassword,usertype:"patient"}
-        axios.post('http://clinic-app-backend.vercel.app/users/registration',registrationData).then((response)=>{
+        axios.post('https://clinic-app-backend.vercel.app/users/registration',registrationData).then((response)=>{
                 console.log(response);
                 alert("Your password is the last 3 digits of your phone number.");
                 navigate('/');

@@ -53,7 +53,7 @@ const Doctorregistration = ()=>{
             if(count==0){
             let newpassword= phoneno.slice(-3,);
             let registrationData ={name:firstname,phoneno:phoneno,email:email,password:newpassword,usertype:"doctor"}
-        axios.post('http://clinic-app-backend.vercel.app/users/registration',registrationData).then((response)=>{
+        axios.post('https://clinic-app-backend.vercel.app/users/registration',registrationData).then((response)=>{
                 console.log(response);
                 alert("Your password is the last 3 digits of your phone number.");
                 navigate('/');
