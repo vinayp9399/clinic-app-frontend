@@ -49,7 +49,7 @@ const Header = ()=>{
         <h1 style={{fontSize:"41px", color:"rgb(40 176 226)", marginLeft:"-38px"}}>Health Care</h1>
 
         { usertype==="doctor" && <>
-        <div id="search" style={{width:"686px"}}><input value={phoneno} class="search_box" type="text" placeholder="Search patient ..." name="phoneno" onChange={getphoneno}/><i style={{position:"relative", bottom:"-1px", left:"-42px", color:"rgb(14, 37, 86)"}} class="fa fa-search fa-lg" onClick={search}></i></div>
+        <div id="search" style={{width:"686px"}}><input value={phoneno} class="search_box" type="text" placeholder="Search patient phoneno. ..." name="phoneno" onChange={getphoneno}/><i style={{position:"relative", bottom:"-1px", left:"-42px", color:"rgb(14, 37, 86)"}} class="fa fa-search fa-lg" onClick={search}></i></div>
         </>}
         { usertype==="patient" && <>
         <div id="search" style={{width:"686px"}}><input value={phoneno} class="search_box" type="text" placeholder="Search doctor ..." name="phoneno" onChange={getphoneno}/><i style={{position:"relative", bottom:"-1px", left:"-42px", color:"rgb(14, 37, 86)"}} class="fa fa-search fa-lg" onClick={search}></i></div>
