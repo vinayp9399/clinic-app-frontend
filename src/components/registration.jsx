@@ -37,7 +37,7 @@ const Registration = ()=>{
             const expression_mob_no = /^[0-9]{10}$/;
             if(String(phoneno).match(expression_mob_no)){
                 let registrationData ={phoneno:phoneno,password:password}
-            axios.post('http://localhost:8080/users/login',registrationData).then((response)=>{
+            axios.post('https://clinic-app-backend.vercel.app/users/login',registrationData).then((response)=>{
                 if(response.data.message == 'phoneno or password does not match'){
                     //getformerror('Email or password is wrong');
                     console.log('Email or password is wrong');
