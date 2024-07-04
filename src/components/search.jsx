@@ -8,8 +8,11 @@ const Search = ()=>{
     const [IsLoading, setIsLoading] = useState(true);
     useEffect(()=>{
         axios.get(`https://clinic-app-backend.vercel.app/appointments/findpatient/${doctorid}/${phoneno}`).then((response)=>{
-            setdata1(response.data.message);
-            setIsLoading(false);
+            if(response.data.message == 'no record found'){
+                setIsLoading(false);
+            }
+            else{setdata1(response.data.message);
+            setIsLoading(false);}
         })
     })
     return(
@@ -20,14 +23,15 @@ const Search = ()=>{
                     <div className="loader">
                     </div>
                     :<>
-                    <table border={1} width={800} height={300} align="center"><tbody>
+                    {!data1 && <><h3>No Record Found!</h3></>}
+                    {data1 && <><table border={1} width={800} height={300} align="center"><tbody>
                     <tr><td><b>Patient Name</b></td><td>{data1.name}</td></tr>
                     <tr><td><b>Age</b></td><td>{data1.age}</td></tr>
                     <tr><td><b>Gender</b></td><td>{data1.gender}</td></tr>
                     <tr><td><b>Phone no.</b></td><td>{data1.phoneno}</td></tr>
                     <tr><td><b>Symptoms</b></td><td>{data1.symptoms}</td></tr>
                     <tr><td><b>Prescription</b></td><td>{data1.prescription}</td></tr>
-                    </tbody></table></>}
+                    </tbody></table></>}</>}
                     </div>
         </>
     )
