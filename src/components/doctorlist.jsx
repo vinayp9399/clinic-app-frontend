@@ -3,16 +3,19 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 
+
 const Doctorlist = ()=>{
     const params = useParams();
     const navigate = useNavigate();
     const [doctordata, setdoctordata] = useState('');
     const [imageurl, setImageurl]= useState("https://clinic-app-backend.vercel.app/");
+    const [IsLoading, setIsLoading] = useState(true);
 
     const userid = localStorage.getItem('id');
     const getalldoctorData = ()=>{
         axios.get('https://clinic-app-backend.vercel.app/users/finddoctors/').then((response)=>{
             setdoctordata(response.data.message)
+            setIsLoading(false);
         })
     }
     // if(location.pathname===`/products/${params.category}`){
@@ -37,7 +40,12 @@ const Doctorlist = ()=>{
         <>
         <div style={{height:"500px"}}>
         <div style={{backgroundColor:"rgb(14, 37, 86)", height:"53px",width:"1267px", display:"flex", alignItems:"center",justifyContent:"center", margin:"-4px"}}><h1 style={{color:"white"}}>Meet Our Experienced Doctors</h1></div>
-                { doctordata && doctordata.map((doctor)=>(
+        {
+                    IsLoading===true ?
+                    <div className="loader">
+                    </div>
+                    :
+                <>{ doctordata && doctordata.map((doctor)=>(
                     <>
                     <div class="card2">
                     {doctor.image && <>
@@ -47,7 +55,7 @@ const Doctorlist = ()=>{
                     <h3>Dr. {doctor.name}</h3>
                     <div style={{display:"flex", justifyContent:"space-between"}}><button class="button1" onClick={()=>{bookAppointment(doctor._id)}}>Book Appointment</button></div>
                     </div></>
-                ))}  
+                ))}</>}  
         </div> 
             
         </>

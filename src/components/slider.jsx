@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import '../css/slider.css';
 const Slider = ()=>{
-    let images =['../images/canva-blue-modern-medical-(banner-(landscape))-KnpnPyt_oV4.jpg',
-    '../images/doctor-man-stethoscope-hospital-260nw-555894940.png',
-    '..images/canva-blue-modern-medical-(banner-(landscape))-KnpnPyt_oV4.jpg']
+    let images =['../images/vecteezy_double-exposure-of-technology-healthcare-and-medicine_11830942.jpg',
+        '../images/vecteezy_ai-generated-a-doctor-holds-a-clipboard_35846616.jpg',
+        '../images/vecteezy_group-of-doctors-standing-in-hallway_45891459.jpeg']
     let [imageno, setimageno] = useState(0);
-    const [image, setimage]=useState('../images/canva-blue-modern-medical-(banner-(landscape))-KnpnPyt_oV4.jpg');
+    const [image, setimage]=useState('../images/vecteezy_double-exposure-of-technology-healthcare-and-medicine_11830942.jpg');
 
     function changeSlide(){
         setimage(images[imageno]);
@@ -42,8 +42,8 @@ const Slider = ()=>{
     return(
         <>
             <img id="imagegalary" src={image} class="img2" alt=""/>
-            {/* <a class="prev" onClick={()=>{prevSlide()}}>❮</a>
-            <a class="next" onClick={()=>{nextSlide()}}>❯</a> */}
+            <a class="prev" onClick={()=>{prevSlide()}}>❮</a>
+            <a class="next" onClick={()=>{nextSlide()}}>❯</a>
         </>
     )
 }

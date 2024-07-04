@@ -34,8 +34,10 @@ const Registration = ()=>{
         //console.log(firstname+lastname+phoneno+email+password)
 
         if(location.pathname === '/'){
-            let registrationData ={phoneno:phoneno,password:password}
-            axios.post('https://clinic-app-backend.vercel.app/users/login',registrationData).then((response)=>{
+            const expression_mob_no = /^[0-9]{10}$/;
+            if(String(phoneno).match(expression_mob_no)){
+                let registrationData ={phoneno:phoneno,password:password}
+            axios.post('http://localhost:8080/users/login',registrationData).then((response)=>{
                 if(response.data.message == 'phoneno or password does not match'){
                     //getformerror('Email or password is wrong');
                     console.log('Email or password is wrong');
@@ -48,9 +50,12 @@ const Registration = ()=>{
                     localStorage.setItem('usertype',response.data.message.usertype)
                    navigate('/home')
                 }
-                
-    
             })
+            document.getElementById("login_error").innerHTML="";
+            }else{
+                document.getElementById("login_error").innerHTML="Invalid phoneno.";
+            }
+            
 
         }else if(location.pathname === '/registration'){
             const expression_email = /^[a-z A-Z _ 0-9]+@[a-z A-Z]+\.[a-z A-Z]{2,5}$/;

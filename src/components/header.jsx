@@ -54,7 +54,8 @@ const Header = ()=>{
         { usertype==="patient" && <>
         <div id="search" style={{width:"686px"}}><input value={phoneno} class="search_box" type="text" placeholder="Search doctor ..." name="phoneno" onChange={getphoneno}/><i style={{position:"relative", bottom:"-1px", left:"-42px", color:"rgb(14, 37, 86)"}} class="fa fa-search fa-lg" onClick={search}></i></div>
         </>}
-        <img style={{borderRadius:"100%"}} src={imageurl + image1} alt="" width='50' height='50'/>
+        { usertype==="doctor" &&<img style={{borderRadius:"100%"}} src={imageurl + image1} alt="" width='50' height='50'/>}
+        { usertype==="patient" &&<img style={{borderRadius:"100%",visibility:"hidden"}} src={imageurl + image1} alt="" width='50' height='50'/>}
         <div id="nav1_1">
         {!email &&<a onClick={()=>{navigate('/')}} class="a1"><i style={{color:"rgb(40 176 226)", marginRight:"13px"}} class="fa fa-user fa-lg" aria-hidden="true"></i></a>}
         {email &&
