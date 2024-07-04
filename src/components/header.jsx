@@ -39,7 +39,7 @@ const Header = ()=>{
             localStorage.setItem('phoneno',phoneno);
             navigate('/search');
         }else{
-            document.getElementById("searchfill").placeholder= "Invalid phone no.!";
+            document.getElementById("searchfill").value= "Invalid phone no.!";
         }
     }
 
