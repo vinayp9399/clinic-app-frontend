@@ -1,4 +1,6 @@
-import Registration from "../components/registration"
+import Registration from "../components/registration";
+
+import '../css/login.css';
 
 const Loginpage = ()=>{
     return(

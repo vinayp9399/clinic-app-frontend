@@ -12,6 +12,7 @@ const Registration = ()=>{
     const [phoneno,getphoneno] = useState('');
     const [email,getemail] = useState('');
     const [password,getpassword] = useState('');
+    const [IsLoading, setIsLoading] = useState(false);
 
     const phonenoHanadler = (event)=>{
         getphoneno(event.target.value)
@@ -32,15 +33,18 @@ const Registration = ()=>{
     const submitHandler= (event)=>{
         event.preventDefault();
         //console.log(firstname+lastname+phoneno+email+password)
+        setIsLoading(true);
 
         if(location.pathname === '/'){
             const expression_mob_no = /^[0-9]{10}$/;
             if(String(phoneno).match(expression_mob_no)){
+                setIsLoading(false);
                 let registrationData ={phoneno:phoneno,password:password}
             axios.post('https://clinic-app-backend.vercel.app/users/login',registrationData).then((response)=>{
                 if(response.data.message == 'phoneno or password does not match'){
                     //getformerror('Email or password is wrong');
                     console.log('Email or password is wrong');
+                    document.getElementById("login_error").style.visibility="visible";
                     document.getElementById("login_error").innerHTML="phoneno or password is wrong";
 
                 }else{
@@ -48,11 +52,19 @@ const Registration = ()=>{
                     localStorage.setItem('name',response.data.message.name)
                     localStorage.setItem('id',response.data.message._id)
                     localStorage.setItem('usertype',response.data.message.usertype)
-                   navigate('/home')
+                    localStorage.setItem('image',response.data.message.image)
+
+                    let usertype = localStorage.getItem("usertype");
+                    if(usertype=="doctor"){
+                   navigate('/doctordashboard')}
+                   else if(usertype=="patient"){
+                    navigate('/patientdashboard')}
                 }
             })
-            document.getElementById("login_error").innerHTML="";
-            }else{
+            // document.getElementById("login_error").style.visibility="hidden";
+            }else{ 
+                setIsLoading(false);              
+                document.getElementById("login_error").style.visibility="visible";
                 document.getElementById("login_error").innerHTML="Invalid phoneno.";
             }
             
@@ -93,35 +105,70 @@ const Registration = ()=>{
     
     return(
         <>
-  <div id="header">
-        <a><img style={{height:"97px", width:"113px"}} src="../images/blue-plus-icon-12.png" alt=""/></a>
-        <h1 style={{fontSize:"41px", color:"rgb(14, 37, 86)"}}>Health Care</h1>
-    </div>
-    <div id="content">
-            <form class="login1">
-            <h1 style={{color:"rgb(14, 37, 86)"}}>{formname}</h1><br/>
-            { buttonname === 'Sign In' &&
-            <>
-                <label><strong>Email Id:</strong></label><br/> 
-                <input id="email" style={{height:"24px", width:"339px"}} type="email" name="email" value={email} onChange={emailHanadler} required/> <br/>
-                <h4 style={{color:"red"}} id="email_error"></h4><br/>
-                </>
-            }
-                <label><strong>Mobile No.:</strong></label><br/>
-                <input id="mob_no" style={{height:"24px", width:"339px"}} type="tel" name="Phone_No." value={phoneno} onChange={phonenoHanadler} required/><br/>
-                <h4 style={{color:"red"}} id="mob_no_error"></h4><br/>
 
-                { buttonname === 'Continue' &&<>
-                <label><strong>Password:</strong></label><br/> 
-                <input id="password" style={{height:"24px", width:"339px"}} type="Password" name="password" value={password} onChange={passwordHanadler} required/><br/>
-                <h4 style={{color:"red"}} id="password_error"></h4><br/></>
-                }
-                <input class="submit_button" type="submit" value={buttonname} onClick={submitHandler} name="submit"/>
-                { buttonname === 'Sign In' &&<p style={{marginTop:"10px", textAlign:"center"}}>Already have an account? <a style={{color:"blue"}} onClick={()=>{navigate('/')}}>Log In</a></p>}
-                { buttonname === 'Continue' &&<><p id="login_error" style={{marginTop:"10px", textAlign:"center", color:"red"}}></p><p style={{marginTop:"10px", textAlign:"center"}}>New to Health Care? <a style={{color:"blue"}} onClick={()=>{navigate('/registration')}}>Create Account</a></p></>}
-            </form>
-        </div>  
+        <center>
+<div class="container1">
+<table border="0" style={{paddingLeft:"50px",width:"100%"}}>
+<tr>
+        <td>
+            <img style={{marginLeft:"70px", marginRight:"70px",marginTop:"10px"}} height="70px" src="../../images/blue-plus-icon-12.png" alt="" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p class="header-text">Welcome Back!</p>
+        </td>
+    </tr>
+<div class="form-body">
+    <tr>
+        <td>
+            <p class="sub-text">Login with your details to continue</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="label-td">
+            <label for="useremail" class="form-label">Phone No : </label>
+        </td>
+    </tr>
+    <tr>
+        <td class="label-td">
+            <input id="mob_no" type="email" name="useremail" class="input-text" placeholder="Phone No." value={phoneno} onChange={phonenoHanadler} required/>
+        </td>
+    </tr>
+    <tr>
+        <td class="label-td">
+            <label for="userpassword" class="form-label">Password: </label>
+        </td>
+    </tr>
 
+    <tr>
+        <td class="label-td">
+            <input id="password" type="Password" name="userpassword" class="input-text" placeholder="Password" value={password} onChange={passwordHanadler} required/>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td>
+        {IsLoading==true &&
+        <div className="loader1" style={{display:"flex", justifyContent:"space-around"}}></div>}
+        {IsLoading==false &&
+        <p id="login_error" style={{visibility:"hidden", textAlign:"center", color:"red"}}>xyz</p>}
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <button onClick={submitHandler} class="login-btn1 btn-primary-soft btn">Login</button>
+        </td>
+    </tr>
+</div>      
+</table>
+
+<div><img width="500px" src="../../images/pngtree-online-doctor-health-service-png-image_13230792.png" alt="" /></div>
+
+</div>
+</center>
 
         </>
     )
