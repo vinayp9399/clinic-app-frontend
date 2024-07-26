@@ -9,7 +9,7 @@ const PatientMenu=(props)=>{
         <>
         <div class="menu">
             <table class="menu-container" border="0">
-            <tr><td style={{paddingLeft:"10px", paddingRight:"10px"}}><div style={{borderBottom: "1.5px solid rgb(235, 235, 235)",paddingBottom:"10px", display:"flex", gap:"10px"}}>
+            <tr><td style={{paddingLeft:"10px", paddingRight:"10px",borderBottom: "2px solid white",backgroundColor: "rgb(6 14 35)"}}><div style={{paddingBottom:"3px", display:"flex", gap:"10px"}}>
                                 <img style={{width:"33%"}} src="../images/blue-plus-icon-12.png" alt=""/>
                                 
                                 <h1 style={{color:"rgb(40 176 226)"}}>E-Clinic</h1></div></td>
