@@ -4,11 +4,57 @@ import axios from 'axios';
 
 const DoctorDash=()=>{
     const firstname = localStorage.getItem('name');
+
+    const [data, setdata] = useState('');
+
+    const [register1,setregister1]=useState(false);
+    const doctorid = localStorage.getItem('id');
+    const [IsLoading, setIsLoading] = useState(true);
     const navigate = useNavigate();
 
-    const doctorid = localStorage.getItem('id');
-    const [data, setdata] = useState('');
-    const [IsLoading, setIsLoading] = useState(true);
+    //console.log(params.id);
+    const [name,getname] = useState('');
+    const [age,getage] = useState('');
+    const [gender,getgender] = useState('');
+    const [phoneno,getphoneno] = useState('');
+    const [prescription,getprescription]= useState('');
+    const [symptoms,getsymptoms]= useState('');
+    const nameHandler = (event)=>{
+        getname(event.target.value)
+    }
+    const ageHandler = (event)=>{
+        getage(event.target.value)
+    }
+    const phonenoHandler = (event)=>{
+        getphoneno(event.target.value)
+    }
+    const genderHandler = (event)=>{
+        getgender(event.target.value)
+    }
+    const prescriptionHandler = (event)=>{
+        getprescription(event.target.value)
+    }
+    const symptomsHandler = (event)=>{
+        getsymptoms(event.target.value)
+    }
+    const submitHandler= (event)=>{
+        event.preventDefault();
+        let appointmentData ={doctorid:doctorid,name:name,age:age,phoneno:phoneno,gender:gender,symptoms:symptoms,prescription:prescription}
+        axios.post(`https://clinic-app-backend.vercel.app/appointments/addappointment`,appointmentData).then((response)=>{
+            getallpatientData();
+        })
+
+            let newpassword= phoneno.slice(-3,);
+            let registrationData ={phoneno:phoneno,name:name,email:"",password:newpassword,usertype:"patient"}
+        axios.post('https://clinic-app-backend.vercel.app/users/registration',registrationData).then((response)=>{
+                console.log(response);
+                alert("Password of the patient is the last 3 digits of the phone number.");
+                setregister1(false);
+
+        })
+
+
+    }
 
     const getallpatientData =()=>{
         axios.get(`https://clinic-app-backend.vercel.app/appointments/findappointments/${doctorid}`).then((response)=>{
@@ -61,7 +107,7 @@ const DoctorDash=()=>{
                             <p >Thanks for joining with us. We are always trying to get <br /> you a complete service.
                             You can view your dailly <br /> schedule, Reach Patients Appointment at home!<br/><br/>
                             </p>
-                            <a onClick={()=>{navigate("/appointmentmanager")}} class="non-style-link"><button class="btn-primary btn" style={{width:"50%"}}>View My Appointments</button></a>
+                            <a onClick={()=>{setregister1(true)}} class="non-style-link"><button class="btn-primary btn" style={{width:"50%"}}>Patient Form</button></a>
                             <br/>
                             <br/>
                             <br />
@@ -248,6 +294,104 @@ const DoctorDash=()=>{
                     </td>
                 </tr>
             </table>
+
+            {register1==true &&
+            <div id="popup1" class="overlay">
+                    <div class="popup">
+                    <center>
+                    
+                    
+                        <a style={{cursor:"pointer"}} class="close" onClick={()=>{setregister1(false)}}>&times;</a> 
+                        <div style={{display:"flex",justifyContent:"center"}}>
+                        <div class="abc">
+                        <table width="80%" class="sub-table scrolldown add-doc-form-container" border="0">
+                        <tr>
+                                <td class="label-td" colspan="2">
+                                  </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <p style={{padding:"0",margin:"0",textAlign:"left",fontSize:"25px",fontWeight:"500"}}>Patient Form</p><br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label-td" colspan="2">
+                                <form method="POST" class="add-new-form">
+                                    <label for="title" class="form-label">Patient Name : </label></form>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label-td" colspan="2">
+                                    <input type="text" name="title" class="input-text" placeholder="Patient Name" value={name} onChange={nameHandler} required/><br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label-td" colspan="2">
+                                    <label for="nop" class="form-label">Age: </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label-td" colspan="2">
+                                    <input type="number" name="nop" class="input-text" min="0" placeholder="Age" value={age} onChange={ageHandler} required/><br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label-td" colspan="2">
+                                    <label for="nop" class="form-label">Gender: </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label-td" colspan="2">
+                                    <input type="text" name="nop" class="input-text" min="0" placeholder="Gender" value={gender} onChange={genderHandler} required/><br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label-td" colspan="2">
+                                    <label for="nop" class="form-label">Phone No.: </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label-td" colspan="2">
+                                    <input type="number" name="nop" class="input-text" min="0" placeholder="Phone No." value={phoneno} onChange={phonenoHandler} required/><br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label-td" colspan="2">
+                                    <label for="nop" class="form-label">Symptoms: </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label-td" colspan="2">
+                                    <textarea rows="4" type="text" name="nop" class="input-text" placeholder="Symptoms" value={symptoms} onChange={symptomsHandler} required/><br/>
+                                </td>
+                            </tr> <tr>
+                                <td class="label-td" colspan="2">
+                                    <label for="nop" class="form-label">Prescription: </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label-td" colspan="2">
+                                    <textarea rows="4" type="text" name="nop" class="input-text" placeholder="Prescription" value={prescription} onChange={prescriptionHandler} required/><br/>
+                                </td>
+                            </tr>
+                           
+                            <tr>
+                                <td colspan="2">
+                                    <input type="reset" value="Reset" class="login-btn btn-primary-soft btn"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                
+                                    <input type="reset" onClick={submitHandler} value="Register Patient" class="login-btn btn-primary-soft btn" name="shedulesubmit"/>
+                                    
+                                </td>
+                
+                            </tr>
+                        </table>
+                        </div>
+                        </div>
+                    </center>
+                    <br/><br/>
+            </div>
+            </div>}
         </div>
         </>
     )

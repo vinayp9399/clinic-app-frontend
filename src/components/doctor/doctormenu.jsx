@@ -10,6 +10,8 @@ const DoctorMenu=(props)=>{
     const profileImage1 = localStorage.getItem('image');
     const [imageurl, setImageurl]= useState("https://clinic-app-backend.vercel.app/");
     const [image1, setImage1] = useState("");
+
+    
     
     const profileImage =()=>{
         axios.get(`https://clinic-app-backend.vercel.app/users/singleuser/${id}`).then((response)=>{
