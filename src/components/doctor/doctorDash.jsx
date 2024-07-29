@@ -107,7 +107,7 @@ const DoctorDash=()=>{
                             <p >Thanks for joining with us. We are always trying to get <br /> you a complete service.
                             You can view your dailly <br /> schedule, Reach Patients Appointment at home!<br/><br/>
                             </p>
-                            <a onClick={()=>{setregister1(true)}} class="non-style-link"><button class="btn-primary btn" style={{width:"50%"}}>Patient Form</button></a>
+                            <a onClick={()=>{navigate("/prescriptionform")}} class="non-style-link"><button class="btn-primary btn" style={{width:"50%"}}>Prescription Form</button></a>
                             <br/>
                             <br/>
                             <br />
@@ -295,103 +295,6 @@ const DoctorDash=()=>{
                 </tr>
             </table>
 
-            {register1==true &&
-            <div id="popup1" class="overlay">
-                    <div class="popup">
-                    <center>
-                    
-                    
-                        <a style={{cursor:"pointer"}} class="close" onClick={()=>{setregister1(false)}}>&times;</a> 
-                        <div style={{display:"flex",justifyContent:"center"}}>
-                        <div class="abc">
-                        <table width="80%" class="sub-table scrolldown add-doc-form-container" border="0">
-                        <tr>
-                                <td class="label-td" colspan="2">
-                                  </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <p style={{padding:"0",margin:"0",textAlign:"left",fontSize:"25px",fontWeight:"500"}}>Patient Form</p><br/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                <form method="POST" class="add-new-form">
-                                    <label for="title" class="form-label">Patient Name : </label></form>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <input type="text" name="title" class="input-text" placeholder="Patient Name" value={name} onChange={nameHandler} required/><br/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <label for="nop" class="form-label">Age: </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <input type="number" name="nop" class="input-text" min="0" placeholder="Age" value={age} onChange={ageHandler} required/><br/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <label for="nop" class="form-label">Gender: </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <input type="text" name="nop" class="input-text" min="0" placeholder="Gender" value={gender} onChange={genderHandler} required/><br/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <label for="nop" class="form-label">Phone No.: </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <input type="number" name="nop" class="input-text" min="0" placeholder="Phone No." value={phoneno} onChange={phonenoHandler} required/><br/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <label for="nop" class="form-label">Symptoms: </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <textarea rows="4" type="text" name="nop" class="input-text" placeholder="Symptoms" value={symptoms} onChange={symptomsHandler} required/><br/>
-                                </td>
-                            </tr> <tr>
-                                <td class="label-td" colspan="2">
-                                    <label for="nop" class="form-label">Prescription: </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <textarea rows="4" type="text" name="nop" class="input-text" placeholder="Prescription" value={prescription} onChange={prescriptionHandler} required/><br/>
-                                </td>
-                            </tr>
-                           
-                            <tr>
-                                <td colspan="2">
-                                    <input type="reset" value="Reset" class="login-btn btn-primary-soft btn"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                
-                                    <input type="reset" onClick={submitHandler} value="Register Patient" class="login-btn btn-primary-soft btn" name="shedulesubmit"/>
-                                    
-                                </td>
-                
-                            </tr>
-                        </table>
-                        </div>
-                        </div>
-                    </center>
-                    <br/><br/>
-            </div>
-            </div>}
         </div>
         </>
     )

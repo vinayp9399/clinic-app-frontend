@@ -11,6 +11,7 @@ import DoctorDashboard from './pages/doctor/doctorDashboard.js';
 import PatientDashboard from './pages/patient/patientDashboard.js';
 import Appointmentmanagerpage from './pages/doctor/appointmentmanagerpage.js';
 import Doctorspage from './pages/patient/doctorspage.js';
+import Prescriptionformpage from './pages/doctor/prescriptionformpage.js';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
 
       <Route path="/doctordashboard" element={<DoctorDashboard/>}></Route>
       <Route path="/appointmentmanager" element={<Appointmentmanagerpage/>}></Route>
+      <Route path="/prescriptionform" element={<Prescriptionformpage/>}></Route>
 
 
       <Route path="/patientdashboard" element={<PatientDashboard/>}></Route>

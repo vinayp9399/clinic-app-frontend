@@ -1,13 +1,13 @@
 .container1{
     width: 64%;
     background-color: white;
-    border: 3px solid rgb(235, 235, 235);
+    border: 3px solid rgb(212, 211, 211);
     border-radius: 8px;
     margin-top: 20px;
     margin-bottom: 20px;
     display:flex;
     padding: 0;
-    box-shadow: 0 3px 5px 0 rgba(240, 240, 240, 0.3);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     animation: transitionIn-Y-over 0.5s;
 
 }

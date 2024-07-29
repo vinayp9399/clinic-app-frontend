@@ -91,11 +91,11 @@ const Appointmentmanager=()=>{
                
                 <tr>
                     <td colspan="4" >
-                        <div style={{display:"flex",marginTop:"40px"}}>
+                        {/* <div style={{display:"flex",marginTop:"40px"}}>
                         <div class="heading-main12" style={{marginLeft:"45px",fontSize:"20px",color:"rgb(49, 49, 49)",marginTop:"5px"}}>Schedule a Session</div>
                         <a onClick={()=>{setregister1(true)}} class="non-style-link"><button  class="login-btn btn-primary btn button-icon"  style={{marginLeft:"25px",backgroundImage:" url('../images/icons/add.svg')"}}>Add a Session</button>
                         </a>
-                        </div>
+                        </div> */}
                     </td>
                 </tr>
                 <tr>
@@ -234,7 +234,7 @@ const Appointmentmanager=()=>{
                                         
                                         </td>
                                         <td style={{textAlign:"center"}}>
-                                        <input class="btn-primary-soft btn button-icon btn-delete" style={{marginRight:"10px",marginTop:"5px"}} type='button' value="Delete" onClick={()=>{handleDelete(data1._id)}}/>
+                                        {/* <input class="btn-primary-soft btn button-icon btn-delete" style={{marginRight:"10px",marginTop:"5px"}} type='button' value="Delete" onClick={()=>{handleDelete(data1._id)}}/> */}
                                         <input class="btn-primary-soft btn button-icon btn-edit" style={{marginTop:"5px"}} type='button' value="Edit" />
                     
                                         <input class="btn-primary-soft btn button-icon btn-view" style={{marginTop:"5px",marginLeft:"10px"}} type='button' value="Details" />

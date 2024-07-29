@@ -38,7 +38,7 @@ const Registration = ()=>{
         if(location.pathname === '/'){
             const expression_mob_no = /^[0-9]{10}$/;
             if(String(phoneno).match(expression_mob_no)){
-                setIsLoading(false);
+                setIsLoading(true);
                 let registrationData ={phoneno:phoneno,password:password}
             axios.post('https://clinic-app-backend.vercel.app/users/login',registrationData).then((response)=>{
                 if(response.data.message == 'phoneno or password does not match'){
@@ -105,7 +105,6 @@ const Registration = ()=>{
     
     return(
         <>
-
         <center>
 <div class="container1">
 <table border="0" style={{paddingLeft:"50px",width:"100%"}}>
@@ -169,7 +168,6 @@ const Registration = ()=>{
 
 </div>
 </center>
-
         </>
     )
 }
