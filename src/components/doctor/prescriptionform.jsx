@@ -112,36 +112,36 @@ const Prescriptionform=()=>{
                             </tr>
                             
                             <tr>
-                                <td class="label-td" colspan="2">
+                                <td class="label-td" colspan="1">
                                 <form method="POST" class="add-new-form">
                                     <label for="title" class="form-label">Patient Name : </label></form>
                                 </td>
-                                <td class="label-td" colspan="2">
+                                <td class="label-td" colspan="1">
                                     <label for="nop" class="form-label">Age: </label>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="label-td" colspan="2">
+                                <td class="label-td" colspan="1">
                                     <input type="text" name="title" class="input-text" placeholder="Patient Name" value={name} onChange={nameHandler} required/><br/>
                                 </td>
-                                <td class="label-td" colspan="2">
+                                <td class="label-td" colspan="1">
                                     <input type="number" name="nop" class="input-text" min="0" placeholder="Age" value={age} onChange={ageHandler} required/><br/>
                                 </td>
                             </tr>
                             
                             <tr>
-                                <td class="label-td" colspan="2">
+                                <td class="label-td" colspan="1">
                                     <label for="nop" class="form-label">Gender: </label>
                                 </td>
-                                <td class="label-td" colspan="2">
+                                <td class="label-td" colspan="1">
                                     <label for="nop" class="form-label">Phone No.: </label>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="label-td" colspan="2">
+                                <td class="label-td" colspan="1">
                                     <input type="text" name="nop" class="input-text" min="0" placeholder="Gender" value={gender} onChange={genderHandler} required/><br/>
                                 </td>
-                                <td class="label-td" colspan="2">
+                                <td class="label-td" colspan="1">
                                     <input type="number" name="nop" class="input-text" min="0" placeholder="Phone No." value={phoneno} onChange={phonenoHandler} required/><br/>
                                 </td>
                             </tr>

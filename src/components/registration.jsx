@@ -33,17 +33,29 @@ const Registration = ()=>{
     const submitHandler= (event)=>{
         event.preventDefault();
         //console.log(firstname+lastname+phoneno+email+password)
-        setIsLoading(true);
 
         if(location.pathname === '/'){
             const expression_mob_no = /^[0-9]{10}$/;
-            if(String(phoneno).match(expression_mob_no)){
-                setIsLoading(true);
+            if(phoneno=="" && password==""){
+                setIsLoading(false);
+                document.getElementById("login_error").style.visibility="visible";
+                document.getElementById("login_error").innerHTML="Please enter your credentials";
+            }
+            else if(phoneno=="" && password!=""){
+                setIsLoading(false);
+                document.getElementById("login_error").style.visibility="visible";
+                document.getElementById("login_error").innerHTML="Please enter phone no.";
+            }
+            else if(password=="" && phoneno!=""){
+                setIsLoading(false);
+                document.getElementById("login_error").style.visibility="visible";
+                document.getElementById("login_error").innerHTML="Please enter password";
+            }
+            else if(String(phoneno).match(expression_mob_no)){
                 let registrationData ={phoneno:phoneno,password:password}
             axios.post('https://clinic-app-backend.vercel.app/users/login',registrationData).then((response)=>{
                 if(response.data.message == 'phoneno or password does not match'){
-                    //getformerror('Email or password is wrong');
-                    console.log('Email or password is wrong');
+                    setIsLoading(false);
                     document.getElementById("login_error").style.visibility="visible";
                     document.getElementById("login_error").innerHTML="phoneno or password is wrong";
 
