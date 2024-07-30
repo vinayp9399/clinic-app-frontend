@@ -92,8 +92,8 @@ const Appointmentmanager=()=>{
                 <tr>
                     <td colspan="4" >
                         {/* <div style={{display:"flex",marginTop:"40px"}}>
-                        <div class="heading-main12" style={{marginLeft:"45px",fontSize:"20px",color:"rgb(49, 49, 49)",marginTop:"5px"}}>Schedule a Session</div>
-                        <a onClick={()=>{setregister1(true)}} class="non-style-link"><button  class="login-btn btn-primary btn button-icon"  style={{marginLeft:"25px",backgroundImage:" url('../images/icons/add.svg')"}}>Add a Session</button>
+                        <div class="heading-main12" style={{marginLeft:"45px",fontSize:"20px",color:"rgb(49, 49, 49)",marginTop:"5px"}}>Add Appointment</div>
+                        <a onClick={()=>{setregister1(true)}} class="non-style-link"><button  class="login-btn btn-primary btn button-icon"  style={{marginLeft:"25px",backgroundImage:" url('../images/icons/add.svg')"}}>Appointment</button>
                         </a>
                         </div> */}
                     </td>
@@ -200,11 +200,10 @@ const Appointmentmanager=()=>{
                                     </td>
                                     </tr> */}
                                  
-                                 {
-                    IsLoading===true ?
+                                 {IsLoading===true ?
                     <tr>
                     <td colSpan={7}>
-                        <div className="loader" style={{display:"flex", justifyContent:"space-around"}}></div>
+                        <div className="loader1" style={{display:"flex", justifyContent:"space-around"}}></div>
                     </td>
                     </tr>
                     :

@@ -8,6 +8,7 @@ const Registration = ()=>{
     const location = useLocation();
     console.log(location);
     const [formname,getformname] = useState('Create Account')
+    const [errormessage,seterrormessage] = useState('')
     const [buttonname,getbuttonname] = useState('Sign In');
     const [phoneno,getphoneno] = useState('');
     const [email,getemail] = useState('');
@@ -32,32 +33,29 @@ const Registration = ()=>{
             
     const submitHandler= (event)=>{
         event.preventDefault();
+        setIsLoading(true);
         //console.log(firstname+lastname+phoneno+email+password)
 
         if(location.pathname === '/'){
             const expression_mob_no = /^[0-9]{10}$/;
             if(phoneno=="" && password==""){
                 setIsLoading(false);
-                document.getElementById("login_error").style.visibility="visible";
-                document.getElementById("login_error").innerHTML="Please enter your credentials";
+                seterrormessage("Please enter your credentials")
             }
             else if(phoneno=="" && password!=""){
                 setIsLoading(false);
-                document.getElementById("login_error").style.visibility="visible";
-                document.getElementById("login_error").innerHTML="Please enter phone no.";
+                seterrormessage("Please enter phone no.")
             }
             else if(password=="" && phoneno!=""){
                 setIsLoading(false);
-                document.getElementById("login_error").style.visibility="visible";
-                document.getElementById("login_error").innerHTML="Please enter password";
+                seterrormessage("Please enter password")
             }
             else if(String(phoneno).match(expression_mob_no)){
                 let registrationData ={phoneno:phoneno,password:password}
             axios.post('https://clinic-app-backend.vercel.app/users/login',registrationData).then((response)=>{
                 if(response.data.message == 'phoneno or password does not match'){
                     setIsLoading(false);
-                    document.getElementById("login_error").style.visibility="visible";
-                    document.getElementById("login_error").innerHTML="phoneno or password is wrong";
+                    seterrormessage("phoneno or password is wrong")
 
                 }else{
                     localStorage.setItem('email',response.data.message.email)
@@ -162,9 +160,10 @@ const Registration = ()=>{
     <tr>
         <td>
         {IsLoading==true &&
-        <div className="loader1" style={{display:"flex", justifyContent:"space-around"}}></div>}
+        <><div className="loader1" style={{display:"flex", justifyContent:"space-around"}}></div>
+        </>}
         {IsLoading==false &&
-        <p id="login_error" style={{visibility:"hidden", textAlign:"center", color:"red"}}>xyz</p>}
+        <p id="login_error" style={{textAlign:"center", color:"red"}}>{errormessage}</p>}
         </td>
     </tr>
 

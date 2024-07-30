@@ -40,7 +40,7 @@ const Prescriptionform=()=>{
         event.preventDefault();
         let date1 = new Date();
         let time = `${date1.getHours()}:${date1.getMinutes()}`
-        let date = `${date1.getDate()}/${date1.getMonth()}/${date1.getFullYear()}`
+        let date = `${date1.getDate()}/${date1.getMonth()+1}/${date1.getFullYear()}`
         let appointmentData ={doctorid:doctorid,name:name,age:age,phoneno:phoneno,gender:gender,symptoms:symptoms,prescription:prescription,time:time,date:date}
         axios.post(`https://clinic-app-backend.vercel.app/appointments/addappointment`,appointmentData).then((response)=>{
             getallpatientData();
@@ -51,7 +51,7 @@ const Prescriptionform=()=>{
         axios.post('https://clinic-app-backend.vercel.app/users/registration',registrationData).then((response)=>{
                 console.log(response);
                 alert("Registration Done");
-                setregister1(false);
+                navigate("/doctordashboard")
 
         })
 
@@ -134,18 +134,26 @@ const Prescriptionform=()=>{
                             
                             <tr>
                                 <td class="label-td" colspan="1">
-                                    <label for="nop" class="form-label">Gender: </label>
-                                </td>
-                                <td class="label-td" colspan="1">
                                     <label for="nop" class="form-label">Phone No.: </label>
                                 </td>
+                                <td class="label-td" colspan="1">
+                                    <label for="nop" class="form-label">Gender: </label>
+                                </td>
+                                
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="1">
-                                    <input type="text" name="nop" class="input-text" min="0" placeholder="Gender" value={gender} onChange={genderHandler} required/><br/>
-                                </td>
-                                <td class="label-td" colspan="1">
                                     <input type="number" name="nop" class="input-text" min="0" placeholder="Phone No." value={phoneno} onChange={phonenoHandler} required/><br/>
+                                </td>
+                                <td style={{padding:"0px"}} class="label-td" colspan="1">
+                                    {/* <input type="text" name="nop" class="input-text" min="0" placeholder="Gender" value={gender} onChange={genderHandler} required/><br/> */}
+                                    <div style={{display:"flex", justifyContent:"space-around", alignItems:"center"}}>
+                                    <div><input type="radio" id="male" name="gender" value="Male" onChange={genderHandler}/>
+                                    <label for="Male">Male</label></div>
+                                    <div><input type="radio" id="female" name="gender" value="Female" onChange={genderHandler}/>
+                                    <label for="Female">Female</label></div>
+                                    </div>
+
                                 </td>
                             </tr>
                             
