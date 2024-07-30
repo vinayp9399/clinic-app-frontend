@@ -38,7 +38,10 @@ const Prescriptionform=()=>{
     }
     const submitHandler= (event)=>{
         event.preventDefault();
-        let appointmentData ={doctorid:doctorid,name:name,age:age,phoneno:phoneno,gender:gender,symptoms:symptoms,prescription:prescription}
+        let date1 = new Date();
+        let time = `${date1.getHours()}:${date1.getMinutes()}`
+        let date = `${date1.getDate()}/${date1.getMonth()}/${date1.getFullYear()}`
+        let appointmentData ={doctorid:doctorid,name:name,age:age,phoneno:phoneno,gender:gender,symptoms:symptoms,prescription:prescription,time:time,date:date}
         axios.post(`https://clinic-app-backend.vercel.app/appointments/addappointment`,appointmentData).then((response)=>{
             getallpatientData();
         })
@@ -66,11 +69,11 @@ const Prescriptionform=()=>{
         getallpatientData();
     })
 
-    const handleDelete = (patientId)=>{
-        axios.delete(`https://clinic-app-backend.vercel.app/appointments/deleteappointment/${patientId}`).then((response)=>{
-            getallpatientData();
-        })
-    }
+    // const handleDelete = (patientId)=>{
+    //     axios.delete(`https://clinic-app-backend.vercel.app/appointments/deleteappointment/${patientId}`).then((response)=>{
+    //         getallpatientData();
+    //     })
+    // }
 
     return(
         <>
