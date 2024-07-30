@@ -228,10 +228,10 @@ const Appointmentmanager=()=>{
                                         </td>
 
                                         <td style={{textAlign:"center"}}>
-                                        
+                                        {data1.date}
                                         </td>
                                         <td style={{textAlign:"center"}}>
-                                        
+                                        {data1.time}
                                         </td>
                                         <td style={{textAlign:"center"}}>
                                         {/* <input class="btn-primary-soft btn button-icon btn-delete" style={{marginRight:"10px",marginTop:"5px"}} type='button' value="Delete" onClick={()=>{handleDelete(data1._id)}}/> */}
