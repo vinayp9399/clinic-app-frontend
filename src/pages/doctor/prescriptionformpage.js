@@ -1,3 +1,4 @@
+import Doctorheader from "../../components/doctor/doctorheader";
 import DoctorMenu from "../../components/doctor/doctormenu"
 import Prescriptionform from "../../components/doctor/prescriptionform";
 
@@ -10,7 +11,10 @@ const Prescriptionformpage=()=>{
         <>
         <div class="container">
         {<DoctorMenu/>}
+        <div class="dash-body">
+        {<Doctorheader nav={"Prescription Form"}/>}
         {<Prescriptionform/>}
+        </div>
         </div>
         </>
     )

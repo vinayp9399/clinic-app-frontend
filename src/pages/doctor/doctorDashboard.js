@@ -1,4 +1,5 @@
 import DoctorDash from "../../components/doctor/doctorDash"
+import Doctorheader from "../../components/doctor/doctorheader";
 import DoctorMenu from "../../components/doctor/doctormenu"
 
 import '../../css/admin.css';
@@ -10,7 +11,9 @@ const DoctorDashboard=()=>{
         <>
         <div class="container">
         {<DoctorMenu nav={"DoctorDash"}/>}
-        {<DoctorDash/>}
+        <div class="dash-body">
+        {<Doctorheader nav={"Dashboard"}/>}
+        {<DoctorDash/>}</div>
         </div>
         </>
     )

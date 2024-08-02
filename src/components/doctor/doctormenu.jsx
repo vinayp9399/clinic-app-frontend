@@ -78,11 +78,11 @@ const DoctorMenu=(props)=>{
                         <a style={{cursor:"pointer"}} onClick={()=>{navigate("/appointmentmanager")}} class="non-style-link-menu"><p class="menu-text">Appointment Manager</p></a>
                     </td>}
                 </tr>
-                <tr class="menu-row" >
+                {/* <tr class="menu-row" >
                     <td class="menu-btn menu-icon-patient">
                         <a style={{cursor:"pointer"}} href="" class="non-style-link-menu"><p class="menu-text">My Patients</p></a>
                     </td>
-                </tr>
+                </tr> */}
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-session">
                         <a style={{cursor:"pointer"}} href="" class="non-style-link-menu"><p class="menu-text">Total Reviews</p></a>

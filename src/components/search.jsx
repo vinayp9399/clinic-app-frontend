@@ -6,6 +6,7 @@ const Search = ()=>{
     const phoneno = localStorage.getItem('phoneno');
     const [data1, setdata1] = useState('');
     const [IsLoading, setIsLoading] = useState(true);
+    
     useEffect(()=>{
         axios.get(`https://clinic-app-backend.vercel.app/appointments/findpatient/${doctorid}/${phoneno}`).then((response)=>{
             if(response.data.message == 'no record found'){

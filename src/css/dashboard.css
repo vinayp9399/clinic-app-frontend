@@ -380,6 +380,10 @@ input[type=search]:focus {
   color:white;
   background-image: url('../../public/images/icons/book.svg');
 }
+.header-icon-notification{
+  color:black;
+  background-image: url('../../public/images/icons/notification.svg');
+}
 .menu-icon-patient{
   background-image: url('../../public/images/icons/patients.svg');
 }
