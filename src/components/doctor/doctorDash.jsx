@@ -85,7 +85,7 @@ const DoctorDash=()=>{
                             <p >Thanks for joining with us. We are always trying to get <br /> you a complete service.
                             You can view your dailly <br /> schedule, Reach Patients Appointment at home!<br/><br/>
                             </p>
-                            <a onClick={()=>{navigate("/prescriptionform")}} class="non-style-link"><button class="btn-primary btn" style={{width:"50%"}}>Prescription Form</button></a>
+                            <a onClick={()=>{navigate("/prescriptionform")}} class="non-style-link"><button class="btn-primary btn" style={{width:"50%"}}>Patient Prescription</button></a>
                             <br/>
                             <br/>
                             <br />

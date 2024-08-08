@@ -1,0 +1,274 @@
+/* Base Styles */
+/* body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+} */
+
+.container_12 {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.container_13 {
+    width: 80%;
+    height: 230px;
+    margin: auto;
+    overflow: hidden;
+    text-align: left;
+}
+
+.container_14 {
+    height: 410px;
+    margin: auto;
+    overflow: hidden;
+    text-align: left;
+}
+
+/* Header Styles */
+header {
+    background: rgb(6, 14, 35);
+    color: #ffffff;
+    padding: 20px 0;
+    /* border-bottom: #e8491d 3px solid; */
+}
+
+header .logo {
+    float: left;
+    width: 450px;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    padding: 0 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0 0 30px 0;
+        color: #f8fafc;
+}
+
+/* Hero Section */
+.hero {
+    background: url("https://media.istockphoto.com/id/638377134/photo/doctor-man-with-stethoscope-in-hospital.jpg?b=1&s=612x612&w=0&k=20&c=EJt4OBXHUqF-TG2GuluiNbQAGFzPX0eLyGcEaCd_0oE=") no-repeat center center/cover;
+    color: #050505;
+    height:460px;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    margin-top: 0;
+    font-size: 48px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 20px 0;
+    position: relative;
+    top: -17px;
+}
+
+.hero .btn {
+    color: #ffffff;
+    background: var(--primarycolor);
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+/* Services Section */
+#services {
+    background: #ffffff;
+    text-align: center;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service {
+    flex-basis: 22%;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+}
+
+.service i {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: var(--primarycolor);
+}
+
+/* About Section */
+#about {
+    padding: 50px 0;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+#about p {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Doctors Section */
+#doctors {
+    padding: 50px 0;
+    background: #ffffff;
+    text-align: center;
+}
+
+.doctors-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.doctor {
+    text-align: center;
+    flex-basis: 30%;
+    margin-bottom: 20px;
+}
+
+.doctor img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 0;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact ul li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+#contact ul li i {
+    margin-right: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background: rgb(6, 14, 35);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: var(--primarycolor);
+    text-decoration: none;
+}
+
+.why-us .content {
+    padding: 30px;
+    background: #1977cc;
+    border-radius: 4px;
+    color: #fff;
+  }
+  
+  .why-us .content h3 {
+    font-weight: 700;
+    font-size: 34px;
+    margin-bottom: 30px;
+    color: #fff;
+  }
+  
+  .why-us .content p {
+    margin-bottom: 30px;
+  }
+  
+  .why-us .content .more-btn {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 30px 8px 30px;
+    color: #fff;
+    border-radius: 50px;
+    transition: all ease-in-out 0.4s;
+  }
+  
+  .why-us .content .more-btn i {
+    font-size: 14px;
+  }
+  
+  .why-us .content .more-btn:hover {
+    color: #1977cc;
+    background: #fff;
+  }
+  
+  .why-us .icon-boxes .icon-box {
+    text-align: center;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    width: 100%;
+    height: 353px;
+  }
+  
+  .why-us .icon-boxes .icon-box .icon {
+    font-size: 40px;
+    color: #1977cc;
+    margin-bottom: 30px;
+  }
+  
+  .why-us .icon-boxes .icon-box h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    color: #2c4964;
+  }
+  
+  .why-us .icon-boxes .icon-box p {
+    font-size: 15px;
+    color: #848484;
+  }
+
+  .row{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(var(--bs-gutter-x)* -.5);
+    margin-right: calc(var(--bs-gutter-x)* -.5);
+    margin-top: calc(var(--bs-gutter-y)* -1);
+  }

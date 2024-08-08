@@ -36,7 +36,7 @@ const Registration = ()=>{
         setIsLoading(true);
         //console.log(firstname+lastname+phoneno+email+password)
 
-        if(location.pathname === '/'){
+        if(location.pathname === '/login'){
             const expression_mob_no = /^[0-9]{10}$/;
             if(phoneno=="" && password==""){
                 setIsLoading(false);

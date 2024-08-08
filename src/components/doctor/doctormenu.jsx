@@ -46,7 +46,7 @@ const DoctorMenu=(props)=>{
                                 </td>
                                 <td style={{padding:"0px", margin:"0px"}}>
                                     <p class="profile-title">Dr. {firstname}</p>
-                                    <p class="profile-subtitle">Doctor Details</p>
+                                    <p class="profile-subtitle">MBBS. Surgery</p>
                                 </td>
                             </tr>
                             <tr>
