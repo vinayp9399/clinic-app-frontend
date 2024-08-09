@@ -70,7 +70,7 @@ const DoctorDash=()=>{
     return(
         <>
         
-            <table border="0" width="100%" style={{borderSpacing: "0", margin:"0", padding:"0"}}>
+            <table border="0" width="100%" style={{borderSpacing: "0", margin:"0", marginTop:"25px", padding:"0"}}>
                         
                         
                 <tr>
@@ -87,8 +87,7 @@ const DoctorDash=()=>{
                             </p>
                             <a onClick={()=>{navigate("/prescriptionform")}} class="non-style-link"><button class="btn-primary btn" style={{width:"50%"}}>Patient Prescription</button></a>
                             <br/>
-                            <br/>
-                            <br />
+                            
                             
                         </td>
                         

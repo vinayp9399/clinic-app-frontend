@@ -86,12 +86,12 @@ const Prescriptionform=()=>{
                         <div style={{display:"flex",justifyContent:"center"}}>
                         
                         <table width="80%" style={{border:"2px solid grey"}} class="sub-table add-doc-form-container" border="0">
-                        <tr>
+                        {/* <tr>
                                 <td class="label-td" colspan="2">
                                   </td>
-                            </tr>
+                            </tr> */}
                             
-                            <tr>
+                            {/* <tr>
                                 <td class="label-td" colspan="1">
                                 <form method="POST" class="add-new-form">
                                     <label for="title" class="form-label">Patient Name : </label></form>
@@ -99,7 +99,7 @@ const Prescriptionform=()=>{
                                 <td class="label-td" colspan="1">
                                     <label for="nop" class="form-label">Age: </label>
                                 </td>
-                            </tr>
+                            </tr> */}
                             <tr>
                                 <td class="label-td" colspan="1">
                                     <input type="text" name="title" class="input-text" placeholder="Patient Name" value={name} onChange={nameHandler} required/><br/>
@@ -109,7 +109,7 @@ const Prescriptionform=()=>{
                                 </td>
                             </tr>
                             
-                            <tr>
+                            {/* <tr>
                                 <td class="label-td" colspan="1">
                                     <label for="nop" class="form-label">Phone No.: </label>
                                 </td>
@@ -117,7 +117,7 @@ const Prescriptionform=()=>{
                                     <label for="nop" class="form-label">Gender: </label>
                                 </td>
                                 
-                            </tr>
+                            </tr> */}
                             <tr>
                                 <td class="label-td" colspan="1">
                                     <input type="number" name="nop" class="input-text" min="0" placeholder="Phone No." value={phoneno} onChange={phonenoHandler} required/><br/>
@@ -134,20 +134,21 @@ const Prescriptionform=()=>{
                                 </td>
                             </tr>
                             
-                            <tr>
+                            {/* <tr>
                                 <td class="label-td" colspan="2">
                                     <label for="nop" class="form-label">Symptoms: </label>
                                 </td>
-                            </tr>
+                            </tr> */}
                             <tr>
                                 <td class="label-td" colspan="3">
                                     <textarea rows="4" type="text" name="nop" class="input-text" placeholder="Symptoms" value={symptoms} onChange={symptomsHandler} required/><br/>
                                 </td>
-                            </tr> <tr>
+                            </tr> 
+                            {/* <tr>
                                 <td class="label-td" colspan="2">
                                     <label for="nop" class="form-label">Prescription: </label>
                                 </td>
-                            </tr>
+                            </tr> */}
                             <tr>
                                 <td class="label-td" colspan="3">
                                     <textarea rows="4" type="text" name="nop" class="input-text" placeholder="Prescription" value={prescription} onChange={prescriptionHandler} required/><br/>
@@ -156,9 +157,9 @@ const Prescriptionform=()=>{
                            
                             <tr>
                                 <td colspan="2">
-                                    <input type="reset" value="Download PDF" class="login-btn btn-primary-soft btn"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="reset" value="Print" class="login-btn btn-primary-soft btn"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 
-                                    <input type="reset" onClick={submitHandler} value="Register Patient" class="login-btn btn-primary-soft btn" name="shedulesubmit"/>
+                                    <input type="reset" onClick={submitHandler} value="Submit" class="login-btn btn-primary-soft btn" name="shedulesubmit"/>
                                     
                                 </td>
                 

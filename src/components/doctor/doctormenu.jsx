@@ -40,7 +40,7 @@ const DoctorMenu=(props)=>{
                 <tr>
                     <td style={{paddingLeft:"10px", paddingRight:"10px"}} colspan="2">
                         <table border="0" class="profile-container">
-                            <tr>
+                            <tr style={{position:"relative",top:"15px"}}>
                                 <td width="30%" style={{paddingLeft:"20px"}}>
                                     <img src={imageurl + profileImage1} alt="" width='70' height='70' style={{borderRadius:"50%"}}/>
                                 </td>

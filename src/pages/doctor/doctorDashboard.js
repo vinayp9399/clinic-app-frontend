@@ -12,7 +12,6 @@ const DoctorDashboard=()=>{
         <div class="container">
         {<DoctorMenu nav={"DoctorDash"}/>}
         <div class="dash-body">
-        {<Doctorheader nav={"Dashboard"}/>}
         {<DoctorDash/>}</div>
         </div>
         </>

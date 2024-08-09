@@ -75,7 +75,7 @@ const Appointmentmanager=()=>{
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="4" style={{paddingTop:"10px",width:"100%"}}>
+                    <td colspan="4" style={{width:"100%"}}>
                     
                         <p class="heading-main12" style={{marginLeft:"45px",fontSize:"18px",color:"rgb(49, 49, 49)"}}>My Appointments </p>
                     </td>
@@ -212,7 +212,7 @@ const Appointmentmanager=()=>{
                                         </td>
                                         <td style={{textAlign:"center"}}>
                                         {/* <input class="btn-primary-soft btn button-icon btn-delete" style={{marginRight:"10px",marginTop:"5px"}} type='button' value="Delete" onClick={()=>{handleDelete(data1._id)}}/> */}
-                                        <input class="btn-primary-soft btn button-icon btn-edit" style={{marginTop:"5px"}} type='button' value="Edit" />
+                                        {/* <input class="btn-primary-soft btn button-icon btn-edit" style={{marginTop:"5px"}} type='button' value="Edit" /> */}
                     
                                         <input class="btn-primary-soft btn button-icon btn-view" style={{marginTop:"5px",marginLeft:"10px"}} type='button' value="Details" />
                                         </td>

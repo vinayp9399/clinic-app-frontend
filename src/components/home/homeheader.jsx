@@ -56,8 +56,7 @@ const Homeheader=()=>{
                         <div className="content">
                             <h3>Why Choose Us?</h3>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
+                                We connect you with our best doctors available. The patients can browse the doctor's appointment system website to find a doctor that has the specialty of their needs. Patients can review the doctor's weekly schedule, enabling them to select a suitable day and time for their appointment. 
                             </p>
                             <div className="text-center">
                                 <button>Learn More</button> 
@@ -134,7 +133,7 @@ const Homeheader=()=>{
     <section id="about">
         <div class="container_12">
             <h2>About Us</h2>
-            <p>Professional Clinic has been providing top-notch healthcare services for over 20 years. Our team of experienced doctors and medical staff are dedicated to ensuring the best possible care for our patients.</p>
+            <p>E-Clinic has been provides top-notch healthcare services through easy appouintment booking. Our team of experienced doctors are dedicated to ensuring the best possible care for our patients.</p>
         </div>
     </section>
 
@@ -146,7 +145,7 @@ const Homeheader=()=>{
                 <div class="doctor">
                     <img src={imageurl + doctor.image}/>
                     <h3>Dr. {doctor.name}</h3>
-                    <p>Cardiologist</p>
+                    <p>{doctor.details}</p>
                 </div>
                 ))} 
                 
@@ -160,8 +159,7 @@ const Homeheader=()=>{
             <p>Have questions or need to book an appointment? Get in touch with us today.</p>
             <ul>
                 <li><i class="fas fa-phone-alt"></i> (123) 456-7890</li>
-                <li><i class="fas fa-envelope"></i> info@professionalclinic.com</li>
-                <li><i class="fas fa-map-marker-alt"></i> 123 Health St., Wellness City, HC 12345</li>
+                <li><i class="fas fa-envelope"></i> info@e-clinic.com</li>
             </ul>
         </div>
     </section>
