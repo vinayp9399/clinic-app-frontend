@@ -1,6 +1,4 @@
 • E-CLINIC is a user-friendly application that aims to streamline and enhance the process of managing patient visits and records.
-[WhatsApp Image 2024-08-08 at 23 29 22_ab0d473e](https://github.com/user-attachments/assets/e376a4b1-ff33-46ed-ad75-c2f4d978527a)
-
 
 •	Allows doctors to create and register patient accounts during each visit, storing essential details like name, age, contact information, and medical history.
 <img width="960" alt="Screenshot (314)" src="https://github.com/user-attachments/assets/f46fb377-6b4b-47c0-bcdb-c550cdfedb74">
