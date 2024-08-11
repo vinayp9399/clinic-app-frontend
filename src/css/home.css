@@ -33,7 +33,6 @@
 /* Header Styles */
 header {
     background: rgb(6, 14, 35);
-    position:fixed;
     z-index:6;
     color: #ffffff;
     width:100%;
@@ -81,8 +80,6 @@ header nav ul li a:hover{
     background: url("https://media.istockphoto.com/id/638377134/photo/doctor-man-with-stethoscope-in-hospital.jpg?b=1&s=612x612&w=0&k=20&c=EJt4OBXHUqF-TG2GuluiNbQAGFzPX0eLyGcEaCd_0oE=") no-repeat center center/cover;
     color: #050505;
     height:540px;
-    position: relative;
-    top: 96px;
     padding: 100px 0;
     text-align: center;
 }
@@ -106,6 +103,16 @@ header nav ul li a:hover{
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 5px;
+}
+
+.btnp {
+    color: #ffffff;
+    background: var(--primarycolor);
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border:0px;
 }
 
 /* Services Section */

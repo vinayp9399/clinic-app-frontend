@@ -49,7 +49,7 @@ const Homeheader=()=>{
         </div>
     </section>
 
-    <section style={{top:"-108px", position:"relative", zIndex: 1}} className="why-us mt-5 mt-md-0">
+    <section style={{top:"-198px", position:"relative", zIndex: 1,height:"200px"}} className="why-us mt-5 mt-md-0">
             <div className="container_14">
 
                 <div style={{display:"flex", justifyContent:"space-evenly"}} className="row">
@@ -103,7 +103,7 @@ const Homeheader=()=>{
             </div>
         </section>
 
-    <section style={{position:"relative",top:"-110px"}}>
+    <section>
         <div id="services" class="container_12">
             <h2>Our Doctors Specializations</h2>
             <div class="services-grid">
@@ -128,6 +128,7 @@ const Homeheader=()=>{
                     <p>Quality care for your little ones.</p>
                 </div>
             </div>
+            <button style={{marginBottom:"50px"}} class="btnp">Our Services</button>
         </div>
     </section>
 
@@ -136,6 +137,7 @@ const Homeheader=()=>{
             <h2>About Us</h2>
             <p>E-Clinic has been provides top-notch healthcare services through easy appouintment booking. Our team of experienced doctors are dedicated to ensuring the best possible care for our patients.</p>
         </div>
+        <button style={{marginTop:"50px"}} class="btnp">Know More</button>
     </section>
 
     <section id="doctors">
