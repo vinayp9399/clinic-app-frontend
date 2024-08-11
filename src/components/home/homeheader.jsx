@@ -103,8 +103,8 @@ const Homeheader=()=>{
             </div>
         </section>
 
-    <section style={{position:"relative",top:"-110px"}} id="services">
-        <div class="container_12">
+    <section style={{position:"relative",top:"-110px"}}>
+        <div id="services" class="container_12">
             <h2>Our Doctors Specializations</h2>
             <div class="services-grid">
                 <div class="service">
