@@ -8,8 +8,8 @@
 } */
 
 .container_12 {
-    width: 80%;
-    margin: auto;
+    width: 93%;
+    margin-left: 47px;
     overflow: hidden;
 }
 
@@ -31,7 +31,10 @@
 /* Header Styles */
 header {
     background: rgb(6, 14, 35);
+    position:fixed;
+    z-index:6;
     color: #ffffff;
+    width:100%;
     padding: 20px 0;
     /* border-bottom: #e8491d 3px solid; */
 }
@@ -63,7 +66,7 @@ header nav ul li a {
     text-decoration: none;
 
         font-size: 20px;
-        font-weight: 700;
+        font-weight: 500;
         margin: 0 0 30px 0;
         color: #f8fafc;
 }
@@ -72,7 +75,9 @@ header nav ul li a {
 .hero {
     background: url("https://media.istockphoto.com/id/638377134/photo/doctor-man-with-stethoscope-in-hospital.jpg?b=1&s=612x612&w=0&k=20&c=EJt4OBXHUqF-TG2GuluiNbQAGFzPX0eLyGcEaCd_0oE=") no-repeat center center/cover;
     color: #050505;
-    height:460px;
+    height:540px;
+    position: relative;
+    top: 96px;
     padding: 100px 0;
     text-align: center;
 }
@@ -210,6 +215,7 @@ footer a {
     font-weight: 700;
     font-size: 34px;
     margin-bottom: 30px;
+    margin-top: 21px;
     color: #fff;
   }
   

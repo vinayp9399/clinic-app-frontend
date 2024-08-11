@@ -18,7 +18,7 @@ const Doctorheader=(props)=>{
                             <td className="" width="25%">
                                
                             </td>
-                            <td width="15%">
+                            {/* <td width="15%">
                                 <p style={{fontSize: "14px",color: "rgb(119, 119, 119)",padding: "0",margin: "0",textAlign: "right"}}>
                                     Today's Date
                                 </p>
@@ -28,7 +28,7 @@ const Doctorheader=(props)=>{
                             </td>
                             <td width="10%">
                                 <button  class="btn-label"  style={{display: "flex", justifyContent:"center",alignItems: "center"}}><img src="../images/calendar.svg" width="100%"/></button>
-                            </td>
+                            </td> */}
         
         
                         </tr>

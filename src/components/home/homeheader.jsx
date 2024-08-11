@@ -31,9 +31,10 @@ const Homeheader=()=>{
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
+                    <li><a href="#doctors">Doctors</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#about">About Us</a></li>
-                    <li><a href="#doctors">Doctors</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
                     <li style={{cursor:"pointer"}}><a onClick={()=>navigate("/login")}>Login</a></li>
                 </ul>
             </nav>
@@ -48,19 +49,19 @@ const Homeheader=()=>{
         </div>
     </section>
 
-    <section style={{top: "-100px", position:"relative", zIndex: 1}} className="why-us mt-5 mt-md-0">
+    <section style={{top:"-108px", position:"relative", zIndex: 1}} className="why-us mt-5 mt-md-0">
             <div className="container_14">
 
-                <div style={{display:"flex", justifyContent:"space-around"}} className="row">
+                <div style={{display:"flex", justifyContent:"space-evenly"}} className="row">
                     <div style={{width:"400px"}} className="col-lg-4 d-flex align-items-stretch">
                         <div className="content">
                             <h3>Why Choose Us?</h3>
                             <p>
                                 We connect you with our best doctors available. The patients can browse the doctor's appointment system website to find a doctor that has the specialty of their needs. Patients can review the doctor's weekly schedule, enabling them to select a suitable day and time for their appointment. 
                             </p>
-                            <div className="text-center">
-                                <button>Learn More</button> 
-                            </div>
+                            
+                                <button class="btn-primary-soft btn">Learn More</button> 
+                            
                         </div>
                     </div>
                     <div className="col-lg-8 d-flex align-items-stretch">
@@ -102,7 +103,7 @@ const Homeheader=()=>{
             </div>
         </section>
 
-    <section style={{position:"relative",top:"-84px"}} id="services">
+    <section style={{position:"relative",top:"-110px"}} id="services">
         <div class="container_12">
             <h2>Our Doctors Specializations</h2>
             <div class="services-grid">
