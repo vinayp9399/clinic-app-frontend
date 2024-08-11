@@ -79,7 +79,7 @@ header nav ul li a:hover{
 
 /* Hero Section */
 .hero {
-    background: url("https://media.istockphoto.com/id/638377134/photo/doctor-man-with-stethoscope-in-hospital.jpg?b=1&s=612x612&w=0&k=20&c=EJt4OBXHUqF-TG2GuluiNbQAGFzPX0eLyGcEaCd_0oE=") no-repeat center center/cover;
+    background: url("/public/images/360_F_496012415_Dz1RvAu25udnJvjZ907CCqKmEFNyQIJX.jpg") no-repeat center center/cover;
     color: #050505;
     height:540px;
     padding: 100px 0;
