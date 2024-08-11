@@ -18,9 +18,11 @@
 .container_13 {
     width: 80%;
     height: 230px;
-    margin: auto;
+    margin-left: 50px;
     overflow: hidden;
     text-align: left;
+    top: -14px;
+    position: relative;
 }
 
 .container_14 {
@@ -93,7 +95,7 @@ header nav ul li a:hover{
     font-size: 20px;
     margin: 20px 0;
     position: relative;
-    top: -17px;
+    top: -32px;
 }
 
 .hero .btn {
@@ -103,6 +105,8 @@ header nav ul li a:hover{
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 5px;
+    position: relative;
+    top: -23px;
 }
 
 .btnp {
