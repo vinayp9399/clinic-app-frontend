@@ -10,7 +10,9 @@ import PatientDashboard from './pages/patient/patientDashboard.js';
 import Appointmentmanagerpage from './pages/doctor/appointmentmanagerpage.js';
 import Doctorspage from './pages/patient/doctorspage.js';
 import Prescriptionformpage from './pages/doctor/prescriptionformpage.js';
-import Homepage from './pages/homepage.js';
+import Landingpage from './pages/home/landingpage.js';
+import Servicespage from './pages/home/servicespage.js';
+import Aboutuspage from './pages/home/aboutuspage.js';
 
 
 function App() {
@@ -18,7 +20,9 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Homepage/>}></Route>
+      <Route path="/" element={<Landingpage/>}></Route>
+      <Route path="/aboutus" element={<Aboutuspage/>}></Route>
+      <Route path="/services" element={<Servicespage/>}></Route>
       <Route path="/registration" element={<Registrationpage/>}></Route>
       <Route path="/doctorregistration" element={<Doctorregistrationpage/>}></Route>
       <Route path="/doctorprofile" element={<Doctorprofilepage/>}></Route>

@@ -120,7 +120,7 @@ header nav ul li a:hover{
 }
 
 /* Services Section */
-#services {
+#services1 {
     background: #ffffff;
     text-align: center;
 }
@@ -145,13 +145,13 @@ header nav ul li a:hover{
 }
 
 /* About Section */
-#about {
+#about1 {
     padding: 50px 0;
     background: #f4f4f4;
     text-align: center;
 }
 
-#about p {
+#about1 p {
     max-width: 800px;
     margin: auto;
 }
@@ -294,3 +294,136 @@ footer a {
     margin-right: calc(var(--bs-gutter-x)* -.5);
     margin-top: calc(var(--bs-gutter-y)* -1);
   }
+
+  #about {
+    padding: 50px 0;
+    background: #ffffff;
+    text-align: center;
+}
+
+#about p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+#about h3 {
+    margin-top: 30px;
+    font-size: 24px;
+    color: #35424a;
+}
+
+#about ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+#about ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#about ul li strong {
+    color: #e8491d;
+}
+
+/* Team Section */
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.team-member {
+    flex-basis: 22%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team-member h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #35424a;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: #666;
+}
+
+.container24 {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#services {
+    padding: 50px 0;
+    background: #ffffff;
+    text-align: center;
+}
+
+#services p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+#services h2 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #35424a;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.service-item {
+    flex-basis: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fafafa;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-item img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.service-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #35424a;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}

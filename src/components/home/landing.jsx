@@ -3,7 +3,7 @@ import '../../css/home.css';
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 
-const Homeheader=()=>{
+const Landing=()=>{
     const navigate=useNavigate();
     const [doctordata,setdoctordata]=useState('')
     const [imageurl, setImageurl]= useState("https://clinic-app-backend.vercel.app/");
@@ -21,26 +21,6 @@ const Homeheader=()=>{
 
     return(
         <>
-        <header>
-        <div class="container_12">
-            <div class="logo" style={{display:"flex", gap:"10px",top:"4px",position: "relative"}}>
-                <img style={{width:"9%"}} src="../images/blue-plus-icon-12.png" alt=""/>                
-                <h1 style={{color:"rgb(40 176 226)"}}>E-Clinic</h1>
-                
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#doctors">Doctors</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                    <li style={{cursor:"pointer"}}><a onClick={()=>navigate("/login")}>Login</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
     <section id="home" class="hero">
         <div class="container_13">
             <h2>Welcome to E-Clinic</h2>
@@ -104,7 +84,7 @@ const Homeheader=()=>{
         </section>
 
     <section>
-        <div id="services" class="container_12">
+        <div id="services1" class="container_12">
             <h2>Our Doctors Specializations</h2>
             <div class="services-grid">
                 <div class="service">
@@ -132,7 +112,7 @@ const Homeheader=()=>{
         </div>
     </section>
 
-    <section id="about">
+    <section id="about1">
         <div class="container_12">
             <h2>About Us</h2>
             <p>E-Clinic has been provides top-notch healthcare services through easy appouintment booking. Our team of experienced doctors are dedicated to ensuring the best possible care for our patients.</p>
@@ -155,26 +135,8 @@ const Homeheader=()=>{
             </div>
         </div>
     </section>
-
-    <section id="contact">
-        <div class="container_12">
-            <h2>Contact Us</h2>
-            <p>Have questions or need to book an appointment? Get in touch with us today.</p>
-            <ul>
-                <li><i class="fas fa-phone-alt"></i> (123) 456-7890</li>
-                <li><i class="fas fa-envelope"></i> info@e-clinic.com</li>
-            </ul>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container_12">
-            <p>&copy; 2024 Professional Clinic. All rights reserved.</p>
-            <p><a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a> | <a href="#contact">Contact Us</a></p>
-        </div>
-    </footer>
         </>
     )
 }
 
-export default Homeheader
+export default Landing
