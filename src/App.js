@@ -13,6 +13,7 @@ import Prescriptionformpage from './pages/doctor/prescriptionformpage.js';
 import Landingpage from './pages/home/landingpage.js';
 import Servicespage from './pages/home/servicespage.js';
 import Aboutuspage from './pages/home/aboutuspage.js';
+import Patientdetailspage from './pages/doctor/patientdetailspage.js';
 
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
       <Route path="/doctordashboard" element={<DoctorDashboard/>}></Route>
       <Route path="/appointmentmanager" element={<Appointmentmanagerpage/>}></Route>
       <Route path="/prescriptionform" element={<Prescriptionformpage/>}></Route>
-
+      <Route path="/patientdetails" element={<Patientdetailspage/>}></Route>
 
       <Route path="/patientdashboard" element={<PatientDashboard/>}></Route>
       <Route path="/doctors" element={<Doctorspage/>}></Route>
