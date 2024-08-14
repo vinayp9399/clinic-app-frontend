@@ -19,6 +19,11 @@ const Appointmentmanager=()=>{
         setpatientphone(e.target.value);
     }
 
+    const patientDetails=(phoneno)=>{
+       localStorage.setItem("patientdetphone",phoneno);
+       navigate("/patientdetails") 
+    }
+
     
     const searchPatient=()=>{
         setIsLoading(true);
@@ -214,7 +219,7 @@ const Appointmentmanager=()=>{
                                         {/* <input class="btn-primary-soft btn button-icon btn-delete" style={{marginRight:"10px",marginTop:"5px"}} type='button' value="Delete" onClick={()=>{handleDelete(data1._id)}}/> */}
                                         {/* <input class="btn-primary-soft btn button-icon btn-edit" style={{marginTop:"5px"}} type='button' value="Edit" /> */}
                     
-                                        <input class="btn-primary-soft btn button-icon btn-view" style={{marginTop:"5px",marginLeft:"10px"}} onClick={()=>navigate("/patientdetails")} type='button' value="Details" />
+                                        <input class="btn-primary-soft btn button-icon btn-view" style={{marginTop:"5px",marginLeft:"10px"}} onClick={()=>patientDetails(data1.phoneno)} type='button' value="Details" />
                                         </td>
                                     </tr>
                                      ))}</>}
@@ -249,7 +254,7 @@ const Appointmentmanager=()=>{
                                         {/* <input class="btn-primary-soft btn button-icon btn-delete" style={{marginRight:"10px",marginTop:"5px"}} type='button' value="Delete" onClick={()=>{handleDelete(data1._id)}}/> */}
                                         <input class="btn-primary-soft btn button-icon btn-edit" style={{marginTop:"5px"}} type='button' value="Edit" />
                     
-                                        <input class="btn-primary-soft btn button-icon btn-view" style={{marginTop:"5px",marginLeft:"10px"}} type='button' value="Details" />
+                                        <input class="btn-primary-soft btn button-icon btn-view" style={{marginTop:"5px",marginLeft:"10px"}} onClick={()=>patientDetails(patientdata.phoneno)} type='button' value="Details" />
                                         </td>
                                     </tr></>
                                     

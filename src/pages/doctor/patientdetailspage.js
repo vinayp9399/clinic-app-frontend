@@ -1,4 +1,3 @@
-import DoctorDash from "../../components/doctor/doctorDash"
 import Doctorheader from "../../components/doctor/doctorheader";
 import DoctorMenu from "../../components/doctor/doctormenu"
 import Patientdetails from "../../components/doctor/patientdetails";
@@ -13,6 +12,7 @@ const Patientdetailspage=()=>{
         <div class="container">
         {<DoctorMenu nav={"Patient details"}/>}
         <div class="dash-body">
+        {<Doctorheader nav={"Patient Details"}/>}
         {<Patientdetails/>}</div>
         </div>
         </>
