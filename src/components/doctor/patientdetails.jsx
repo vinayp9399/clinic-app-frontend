@@ -28,69 +28,68 @@ const Patientdetails=()=>{
                     
                         <div style={{display:"flex",marginLeft:"30px"}}>
                         
-                        <table width="80%" style={{border:"2px solid grey"}} class="sub-table add-doc-form-container" border="0">
+                        <table width="95%" style={{border:"2px solid grey"}} class="sub-table add-doc-form-container" border="0">
                         {/* <tr>
                                 <td class="label-td" colspan="2">
                                   </td>
                             </tr> */}
                             
                             <tr>
-                                <td class="label-td" colspan="1">
-                                <form method="POST" class="add-new-form">
-                                    <label for="title" class="form-label">Patient Name : </label></form>
+                                <td style={{paddingTop:"0px",width:"30%"}} class="label-td" colspan="1">
+                                    <b>Patient Name :</b> 
                                 </td>
-                                <td class="label-td" colspan="1">
-                                    <label for="nop" class="form-label">{patientdata.name} </label>
+                                <td style={{paddingTop:"0px"}} class="label-td" colspan="1">
+                                    <span style={{fontWeight:"bold",color:"var(--btnnicetext)"}}>{patientdata.name}</span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="1">
-                                    <label for="nop" class="form-label">Age: </label>
+                                    <b>Age:</b>
                                 </td>
                                 <td class="label-td" colspan="1">
-                                    <label for="nop" class="form-label">{patientdata.age} </label>
+                                    {patientdata.age}
                                 </td>
                             </tr>
                             
                             <tr>
                                 <td class="label-td" colspan="1">
-                                    <label for="nop" class="form-label">Phone No.: </label>
+                                    <b>Phone No:</b>
                                 </td>
                                 <td class="label-td" colspan="1">
-                                    <label for="nop" class="form-label">{patientdata.phoneno} </label>
+                                    {patientdata.phoneno}
                                 </td>
                                 
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="1">
-                                    <label for="nop" class="form-label">Gender: </label>
+                                    <b>Gender:</b>
                                 </td>
                                 <td class="label-td" colspan="1">
-                                    <label for="nop" class="form-label">{patientdata.gender} </label>
+                                    {patientdata.gender}
                                 </td>
                             </tr>
                             
                             <tr>
                                 <td class="label-td" colspan="1">
-                                    <label for="nop" class="form-label">Symptoms: </label>
+                                    <b>Symptoms:</b> 
                                 </td>
                                 <td class="label-td" colspan="1">
-                                    <label for="nop" class="form-label">{patientdata.symptoms}</label>
+                                    {patientdata.symptoms}
                                 </td>
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="1">
-                                    <label for="nop" class="form-label">Prescription: </label>
+                                    <b>Prescription:</b> 
                                 </td>
                                 <td class="label-td" colspan="1">
-                                    <label for="nop" class="form-label">{patientdata.prescription} </label>
+                                    {patientdata.prescription} 
                                 </td>
                             </tr> 
                         </table>
                         
                         </div>
                     
-                    <br/><br/>
+                    <br/>
                         </td>
                         </tr>
                         </table>

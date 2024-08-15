@@ -252,7 +252,7 @@ const Appointmentmanager=()=>{
                                         </td>
                                         <td style={{textAlign:"center"}}>
                                         {/* <input class="btn-primary-soft btn button-icon btn-delete" style={{marginRight:"10px",marginTop:"5px"}} type='button' value="Delete" onClick={()=>{handleDelete(data1._id)}}/> */}
-                                        <input class="btn-primary-soft btn button-icon btn-edit" style={{marginTop:"5px"}} type='button' value="Edit" />
+                                        {/* <input class="btn-primary-soft btn button-icon btn-edit" style={{marginTop:"5px"}} type='button' value="Edit" /> */}
                     
                                         <input class="btn-primary-soft btn button-icon btn-view" style={{marginTop:"5px",marginLeft:"10px"}} onClick={()=>patientDetails(patientdata.phoneno)} type='button' value="Details" />
                                         </td>
