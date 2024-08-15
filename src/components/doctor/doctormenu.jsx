@@ -98,11 +98,6 @@ const DoctorMenu=(props)=>{
                         <a style={{cursor:"pointer"}} href="" class="non-style-link-menu"><p class="menu-text">Profile</p></a>
                     </td>
                 </tr>
-                <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-settings">
-                        <a style={{cursor:"pointer"}} href="" class="non-style-link-menu"><p class="menu-text">Settings</p></a>
-                    </td>
-                </tr>
                 
                 
             </table>
