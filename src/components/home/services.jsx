@@ -8,34 +8,19 @@ const Services=()=>{
             
             <div class="services-grid">
                 <div class="service-item">
-                    <img src="service1.jpg" alt="Telemedicine Consultations"/>
-                    <h3>Telemedicine Consultations</h3>
+                    <img width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_x-m2Zy_tYizt-jmw_tvYiNyz4QqGGEi9EA&s" alt="Telemedicine Consultations"/>
+                    <h3>Easy Appointment booking</h3>
                     <p>Consult with our doctors via secure video conferencing. Get expert medical advice without leaving your home.</p>
                 </div>
                 <div class="service-item">
-                    <img src="service2.jpg" alt="Online Prescriptions"/>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1AGDe6c5p-Td2DMxoemln0LZFXdnRT9WBHQ&s" alt="Online Prescriptions"/>
                     <h3>Online Prescriptions</h3>
                     <p>Receive prescriptions online for your convenience. Our doctors will ensure you get the right medication for your condition.</p>
                 </div>
                 <div class="service-item">
-                    <img src="service3.jpg" alt="Chronic Disease Management"/>
-                    <h3>Chronic Disease Management</h3>
+                    <img src="https://uploads-ssl.webflow.com/5f3c19f18169b62a0d0bf387/5f3d74438aefe54b9158facc_s_B7B60683A076D6B2B6B1AAFAC63899C5CEBA7AFAAA6A7510BBAD17DFD503123E_1597094830927_national-cancer-institute-L8tWZT4CcVQ-unsplash.jpeg"/>
+                    <h3>Chatting with doctor</h3>
                     <p>Manage your chronic conditions with personalized care plans and regular check-ins from our healthcare team.</p>
-                </div>
-                <div class="service-item">
-                    <img src="service4.jpg" alt="Mental Health Support"/>
-                    <h3>Mental Health Support</h3>
-                    <p>Access mental health services, including counseling and therapy, from the privacy and comfort of your home.</p>
-                </div>
-                <div class="service-item">
-                    <img src="service5.jpg" alt="Lab Tests and Diagnostics"/>
-                    <h3>Lab Tests and Diagnostics</h3>
-                    <p>Order lab tests online and receive results electronically. Our team will guide you through the process.</p>
-                </div>
-                <div class="service-item">
-                    <img src="service6.jpg" alt="Vaccinations and Immunizations"/>
-                    <h3>Vaccinations and Immunizations</h3>
-                    <p>Book appointments for vaccinations and immunizations. We offer a range of vaccines for children and adults.</p>
                 </div>
             </div>
         </div>

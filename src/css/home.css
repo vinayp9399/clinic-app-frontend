@@ -299,6 +299,9 @@ footer a {
     padding: 50px 0;
     background: #ffffff;
     text-align: center;
+    background-image: url('https://img.freepik.com/premium-photo/white-blur-abstract-background-from-building-hallway_36051-1032.jpg');
+    background-repeat: no-repeat;
+    background-size: 1900px;
 }
 
 #about p {
@@ -308,10 +311,14 @@ footer a {
     line-height: 1.6;
 }
 
+#about h2 {
+    color: #fafcfd;
+}
+
 #about h3 {
     margin-top: 30px;
     font-size: 24px;
-    color: #35424a;
+    color: #fafcfd;
 }
 
 #about ul {
@@ -320,6 +327,7 @@ footer a {
     max-width: 800px;
     margin: 20px auto;
     text-align: left;
+    color:white;
 }
 
 #about ul li {
@@ -328,7 +336,7 @@ footer a {
 }
 
 #about ul li strong {
-    color: #e8491d;
+    color: #faf2ef;
 }
 
 /* Team Section */
@@ -364,7 +372,7 @@ footer a {
 }
 
 .container24 {
-    width: 80%;
+    width: 90%;
     margin: auto;
     overflow: hidden;
 }
@@ -373,6 +381,9 @@ footer a {
     padding: 50px 0;
     background: #ffffff;
     text-align: center;
+    background-image: url('https://img.freepik.com/premium-photo/white-blur-abstract-background-from-building-hallway_36051-1032.jpg');
+    background-repeat: no-repeat;
+    background-size: 1280px 560px;
 }
 
 #services p {
@@ -402,25 +413,25 @@ footer a {
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    background-color: #fafafa;
+    background-color: #1977cc;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .service-item img {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 200px;
     margin-bottom: 15px;
 }
 
 .service-item h3 {
     font-size: 22px;
     margin-bottom: 10px;
-    color: #35424a;
+    color: #fcfcfd;
 }
 
 .service-item p {
     font-size: 16px;
-    color: #666;
+    color: #fcfcfd;
 }
 
 .service-item:hover {
