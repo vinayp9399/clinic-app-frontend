@@ -4,7 +4,7 @@ const Services=()=>{
         <section id="services">
         <div class="container24">
             <h2>Our Services</h2>
-            <p>At Online Clinic, we offer a wide range of healthcare services to meet your needs. Our team of experienced medical professionals is dedicated to providing high-quality care in the comfort of your home.</p>
+            <p style={{margin:"auto"}}>At Online Clinic, we offer a wide range of healthcare services to meet your needs. Our team of experienced medical professionals is dedicated to providing high-quality care in the comfort of your home.</p>
             
             <div class="services-grid">
                 <div class="service-item">

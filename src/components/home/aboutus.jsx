@@ -30,22 +30,22 @@ const Aboutus=()=>{
 
         <div style={{marginTop:"30px",width:"810px",marginLeft:"auto", marginRight:"auto"}} class="service-item">
             <h3>Our Mission</h3>
-            <p>Our mission is to offer accessible and high-quality medical care to all individuals, regardless of their location. We believe in the power of technology to bridge the gap between patients and healthcare providers, ensuring that everyone has the opportunity to receive the care they need.</p>
+            <p style={{margin:"25px"}}>Our mission is to offer accessible and high-quality medical care to all individuals, regardless of their location. We believe in the power of technology to bridge the gap between patients and healthcare providers, ensuring that everyone has the opportunity to receive the care they need.</p>
         </div>
         <div style={{marginTop:"30px",width:"810px",marginLeft:"auto", marginRight:"auto"}} class="service-item">
             <h3>Our Vision</h3>
-            <p>We envision a world where healthcare is not limited by geography. By leveraging the latest in telemedicine and digital health solutions, we aim to make healthcare more inclusive, efficient, and patient-centered.</p>
+            <p style={{margin:"25px"}}>We envision a world where healthcare is not limited by geography. By leveraging the latest in telemedicine and digital health solutions, we aim to make healthcare more inclusive, efficient, and patient-centered.</p>
         </div>
         <div style={{marginTop:"30px",width:"810px",marginLeft:"auto", marginRight:"auto"}} class="service-item">
             <h3>Our Values</h3>
-            <ul>
+            <ul style={{margin:"25px"}}>
                 <li><strong>Compassion:</strong> We treat every patient with empathy and understanding, ensuring that they feel heard and respected.</li>
                 <li><strong>Excellence:</strong> We are committed to delivering the highest standard of care through continuous improvement and innovation.</li>
                 <li><strong>Integrity:</strong> We uphold the highest ethical standards in all our interactions, maintaining transparency and honesty.</li>
                 <li><strong>Accessibility:</strong> We strive to make healthcare services available to everyone, regardless of their circumstances.</li>
             </ul>
         </div>
-            <h3 style={{color:"black"}}>Meet Our Team</h3>
+            <h3 style={{color:"black", marginTop:"50px"}}>Meet Our Team</h3>
             <div class="team-grid">
                 
                 { doctordata && doctordata.map((doctor)=>(
