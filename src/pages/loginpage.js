@@ -1,11 +1,9 @@
-import Registration from "../components/registration";
+import Login from "../components/login"
 
-import '../css/login.css';
-
-const Loginpage = ()=>{
+const Loginpage =()=>{
     return(
         <>
-        {<Registration/>}
+        {<Login/>}
         </>
     )
 }

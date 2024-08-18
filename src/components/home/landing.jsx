@@ -25,7 +25,7 @@ const Landing=()=>{
         <div class="container_13">
             <h2>Welcome to E-Clinic</h2>
             <p>Your health is our priority. Book an appointment with our <br/>experienced doctors today.</p>
-            <a href="#services" class="btn">Our Services</a>
+            <a onClick={()=>{navigate("/services")}} class="btn">Our Services</a>
         </div>
     </section>
 

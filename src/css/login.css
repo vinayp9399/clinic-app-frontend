@@ -1,10 +1,10 @@
 .container1{
-    width: 64%;
-    background-color: white;
-    border: 3px solid rgb(212, 211, 211);
-    border-radius: 8px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    /* width: 64%; */
+    background-color: rgb(6, 14, 35);
+    /* border: 3px solid #177cc8; */
+    /* border-radius: 8px; */
+    /* margin-top: 20px;
+    margin-bottom: 20px; */
     display:flex;
     padding: 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -18,17 +18,18 @@
     letter-spacing: 1px;
     margin-bottom: 10px;
     margin-top:3px;
+    color:#28b0e2
 
 }
 
 .sub-text{
     font-size: 15px;
-    color: rgb(138, 138, 138);
+    color: white;
     margin-top:3px;
 }
 
 .form-label{
-    color: rgb(44, 44, 44);
+    color: white;
     text-align: left;
     font-size: 14px;
 }

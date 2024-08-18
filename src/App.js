@@ -1,6 +1,5 @@
 import './App.css';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import Registrationpage from './pages/registrationpage.js';
 import Loginpage from './pages/loginpage.js';
 import Doctorregistrationpage from './pages/doctorregistrationpage.js';
 import Doctorprofilepage from './pages/doctorprofilepage.js';
@@ -24,7 +23,7 @@ function App() {
       <Route path="/" element={<Landingpage/>}></Route>
       <Route path="/aboutus" element={<Aboutuspage/>}></Route>
       <Route path="/services" element={<Servicespage/>}></Route>
-      <Route path="/registration" element={<Registrationpage/>}></Route>
+      <Route path="/login" element={<Loginpage/>}></Route>
       <Route path="/doctorregistration" element={<Doctorregistrationpage/>}></Route>
       <Route path="/doctorprofile" element={<Doctorprofilepage/>}></Route>
 
@@ -35,8 +34,6 @@ function App() {
 
       <Route path="/patientdashboard" element={<PatientDashboard/>}></Route>
       <Route path="/doctors" element={<Doctorspage/>}></Route>
-
-      <Route path="/login" element={<Loginpage/>}></Route>
 
 
     </Routes>

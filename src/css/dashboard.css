@@ -81,7 +81,7 @@ body{
 }
 
 .input-text:focus{
-    border: 1px solid rgb(10,118,216);
+    border: 1.5px solid rgb(10,118,216);
     transition: 0.2s;
 }
 

@@ -1,17 +1,15 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import '../css/registration.css';
+import '../css/login.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const Registration = ()=>{
+const Login = ()=>{
 
     const location = useLocation();
     console.log(location);
-    const [formname,getformname] = useState('Create Account')
     const [errormessage,seterrormessage] = useState('')
-    const [buttonname,getbuttonname] = useState('Sign In');
     const [phoneno,getphoneno] = useState('');
-    const [email,getemail] = useState('');
     const [password,getpassword] = useState('');
     const [IsLoading, setIsLoading] = useState(false);
 
@@ -23,9 +21,6 @@ const Registration = ()=>{
         getpassword(event.target.value)
 
     }
-    const emailHanadler = (event)=>{
-        getemail(event.target.value)
-    }
     const navigate = useNavigate();
 
     let count = 0;
@@ -36,7 +31,6 @@ const Registration = ()=>{
         setIsLoading(true);
         //console.log(firstname+lastname+phoneno+email+password)
 
-        if(location.pathname === '/login'){
             const expression_mob_no = /^[0-9]{10}$/;
             if(phoneno=="" && password==""){
                 setIsLoading(false);
@@ -77,50 +71,19 @@ const Registration = ()=>{
                 document.getElementById("login_error").style.visibility="visible";
                 document.getElementById("login_error").innerHTML="Invalid phoneno.";
             }
-            
-
-        }else if(location.pathname === '/registration'){
-            const expression_email = /^[a-z A-Z _ 0-9]+@[a-z A-Z]+\.[a-z A-Z]{2,5}$/;
-            const expression_mob_no = /^[0-9]{10}$/;
-            if(String(email).match(expression_email)){
-                document.getElementById("email_error").innerHTML= "";
-            }else{
-                document.getElementById("email_error").innerHTML= "Invalid email!";
-                count = count + 1 ;
-            }
-            if(String(phoneno).match(expression_mob_no)){
-                document.getElementById("mob_no").innerHTML= "";
-            }else{
-                document.getElementById("mob_no_error").innerHTML= "Invalid phone no.!";
-                count = count + 1 ;
-            }
-
-            if(count==0){
-            let newpassword= phoneno.slice(-3,);
-            let registrationData ={phoneno:phoneno,email:email,password:newpassword,usertype:"patient"}
-        axios.post('https://clinic-app-backend.vercel.app/users/registration',registrationData).then((response)=>{
-                console.log(response);
-                alert("Your password is the last 3 digits of your phone number.");
-                navigate('/');
-
-        })}}
     }
-
-    useEffect(()=>{
-        if(location.pathname === '/'){
-            getformname('Log In')
-            getbuttonname('Continue')
-        }
-    },[])
     
     return(
         <>
         <center>
 <div class="container1">
-<table border="0" style={{paddingLeft:"50px",width:"100%"}}>
+
+<div><img style={{borderRadius:"0 25px 25px 0"}} width="655px" src="../images/loginpage.jpg" alt="" /></div>
+
+<table border="0" style={{paddingLeft:"200px",width:"100%"}}>
 <tr>
         <td>
-            <img style={{marginLeft:"70px", marginRight:"70px",marginTop:"10px"}} height="70px" src="../../images/blue-plus-icon-12.png" alt="" />
+            <img style={{marginLeft:"85px", marginRight:"70px",marginTop:"10px"}} height="70px" src="../../images/blue-plus-icon-12.png" alt="" />
         </td>
     </tr>
     <tr>
@@ -175,11 +138,9 @@ const Registration = ()=>{
 </div>      
 </table>
 
-<div><img width="500px" src="../../images/pngtree-online-doctor-health-service-png-image_13230792.png" alt="" /></div>
-
 </div>
 </center>
         </>
     )
 }
-export default Registration
+export default Login
