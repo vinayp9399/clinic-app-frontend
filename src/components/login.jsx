@@ -78,7 +78,7 @@ const Login = ()=>{
         <center>
 <div class="container1">
 
-<div><img style={{borderRadius:"0 25px 25px 0"}} width="655px" src="../images/loginpage.jpg" alt="" /></div>
+<img style={{borderRadius:"0 25px 25px 0"}} width="659px" height="auto" src="../images/loginpage.jpg" alt="" />
 
 <table border="0" style={{paddingLeft:"200px",width:"100%"}}>
 <tr>
@@ -132,7 +132,7 @@ const Login = ()=>{
 
     <tr>
         <td>
-            <button onClick={submitHandler} class="login-btn1 btn-primary-soft btn">Login</button>
+            <button onClick={submitHandler} style={{marginTop:"10px"}} class="login-btn1 btn-primary-soft btn">Login</button>
         </td>
     </tr>
 </div>      
