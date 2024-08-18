@@ -295,7 +295,7 @@ footer a {
     margin-top: calc(var(--bs-gutter-y)* -1);
   }
 
-  #about {
+#about {
     padding: 50px 0;
     background: #ffffff;
     text-align: center;
@@ -383,7 +383,7 @@ footer a {
     text-align: center;
     background-image: url('https://img.freepik.com/premium-photo/white-blur-abstract-background-from-building-hallway_36051-1032.jpg');
     background-repeat: no-repeat;
-    background-size: 1280px 560px;
+    background-size: 1900px;
 }
 
 #services p {
@@ -395,8 +395,7 @@ footer a {
 
 #services h2 {
     margin-bottom: 30px;
-    font-size: 32px;
-    color: #35424a;
+    color: #070707;
 }
 
 .services-grid {
@@ -419,9 +418,9 @@ footer a {
 .service-item img {
     width: 100%;
     height: 200px;
+    border-radius: 9px;
     margin-bottom: 15px;
 }
-
 .service-item h3 {
     font-size: 22px;
     margin: 20px;
