@@ -108,7 +108,7 @@ const Landing=()=>{
                     <p>Quality care for your little ones.</p>
                 </div>
             </div>
-            <button onClick={()=>navigate('/services')} style={{marginBottom:"50px"}} class="btnp">Our Services</button>
+            <button onClick={()=>navigate('/services')} style={{cursor:"pointer",marginBottom:"50px"}} class="btnp">Our Services</button>
         </div>
     </section>
 
@@ -117,7 +117,7 @@ const Landing=()=>{
             <h2>About Us</h2>
             <p>E-Clinic has been provides top-notch healthcare services through easy appouintment booking. Our team of experienced doctors are dedicated to ensuring the best possible care for our patients.</p>
         </div>
-        <button onClick={()=>navigate('/aboutus')} style={{marginTop:"50px"}} class="btnp">Know More</button>
+        <button onClick={()=>navigate('/aboutus')} style={{cursor:"pointer",marginTop:"50px"}} class="btnp">Know More</button>
     </section>
 
     <section id="doctors">
