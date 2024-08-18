@@ -4,7 +4,7 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 
 const Landing=()=>{
-    const navigate=useNavigate();
+    const navigate = useNavigate();
     const [doctordata,setdoctordata]=useState('')
     const [imageurl, setImageurl]= useState("https://clinic-app-backend.vercel.app/");
 
@@ -40,7 +40,7 @@ const Landing=()=>{
                                 We connect you with our best doctors available. The patients can browse the doctor's appointment system website to find a doctor that has the specialty of their needs. Patients can review the doctor's weekly schedule, enabling them to select a suitable day and time for their appointment. 
                             </p>
                             
-                                <button class="btn-primary-soft btn">Learn More</button> 
+                                <button class="btn-primary-soft1 btn1">Learn More</button> 
                             
                         </div>
                     </div>
@@ -108,7 +108,7 @@ const Landing=()=>{
                     <p>Quality care for your little ones.</p>
                 </div>
             </div>
-            <button style={{marginBottom:"50px"}} class="btnp">Our Services</button>
+            <button onClick={()=>navigate('/services')} style={{marginBottom:"50px"}} class="btnp">Our Services</button>
         </div>
     </section>
 
@@ -117,7 +117,7 @@ const Landing=()=>{
             <h2>About Us</h2>
             <p>E-Clinic has been provides top-notch healthcare services through easy appouintment booking. Our team of experienced doctors are dedicated to ensuring the best possible care for our patients.</p>
         </div>
-        <button style={{marginTop:"50px"}} class="btnp">Know More</button>
+        <button onClick={()=>navigate('/aboutus')} style={{marginTop:"50px"}} class="btnp">Know More</button>
     </section>
 
     <section id="doctors">
