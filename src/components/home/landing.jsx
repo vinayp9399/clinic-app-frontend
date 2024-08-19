@@ -84,35 +84,35 @@ const Landing=()=>{
         </section>
 
     <section>
-        <div id="services1" class="container_12">
+        <div style={{backgroundColor:"transparent"}} id="services1" class="container_12">
             <h2>Our Doctors Specializations</h2>
             <div class="services-grid">
                 <div class="service">
                     <i class="fas fa-stethoscope"></i>
-                    <h3>General Check-up</h3>
+                    <h3 style={{color:"#1977cc"}}>General Check-up</h3>
                     <p>Comprehensive health check-ups for all ages.</p>
                 </div>
                 <div class="service">
                     <i class="fas fa-heartbeat"></i>
-                    <h3>Cardiology</h3>
+                    <h3 style={{color:"#1977cc"}}>Cardiology</h3>
                     <p>Specialized heart care and treatments.</p>
                 </div>
                 <div class="service">
                     <i class="fas fa-tooth"></i>
-                    <h3>Dentistry</h3>
+                    <h3 style={{color:"#1977cc"}}>Dentistry</h3>
                     <p>Complete dental care for a healthy smile.</p>
                 </div>
                 <div class="service">
                     <i class="fas fa-child"></i>
-                    <h3>Pediatrics</h3>
+                    <h3 style={{color:"#1977cc"}}>Pediatrics</h3>
                     <p>Quality care for your little ones.</p>
                 </div>
             </div>
-            <button onClick={()=>navigate('/services')} style={{cursor:"pointer",marginBottom:"50px"}} class="btnp">Our Services</button>
+            <button onClick={()=>navigate('/services')} style={{cursor:"pointer",marginBottom:"50px",marginTop:"40px"}} class="btnp">Our Services</button>
         </div>
     </section>
 
-    <section id="about1">
+    <section style={{backgroundColor:""}} id="about1">
         <div class="container_12">
             <h2>About Us</h2>
             <p>E-Clinic has been provides top-notch healthcare services through easy appouintment booking. Our team of experienced doctors are dedicated to ensuring the best possible care for our patients.</p>
@@ -122,13 +122,13 @@ const Landing=()=>{
 
     <section id="doctors">
         <div class="container_12">
-            <h2>Our Doctors</h2>
+            <h2 style={{marginBottom:"55px"}}>Our Doctors</h2>
             <div class="doctors-grid">
                 { doctordata && doctordata.map((doctor)=>(
                 <div class="doctor">
                     <img src={imageurl + doctor.image}/>
-                    <h3>Dr. {doctor.name}</h3>
-                    <p>{doctor.details}</p>
+                    <h3 style={{color:"#1977cc"}}>Dr. {doctor.name}</h3>
+                    <p style={{marginBottom:"25px"}}>{doctor.details}</p>
                 </div>
                 ))} 
                 
