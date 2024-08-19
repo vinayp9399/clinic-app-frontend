@@ -1,6 +1,7 @@
 import Docprofile from "../../components/doctor/docprofile";
 import Doctorheader from "../../components/doctor/doctorheader";
 import DoctorMenu from "../../components/doctor/doctormenu"
+import Revenue from "../../components/doctor/revenue";
 
 import '../../css/admin.css';
 
@@ -13,7 +14,7 @@ const Revenuepage=()=>{
         {<DoctorMenu nav={"revenue"}/>}
         <div class="dash-body">
         {<Doctorheader nav={"Revenue"}/>}
-        {<Docprofile/>}</div>
+        {<Revenue/>}</div>
         </div>
         </>
     )

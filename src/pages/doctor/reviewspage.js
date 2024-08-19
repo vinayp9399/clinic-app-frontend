@@ -1,6 +1,6 @@
-import Docprofile from "../../components/doctor/docprofile";
 import Doctorheader from "../../components/doctor/doctorheader";
 import DoctorMenu from "../../components/doctor/doctormenu"
+import Reviews from "../../components/doctor/reviews";
 
 import '../../css/admin.css';
 
@@ -13,7 +13,7 @@ const Reviewspage=()=>{
         {<DoctorMenu nav={"total reviews"}/>}
         <div class="dash-body">
         {<Doctorheader nav={"Total Reviews"}/>}
-        {<Docprofile/>}</div>
+        {<Reviews/>}</div>
         </div>
         </>
     )
