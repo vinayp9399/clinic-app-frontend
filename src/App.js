@@ -13,6 +13,9 @@ import Landingpage from './pages/home/landingpage.js';
 import Servicespage from './pages/home/servicespage.js';
 import Aboutuspage from './pages/home/aboutuspage.js';
 import Patientdetailspage from './pages/doctor/patientdetailspage.js';
+import Revenuepage from './pages/doctor/revenuepage.js';
+import Docprofilepage from './pages/doctor/docprofilepage.js';
+import Reviewspage from './pages/doctor/reviewspage.js';
 
 
 function App() {
@@ -31,6 +34,9 @@ function App() {
       <Route path="/appointmentmanager" element={<Appointmentmanagerpage/>}></Route>
       <Route path="/prescriptionform" element={<Prescriptionformpage/>}></Route>
       <Route path="/patientdetails" element={<Patientdetailspage/>}></Route>
+      <Route path="/docprofile" element={<Docprofilepage/>}></Route>
+      <Route path="/revenue" element={<Revenuepage/>}></Route>
+      <Route path="/reviews" element={<Reviewspage/>}></Route>
 
       <Route path="/patientdashboard" element={<PatientDashboard/>}></Route>
       <Route path="/doctors" element={<Doctorspage/>}></Route>

@@ -84,19 +84,34 @@ const DoctorMenu=(props)=>{
                     </td>
                 </tr> */}
                 <tr class="menu-row" >
+                {props.nav=="total reviews" &&
+                    <td class="menu-btn menu-icon-session menu-active menu-icon-session-active">
+                        <a style={{cursor:"pointer"}} href="" class="non-style-link-menu non-style-link-menu-active"><p class="menu-text">Total Reviews</p></a>
+                    </td>}
+                {props.nav!="total reviews" &&
                     <td class="menu-btn menu-icon-session">
-                        <a style={{cursor:"pointer"}} href="" class="non-style-link-menu"><p class="menu-text">Total Reviews</p></a>
-                    </td>
+                        <a style={{cursor:"pointer"}} onClick={()=>{navigate("/reviews")}} href="" class="non-style-link-menu"><p class="menu-text">Total Reviews</p></a>
+                    </td>}
                 </tr>
                 <tr class="menu-row" >
+                {props.nav=="revenue" &&
+                    <td class="menu-btn menu-icon-settings menu-active menu-icon-session-active">
+                        <a style={{cursor:"pointer"}} href="" class="non-style-link-menu non-style-link-menu-active"><p class="menu-text">Revenue</p></a>
+                    </td>}
+                {props.nav!="revenue" &&
                     <td class="menu-btn menu-icon-settings">
-                        <a style={{cursor:"pointer"}} href="" class="non-style-link-menu"><p class="menu-text">Revenue</p></a>
-                    </td>
+                        <a style={{cursor:"pointer"}} onClick={()=>{navigate("/revenue")}} href="" class="non-style-link-menu"><p class="menu-text">Revenue</p></a>
+                    </td>}
                 </tr>
                 <tr class="menu-row" >
+                {props.nav=="profile" &&
+                    <td class="menu-btn menu-icon-settings menu-active menu-icon-session-active">
+                        <a style={{cursor:"pointer"}} href="" class="non-style-link-menu non-style-link-menu-active"><p class="menu-text">Profile</p></a>
+                    </td>}
+                {props.nav!="profile" &&
                     <td class="menu-btn menu-icon-settings">
-                        <a style={{cursor:"pointer"}} href="" class="non-style-link-menu"><p class="menu-text">Profile</p></a>
-                    </td>
+                        <a style={{cursor:"pointer"}} onClick={()=>{navigate("/docprofile")}} href="" class="non-style-link-menu"><p class="menu-text">Profile</p></a>
+                    </td>}
                 </tr>
                 
                 
