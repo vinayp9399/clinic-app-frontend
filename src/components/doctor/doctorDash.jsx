@@ -118,7 +118,7 @@ const DoctorDash=()=>{
                                                     <div class="dashboard-items" style={{padding:"20px", margin:"auto",width:"95%",display: "flex"}}>
                                                         <div>
                                                                 <div class="h1-dashboard">
-                                                                {bookingdata.length}  
+                                                                0 
                                                                 </div><br/>
                                                                 <div class="h3-dashboard">
                                                                 Today's Followups &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -133,7 +133,7 @@ const DoctorDash=()=>{
                                                     <div  class="dashboard-items"  style={{padding:"20px",margin:"auto",width:"95%",display:"flex"}}>
                                                         <div>
                                                                 <div class="h1-dashboard" >
-                                                                 0   
+                                                                {bookingdata.length}   
                                                                 </div><br/>
                                                                 <div class="h3-dashboard">
                                                                     Patient Bookings &nbsp;&nbsp;
@@ -244,10 +244,10 @@ const DoctorDash=()=>{
                                                     </tr> */}
                                             { bookingdata && bookingdata.map((booking)=>( 
                                                <tr>
-                                                        <td style={{padding:"20px",textAlign:"center"}}> {booking.name}
+                                                        <td style={{padding:"15px",textAlign:"center"}}> {booking.name}
                                                         </td>
                                                         
-                                                        <td style={{padding:"20px",fontSize:"13px",textAlign:"center"}}>{booking.date}
+                                                        <td style={{padding:"15px",textAlign:"center"}}>{booking.date}
                                                         </td>
                                                         
                                                         <td style={{textAlign:"center"}}><button class="btn-primary-soft1 btn1">Details</button> 
