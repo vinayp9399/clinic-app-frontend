@@ -6,6 +6,7 @@ const DoctorDash=()=>{
     const firstname = localStorage.getItem('name');
 
     const [data, setdata] = useState('');
+    const [bookingdata, setbookingdata] = useState('');
 
     const [register1,setregister1]=useState(false);
     const doctorid = localStorage.getItem('id');
@@ -56,6 +57,13 @@ const DoctorDash=()=>{
 
     }
 
+    const getbookingData =()=>{
+        axios.get(`https://clinic-app-backend.vercel.app/appointments/findstatus/${doctorid}`).then((response)=>{
+            setbookingdata(response.data.message)
+            setIsLoading(false);
+        })
+    }
+
     const getallpatientData =()=>{
         axios.get(`https://clinic-app-backend.vercel.app/appointments/findappointments/${doctorid}`).then((response)=>{
             setdata(response.data.message)
@@ -65,6 +73,7 @@ const DoctorDash=()=>{
 
     useEffect(()=>{
         getallpatientData();
+        getbookingData();
     })
 
     return(
@@ -109,7 +118,7 @@ const DoctorDash=()=>{
                                                     <div class="dashboard-items" style={{padding:"20px", margin:"auto",width:"95%",display: "flex"}}>
                                                         <div>
                                                                 <div class="h1-dashboard">
-                                                                  0  
+                                                                {bookingdata.length}  
                                                                 </div><br/>
                                                                 <div class="h3-dashboard">
                                                                 Today's Followups &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -127,7 +136,7 @@ const DoctorDash=()=>{
                                                                  0   
                                                                 </div><br/>
                                                                 <div class="h3-dashboard">
-                                                                    New Booking &nbsp;&nbsp;
+                                                                    Patient Bookings &nbsp;&nbsp;
                                                                 </div>
                                                         </div>
                                                                 <div class="btn-icon-back dashboard-icons" style={{marginLeft: "0px",backgroundImage: "url('../images/icons/book-hover.svg')"}}></div>
@@ -142,7 +151,7 @@ const DoctorDash=()=>{
                                                                   0  
                                                                 </div><br/>
                                                                 <div class="h3-dashboard">
-                                                                    Today Sessions
+                                                                    Revenue Generated
                                                                 </div>
                                                         </div>
                                                                 <div class="btn-icon-back dashboard-icons" style={{backgroundImage: "url('../images/icons/session-iceblue.svg')"}}></div>
@@ -195,7 +204,7 @@ const DoctorDash=()=>{
 
 
                             
-                                    <p id="anim" style={{fontSize: "20px",fontWeight:"600",paddingLeft: "40px"}}>Your Up Coming Sessions until Next week</p>
+                                    <p id="anim" style={{fontSize: "20px",fontWeight:"600",paddingLeft: "40px"}}>Your Patient Bookings</p>
                                     <center>
                                         <div class="abc scroll" style={{height: "250px",padding: "0",margin: "0"}}>
                                         <table width="85%" class="sub-table scrolldown" border="0" >
@@ -203,18 +212,15 @@ const DoctorDash=()=>{
                                             
                                         <tr>
                                                 <th class="table-headin">
-                                                    
-                                                
-                                                Session Title
-                                                
+                                                Patient Name
                                                 </th>
                                                 
                                                 <th class="table-headin">
-                                                Sheduled Date
+                                                Booking Date
                                                 </th>
                                                 <th class="table-headin">
                                                     
-                                                     Time
+                                                Action
                                                     
                                                 </th>
                                                     
@@ -222,7 +228,7 @@ const DoctorDash=()=>{
                                         </thead>
                                         <tbody>
                                         
-                                            <tr>
+                                            {/* <tr>
                                                     <td colspan="4">
                                                     <br/><br/><br/><br/>
                                                     <center>
@@ -235,22 +241,22 @@ const DoctorDash=()=>{
                                                     </center>
                                                     <br/><br/><br/><br/>
                                                     </td>
-                                                    </tr>
-                                                 
+                                                    </tr> */}
+                                            { bookingdata && bookingdata.map((booking)=>( 
                                                <tr>
-                                                        <td style={{padding:"20px"}}> &nbsp;
+                                                        <td style={{padding:"20px",textAlign:"center"}}> {booking.name}
                                                         </td>
                                                         
-                                                        <td style={{padding:"20px",fontSize:"13px"}}>
+                                                        <td style={{padding:"20px",fontSize:"13px",textAlign:"center"}}>{booking.date}
                                                         </td>
                                                         
-                                                        <td style={{textAlign:"center"}}>
+                                                        <td style={{textAlign:"center"}}><button class="btn-primary-soft1 btn1">Details</button> 
                                                         </td>
                                                         
 
                 
                                                        
-                                                    </tr>
+                                                    </tr>))} 
                                                 
                  
                                             </tbody>
