@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import axios from 'axios';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Prescriptionform=()=>{
     const [register1,setregister1]=useState(false);
@@ -8,6 +8,7 @@ const Prescriptionform=()=>{
     const [data, setdata] = useState('');
     const [IsLoading, setIsLoading] = useState(true);
     const navigate = useNavigate();
+    const params= useParams();
 
     //console.log(params.id);
     const [name,getname] = useState('');
@@ -38,6 +39,27 @@ const Prescriptionform=()=>{
     }
     const submitHandler= (event)=>{
         event.preventDefault();
+
+        if(params.id){
+            let date1 = new Date();
+            let time = `${date1.getHours()}:${date1.getMinutes()}`
+            let date = `${date1.getDate()}/${date1.getMonth()+1}/${date1.getFullYear()}`
+            let registrationData1 ={doctorid:doctorid,name:name,age:age,phoneno:phoneno,gender:gender,symptoms:symptoms,prescription:prescription,time:time,date:date,status:"visited"}
+            axios.put(`http://clinic-app-backend.vercel.app/appointments/updateappointment/${params.id}`,registrationData1).then((response)=>{
+                console.log("1");
+            })
+        
+            let newpassword= phoneno.slice(-3,);
+            let registrationData ={phoneno:phoneno,name:name,email:"",password:newpassword,usertype:"patient"}
+        axios.post('https://clinic-app-backend.vercel.app/users/registration',registrationData).then((response)=>{
+                console.log(response);
+                alert("Registration Done");
+                navigate("/doctordashboard")
+
+        })
+        }
+
+        else{
         let date1 = new Date();
         let time = `${date1.getHours()}:${date1.getMinutes()}`
         let date = `${date1.getDate()}/${date1.getMonth()+1}/${date1.getFullYear()}`
@@ -53,7 +75,7 @@ const Prescriptionform=()=>{
                 alert("Registration Done");
                 navigate("/doctordashboard")
 
-        })
+        })}
 
 
     }
@@ -67,6 +89,14 @@ const Prescriptionform=()=>{
 
     useEffect(()=>{
         getallpatientData();
+        if(params.id){
+            axios.get(`http://clinic-app-backend.vercel.app/appointments/singleappointmentlist/${params.id}`).then((response)=>{
+                getname(response.data.message.name)
+                getage(response.data.message.age)
+                getphoneno(response.data.message.phoneno)
+                getgender(response.data.message.gender)
+        })
+        }
     })
 
     // const handleDelete = (patientId)=>{

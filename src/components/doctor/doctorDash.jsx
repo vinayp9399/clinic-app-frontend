@@ -250,7 +250,7 @@ const DoctorDash=()=>{
                                                         <td style={{padding:"15px",textAlign:"center"}}>{booking.date}
                                                         </td>
                                                         
-                                                        <td style={{textAlign:"center"}}><button class="btn-primary-soft1 btn1">Details</button> 
+                                                        <td style={{textAlign:"center"}}><button class="btn-primary-soft1 btn1" onClick={()=>{navigate(`/editappointment/${booking._id}`)}}>Details</button> 
                                                         </td>
                                                         
 
