@@ -45,8 +45,8 @@ const Prescriptionform=()=>{
             let time = `${date1.getHours()}:${date1.getMinutes()}`
             let date = `${date1.getDate()}/${date1.getMonth()+1}/${date1.getFullYear()}`
             let registrationData1 ={doctorid:doctorid,name:name,age:age,phoneno:phoneno,gender:gender,symptoms:symptoms,prescription:prescription,time:time,date:date,status:"visited"}
-            axios.put(`http://clinic-app-backend.vercel.app/appointments/updateappointment/${params.id}`,registrationData1).then((response)=>{
-                console.log("1");
+            axios.put(`https://clinic-app-backend.vercel.app/appointments/updateappointment/${params.id}`,registrationData1).then((response)=>{
+                console.log(response.message);
             })
         
             let newpassword= phoneno.slice(-3,);
@@ -90,7 +90,7 @@ const Prescriptionform=()=>{
     useEffect(()=>{
         getallpatientData();
         if(params.id){
-            axios.get(`http://clinic-app-backend.vercel.app/appointments/singleappointmentlist/${params.id}`).then((response)=>{
+            axios.get(`https://clinic-app-backend.vercel.app/appointments/singleappointmentlist/${params.id}`).then((response)=>{
                 getname(response.data.message.name)
                 getage(response.data.message.age)
                 getphoneno(response.data.message.phoneno)
