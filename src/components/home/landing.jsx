@@ -178,7 +178,7 @@ const Landing=()=>{
     {enquiry==true &&
     <section id="enquiry" style={{textAlign:"center"}}>
             
-    <h2 style={{marginBottom:"55px"}}>Enquiry Form</h2>         
+    <h2 style={{marginBottom:"55px"}}>Booking Form</h2>         
                     
                         <div style={{display:"flex",justifyContent:"center"}}>
                         
