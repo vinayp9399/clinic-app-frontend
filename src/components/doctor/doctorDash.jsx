@@ -204,7 +204,7 @@ const DoctorDash=()=>{
 
 
                             
-                                    <p id="anim" style={{fontSize: "20px",fontWeight:"600",paddingLeft: "40px"}}>Your Patient Bookings</p>
+                                    <p id="anim" style={{fontSize: "20px",fontWeight:"600",paddingLeft: "40px"}}>Patient Bookings</p>
                                     <center>
                                         <div class="abc scroll" style={{height: "250px",padding: "0",margin: "0"}}>
                                         <table width="85%" class="sub-table scrolldown" border="0" >
