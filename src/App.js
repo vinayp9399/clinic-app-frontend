@@ -16,6 +16,7 @@ import Patientdetailspage from './pages/doctor/patientdetailspage.js';
 import Revenuepage from './pages/doctor/revenuepage.js';
 import Docprofilepage from './pages/doctor/docprofilepage.js';
 import Reviewspage from './pages/doctor/reviewspage.js';
+import Doctorlistpage from './pages/home/doctorlistpage.js';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <Route path="/aboutus" element={<Aboutuspage/>}></Route>
       <Route path="/services" element={<Servicespage/>}></Route>
       <Route path="/login" element={<Loginpage/>}></Route>
+      <Route path="/doctorlist" element={<Doctorlistpage/>}></Route>
       <Route path="/doctorregistration" element={<Doctorregistrationpage/>}></Route>
       <Route path="/doctorprofile" element={<Doctorprofilepage/>}></Route>
 

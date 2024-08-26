@@ -21,7 +21,12 @@ const Header=()=>{
                     {location.pathname!="/" &&
                     <a style={{cursor:"pointer"}} onClick={()=>navigate("/")}>Home</a>}
                     </li>
-                    <li><a style={{cursor:"pointer"}} href="#doctors">Doctors</a></li>
+                    <li>
+                    {location.pathname=="/doctorlist" &&
+                        <a style={{cursor:"pointer",color:"rgb(40, 176, 226)"}} onClick={()=>navigate("/doctorlist")}>Doctors</a>}
+                    {location.pathname!="/doctorlist" &&
+                        <a style={{cursor:"pointer"}} onClick={()=>navigate("/doctorlist")}>Doctors</a>}   
+                    </li>
                     <li>
                     {location.pathname=="/services" &&
                     <a style={{cursor:"pointer",color:"rgb(40, 176, 226)"}} onClick={()=>navigate("/services")}>Services</a>}

@@ -5,20 +5,7 @@ import { useEffect, useState } from 'react'
 
 const Aboutus=()=>{
     const navigate=useNavigate();
-    const [doctordata,setdoctordata]=useState('')
-    const [imageurl, setImageurl]= useState("https://clinic-app-backend.vercel.app/");
-
-    const getalldoctorData = ()=>{
-        axios.get('https://clinic-app-backend.vercel.app/users/finddoctors/').then((response)=>{
-            setdoctordata(response.data.message)
-        })
-    }
-
-
-    useEffect(()=>{
-        getalldoctorData();
-    })
-
+    
 
     return(
         <>
@@ -45,18 +32,7 @@ const Aboutus=()=>{
                 <li><strong>Accessibility:</strong> We strive to make healthcare services available to everyone, regardless of their circumstances.</li>
             </ul>
         </div>
-            <h3 style={{color:"black", marginTop:"50px"}}>Meet Our Doctors</h3>
-            <div class="team-grid">
-                
-                { doctordata && doctordata.map((doctor)=>(
-                <div class="team-member">
-                    <img src={imageurl + doctor.image} alt="Dr. Alice Brown"/>
-                    <h4 style={{color:"#1977cc"}}>Dr. {doctor.name}</h4>
-                    <p style={{marginBottom:"25px"}}>{doctor.details}</p>
-                </div>
-                ))} 
-
-            </div>
+            
         </div>
     </section>
 
