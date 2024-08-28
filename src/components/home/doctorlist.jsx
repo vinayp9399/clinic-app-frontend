@@ -68,10 +68,12 @@ const Doctorlist=()=>{
             <h2 style={{marginBottom:"55px"}}>Book Our Doctors</h2>
             <div class="doctors-grid">
                 { doctordata && doctordata.map((doctor)=>(
-                <div class="doctor" onClick={()=>{getDoctorid(doctor._id,doctor.name)}}><a style={{textDecoration:"none",color:"white"}} href="#enquiry">
+                <div class="doctor" onClick={()=>{getDoctorid(doctor._id,doctor.name)}}><a style={{textDecoration:"none",color:"black",textAlign:"left"}} href="#enquiry">
                     <img src={imageurl + doctor.image}/>
-                    <h3 style={{color:"white"}}>Dr. {doctor.name}</h3>
-                    <p style={{marginBottom:"25px"}}>{doctor.details}</p></a>
+                    <h3 style={{marginLeft:"25px",marginBottom:"0px",color:"rgb(25, 119, 204)"}}>Dr. {doctor.name}</h3>
+                    <p style={{marginLeft:"25px",marginTop:"10px",color:"rgb(25, 119, 204)"}}>{doctor.details}</p>
+                    <p style={{margin:"25px",marginTop:"0px",fontSize:"14px"}}>Vice Chairman - Medical Oncology Breast, Gynaecology, Thoracic
+                    Cancer Care / Oncology, Gynecologic Oncology, Thoracic Oncology, Medical Oncology, Breast Cancer</p></a>
                 </div>
                 ))} 
                 

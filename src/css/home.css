@@ -170,9 +170,9 @@ header nav ul li a:hover{
     padding: 50px 0;
     background: #ffffff;
     text-align: center;
-    background-image: url('https://static.storyweaver.org.in/illustrations/58816/large/3.jpg');
+    /* background-image: url('https://static.storyweaver.org.in/illustrations/58816/large/3.jpg');
     background-repeat: no-repeat;
-    background-size: 1900px;
+    background-size: 1900px; */
 }
 #doctors1 {
     padding: 50px 0;
@@ -190,7 +190,7 @@ header nav ul li a:hover{
     text-align: center;
     flex-basis: 23%;
     margin-bottom: 20px;
-    background-color: #1977cc;
+    background-color: #d8ebfa;
     border-radius: 10px;
     box-shadow: 10px 10px 10px rgb(222 210 210);
     transition: transform 0.3s, box-shadow 0.3s;
