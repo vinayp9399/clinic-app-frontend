@@ -64,9 +64,15 @@ const Doctorlist=()=>{
     return(
         <>
         <section id="doctors">
+        <div class="doctor_banner"><h2 style={{margin:"0px",position:"relative",top:"182px",fontSize:"41px",color:"black",zIndex:3}}>Book Our Doctors</h2>
+        <div style={{position:"relative",top:"212px",left:"350px",display:"flex", gap:"10px", width: "610px",height: "49px"}}>
+                                <input type="search" name="search" class="input-text " placeholder="Search Doctor and We will Find The Session Available" list="doctors" style={{width:"100%"}}/>
+                           
+                                <input type="Submit" value="Search" class="login-btn btn-primary btn" style={{paddingLeft:"25px",paddingRight:"25px",paddingTop: "10px",paddingBottom:"10px"}}/></div>
+        </div>
         <div class="container_12">
-            <h2 style={{marginBottom:"55px"}}>Book Our Doctors</h2>
-            <div class="doctors-grid">
+            
+            <div class="doctors-grid" style={{marginTop:"50px"}}>
                 { doctordata && doctordata.map((doctor)=>(
                 <div class="doctor" onClick={()=>{getDoctorid(doctor._id,doctor.name)}}><a style={{textDecoration:"none",color:"black",textAlign:"left"}} href="#enquiry">
                     <img src={imageurl + doctor.image}/>
