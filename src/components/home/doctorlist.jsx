@@ -16,7 +16,6 @@ const Doctorlist=()=>{
     const [name,getname] = useState('');
     const [doctorname,setdoctorname] = useState('');
     const [age,getage] = useState('');
-    const [gender,getgender] = useState('');
     const [phoneno,getphoneno] = useState('');
 
     const nameHandler = (event)=>{
@@ -27,9 +26,6 @@ const Doctorlist=()=>{
     }
     const phonenoHandler = (event)=>{
         getphoneno(event.target.value)
-    }
-    const genderHandler = (event)=>{
-        getgender(event.target.value)
     }
 
     const getDoctorid = (id,name)=>{
@@ -43,7 +39,7 @@ const Doctorlist=()=>{
         let date1 = new Date();
         let time = `${date1.getHours()}:${date1.getMinutes()}`
         let date = `${date1.getDate()}/${date1.getMonth()+1}/${date1.getFullYear()}`
-        let appointmentData ={doctorid:doctorid,name:name,age:age,phoneno:phoneno,gender:gender,symptoms:"",prescription:"",time:time,date:date,status:"not visited"}
+        let appointmentData ={doctorid:doctorid,name:name,age:age,phoneno:phoneno,symptoms:"",prescription:"",time:time,date:date,status:"not visited"}
         axios.post(`https://clinic-app-backend.vercel.app/appointments/addappointment`,appointmentData).then((response)=>{
            setenquiry(false);
         })
@@ -74,12 +70,13 @@ const Doctorlist=()=>{
             
             <div class="doctors-grid" style={{marginTop:"50px"}}>
                 { doctordata && doctordata.map((doctor)=>(
-                <div class="doctor" onClick={()=>{getDoctorid(doctor._id,doctor.name)}}><a style={{textDecoration:"none",color:"black",textAlign:"left"}} href="#enquiry">
-                    <img src={imageurl + doctor.image}/>
-                    <h3 style={{marginLeft:"25px",marginBottom:"0px",color:"rgb(25, 119, 204)"}}>Dr. {doctor.name}</h3>
+                <div style={{display:"flex"}} class="doctor" onClick={()=>{getDoctorid(doctor._id,doctor.name)}}>
+                    <img style={{width:"143px"}} src={imageurl + doctor.image}/>
+                    <div style={{textDecoration:"none",color:"black",textAlign:"left"}}><h3 style={{marginLeft:"25px",marginBottom:"0px",color:"rgb(25, 119, 204)"}}>Dr. {doctor.name}</h3>
                     <p style={{marginLeft:"25px",marginTop:"10px",color:"rgb(25, 119, 204)"}}>{doctor.details}</p>
-                    <p style={{margin:"25px",marginTop:"0px",fontSize:"14px"}}>Vice Chairman - Medical Oncology Breast, Gynaecology, Thoracic
-                    Cancer Care / Oncology, Gynecologic Oncology, Thoracic Oncology, Medical Oncology, Breast Cancer</p></a>
+                    <p style={{margin:"25px",marginTop:"0px",marginBottom:"0px",fontSize:"14px"}}>Vice Chairman - Medical Oncology Breast, Gynaecology, Thoracic
+                    Cancer Care / Oncology, Gynecologic Oncology, Thoracic Oncology, Medical Oncology, Breast Cancer</p>
+                    <button style={{margin:"25px"}} class="btnp"><a style={{color:"white",textDecoration:"none",fontSize:"16px"}} href="#enquiry">Book an appointment</a></button></div>
                 </div>
                 ))} 
                 
@@ -124,7 +121,7 @@ const Doctorlist=()=>{
                                     <input type="number" name="nop" class="input-text" min="0" placeholder="Phone No." value={phoneno} onChange={phonenoHandler} required/><br/>
                                 </td>
                                 </tr>
-                                <tr>
+                                {/* <tr>
                                 <td style={{padding:"0px"}} class="label-td">
                                     <div style={{display:"flex",gap:"32px"}}>
                                     <div><input type="radio" id="male" name="gender" value="Male" onChange={genderHandler}/>
@@ -134,7 +131,7 @@ const Doctorlist=()=>{
                                     </div>
 
                                 </td>
-                            </tr>
+                            </tr> */}
                            
                             <tr>
                                 <td>

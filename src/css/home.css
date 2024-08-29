@@ -180,7 +180,22 @@ header nav ul li a:hover{
     background-size: 1280px;
     height:600px;
     opacity:1;
-    background-color: black;
+}
+
+.services_banner{
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20240526/pngtree-asian-doctor-give-consult-online-image_15731303.jpg');
+    background-repeat: no-repeat;
+    background-size: 1280px;
+    height:600px;
+    opacity:1;
+}
+
+.about_banner{
+    background-image: url('https://d1w7gvu0kpf6fl.cloudfront.net/img/category/images/75-category-image.jpg');
+    background-repeat: no-repeat;
+    background-size: 1280px;
+    height:600px;
+    opacity:1;
 }
 
 #doctors1 {
@@ -197,7 +212,7 @@ header nav ul li a:hover{
 
 .doctor {
     text-align: center;
-    flex-basis: 23%;
+    flex-basis: 43%;
     margin-bottom: 20px;
     background-color: #d8ebfa;
     border-radius: 10px;
@@ -213,10 +228,10 @@ header nav ul li a:hover{
     /* margin-top: 25px; */
 }
 
-.doctor:hover {
+/* .doctor:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-}
+} */
 
 /* Contact Section */
 #contact {
@@ -332,12 +347,8 @@ footer a {
   }
 
 #about {
-    padding: 50px 0;
     background: #ffffff;
     text-align: center;
-    background-image: url('https://static.storyweaver.org.in/illustrations/58816/large/3.jpg');
-    background-repeat: no-repeat;
-    background-size: 1400px;
 }
 
 #about p {
@@ -424,12 +435,8 @@ footer a {
 }
 
 #services {
-    padding: 50px 0;
     background: #ffffff;
     text-align: center;
-    background-image: url('https://static.storyweaver.org.in/illustrations/58816/large/3.jpg');
-    background-repeat: no-repeat;
-    background-size: 1900px;
 }
 
 #services p {
@@ -456,7 +463,7 @@ footer a {
     text-align: center;
     margin-bottom: 20px;
     border-radius: 10px;
-    background-color: #1977cc;
+    background-color: #d8ebfa;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
