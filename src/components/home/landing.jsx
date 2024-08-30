@@ -107,7 +107,7 @@ const Landing=()=>{
     <section style={{backgroundColor:"white"}} id="doctors1">
         <div class="container_12">
             <h2>Our Doctors</h2>
-            <p>E-Clinic has been provides top-notch healthcare services through easy appouintment booking. Our team of experienced doctors are dedicated to ensuring the best possible care for our patients.</p>
+            <p>Our team of experienced doctors are dedicated to ensuring the best possible care for our patients.</p>
         </div>
         <button onClick={()=>navigate('/doctorlist')} style={{cursor:"pointer",marginTop:"50px"}} class="btnp">Book our Doctors</button>
     </section>
