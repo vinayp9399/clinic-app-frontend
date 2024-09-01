@@ -79,9 +79,9 @@ header nav ul li a:hover{
 
 /* Hero Section */
 .hero {
-    background: url("https://www.shutterstock.com/image-photo/healthcare-banner-portrait-doctors-consultation-260nw-2260731979.jpg") no-repeat center center/cover;
+    background: url("../../public/images/healthcare-banner-portrait-doctors-consultation-260nw-2260731979.png") no-repeat center center/cover;
     color: #050505;
-    height:540px;
+    height:562px;
     padding: 100px 0;
     text-align: center;
 }
@@ -156,7 +156,7 @@ header nav ul li a:hover{
 /* About Section */
 #about1 {
     padding: 50px 0;
-    background: #f4f4f4;
+    /* background: #f4f4f4; */
     text-align: center;
 }
 
