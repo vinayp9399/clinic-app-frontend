@@ -6,7 +6,7 @@ const Landing=()=>{
     const navigate = useNavigate();
 
     let images =['../images/healthcare-banner-portrait-doctors-consultation-260nw-2260731979.png',
-        'https://img.freepik.com/premium-photo/doctors-looking-documents-against-grey-background_1134-17207.jpg','https://www.shutterstock.com/image-photo/group-doctors-medicine-talking-600nw-517855210.jpg']
+        '../images/happy-doctor-glasses-holding-clipboard-260nw-2051958542.png','../images/web-banner-male-doctor-takes-260nw-2150598651.png']
         let [imageno, setimageno] = useState(0);
         const [image, setimage]=useState('../images/healthcare-banner-portrait-doctors-consultation-260nw-2260731979.png');
     
