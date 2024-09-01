@@ -64,7 +64,7 @@ const Doctorregistration = ()=>{
     return(
         <>
   <div id="header">
-        <a onClick={()=>{navigate('/home')}}><img style={{height:"97px", width:"113px"}} src="../images/blue-plus-icon-12.png" alt=""/></a>
+        <a onClick={()=>{navigate('/home')}}><img alt=""/></a>
         <h1 style={{fontSize:"41px", color:"rgb(14, 37, 86)"}}>Health Care</h1>
     </div>
     <div id="content">

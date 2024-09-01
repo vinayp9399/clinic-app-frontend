@@ -1,12 +1,32 @@
 import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import '../../css/home.css';
 
 const Landing=()=>{
     const navigate = useNavigate();
 
+    let images =['../images/healthcare-banner-portrait-doctors-consultation-260nw-2260731979.png',
+        'https://img.freepik.com/premium-photo/doctors-looking-documents-against-grey-background_1134-17207.jpg','https://www.shutterstock.com/image-photo/group-doctors-medicine-talking-600nw-517855210.jpg']
+        let [imageno, setimageno] = useState(0);
+        const [image, setimage]=useState('../images/healthcare-banner-portrait-doctors-consultation-260nw-2260731979.png');
+    
+        function changeSlide(){
+            setimage(images[imageno]);
+            if(imageno >= images.length-1){ 
+                imageno = 0;
+            }else{
+                imageno = imageno + 1;
+            }
+            
+        }
+        
+        useEffect(()=>{
+            setInterval(changeSlide,5000);
+        },[])
+
     return(
         <>
-    <section id="home" class="hero">
+    <section id="home" class="hero" style={{backgroundImage: `url('${image}')`,backgroundRepeat:"no-repeat",backgroundPosition:"center",backgroundSize:"cover"}}>
         <div class="container_13">
             <h2>Welcome to E-Clinic</h2>
             <p>Your health is our priority. Book an appointment with our <br/>experienced doctors today.</p>
@@ -97,22 +117,24 @@ const Landing=()=>{
         </div>
     </section>
 
-    <section style={{display:"flex",padding:"63px"}} id="about1">
+    <section style={{display:"flex",padding:"63px",gap:"100px"}} id="about1">
         <div><img style={{borderRadius:"10px"}} src="https://lh5.googleusercontent.com/proxy/D9U14usXzmBtcFV5EAMM4RuvPeVhPc5zaIXoV2ahGY_RDWNyzgbSwr0EIoqM93DLUcEia4u4YJQfjYZQI4yQK6VzA12lMZfA_0C6mN-wxH_gsVukHPbCOMraqlE" alt="" /></div>
         <div style={{textAlign:"left"}} class="container_12">
             <h2>About Us</h2>
-            <p>E-Clinic has been provides top-notch healthcare services through easy appouintment booking. Our team of experienced doctors are dedicated to ensuring the best possible care for our patients. We provide best leading medicle service Nulla perferendis veniam deleniti ipsum officia dolores repellat laudantium obcaecati neque.</p>
+            <p>E-Clinic has been provides top-notch healthcare services through easy appouintment booking. Our team of experienced doctors are dedicated to ensuring the best possible care for our patients. We provide best leading medicle service. <br /><br />
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+            </p>
         
         <button onClick={()=>navigate('/aboutus')} style={{cursor:"pointer",marginTop:"30px"}} class="btnp">Know More</button></div>
     </section>
-    <section style={{backgroundColor:"white",display:"flex",padding:"63px",gap:"100px"}} id="doctors1">
+    <section style={{backgroundColor:"white",display:"flex",padding:"63px",gap:"150px"}} id="doctors1">
         <div style={{textAlign:"left"}}>
             <h2>Our Doctors</h2>
             <p>Our team of experienced doctors are dedicated to ensuring the best possible care for our patients. Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover Various versions have evolved over the years, sometimes. <br/><br />
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
             <button onClick={()=>navigate('/doctorlist')} style={{cursor:"pointer",marginTop:"20px"}} class="btnp">Book Appointment</button>
         </div>        
-        <div><img style={{borderRadius:"10px"}} width="500px" src="https://longislandneuro.com/wp-content/uploads/2023/01/handsome-male-doctor-explaining-medical-treatment-2022-12-15-18-17-30-utc.webp" alt="" /></div>
+        <div><img style={{borderRadius:"10px"}} width="500px" height="330px" src="https://longislandneuro.com/wp-content/uploads/2023/01/handsome-male-doctor-explaining-medical-treatment-2022-12-15-18-17-30-utc.webp" alt="" /></div>
     </section>
 
     

@@ -79,7 +79,7 @@ header nav ul li a:hover{
 
 /* Hero Section */
 .hero {
-    background: url("../../public/images/healthcare-banner-portrait-doctors-consultation-260nw-2260731979.png") no-repeat center center/cover;
+    /* background: url("../../public/images/healthcare-banner-portrait-doctors-consultation-260nw-2260731979.png") no-repeat center center/cover; */
     color: #050505;
     height:562px;
     padding: 100px 0;
@@ -488,3 +488,10 @@ footer a {
     transform: translateY(-10px);
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
+
+
+
+
+
+
+
