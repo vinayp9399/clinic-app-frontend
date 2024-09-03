@@ -100,12 +100,58 @@ const DoctorDash=()=>{
                     <table class="filter-container doctor-header" style={{border: "none", width:"95%",marginBottom:"0px"}} border="0">
                     <tr>
                         <td rowSpan={2}>
-                            <h3 style={{marginBottom:"0px"}}>Welcome!</h3>
-                            <h1 style={{margin:"0px"}}>Dr. {firstname}</h1>
-                            <p >Thanks for joining with us. We are always trying to get <br /> you a complete service.
-                            You can view your dailly <br /> schedule, Reach Patients Appointment at home!<br/>
-                            </p>
-                            <a onClick={()=>{navigate("/prescriptionform")}} class="non-style-link"><button class="btn-primary btn" style={{width:"50%"}}>Patient Prescription</button></a>
+                        <div style={{width:"95%",display: "flex"}}>
+                                                        
+                                                        <PieChart style={{height:"248px"}} animation animationDuration={500} animationEasing="ease-out"
+       center={[50, 50]}
+    //    label={({ dataEntry }) => dataEntry.title}
+    //     labelStyle={
+    //         {
+    //             fill: "white",
+    //             fontSize: "3px",
+    //             fontFamily: "Helvetica Neue,sans-serif",
+    //             textShadow: "1px 1px 5px #000"
+    //         }
+    //     }
+       data={[
+         {
+         color: "#0a76d8",
+         title: "Total patients",
+         value: data.length,
+         },
+         {
+         color: "green",
+         title: "Patient bookings",
+         value: bookingdata.length,
+         },
+         {
+         color: "#6A2135",
+         title: "Today's Followups",
+         value: followupdata.length,
+         },
+         {
+         color: "orange",
+         title: "Total Revenue",
+         value: 1,
+         },
+       ]}
+    //    labelPosition={70}
+       lengthAngle={360}
+       lineWidth={65}
+       paddingAngle={0}
+       radius={50}
+       startAngle={0}
+       viewBoxSize={[104, 110]}
+          />
+          <ul style={{listStyleType:"none", marginTop:"48px",width:"420px",lineHeight:"33px",color:"black"}}>
+          <li style={{display:"flex",gap:"5px",alignItems:"center"}}><div style={{width:"20px", height:"20px",backgroundColor:"#0a76d8"}}></div> Total patients</li>
+          <li style={{display:"flex",gap:"5px",alignItems:"center"}}><div style={{width:"20px", height:"20px",backgroundColor:"green"}}></div> Patient bookings</li>
+          <li style={{display:"flex",gap:"5px",alignItems:"center"}}><div style={{width:"20px", height:"20px",backgroundColor:"#6A2135"}}></div> Today's Followups</li>
+          <li style={{display:"flex",gap:"5px",alignItems:"center"}}><div style={{width:"20px", height:"20px",backgroundColor:"orange"}}></div> Revenue Generated</li>
+          </ul>
+                                                                    
+                                                        </div>
+                            <a onClick={()=>{navigate("/prescriptionform")}} class="non-style-link"><button class="btn-primary btn" style={{width:"50%"}}>Prescribe Patient</button></a>
                             
                             
                             
@@ -183,86 +229,6 @@ const DoctorDash=()=>{
                             <tr>
                                 <td width="50%">
                                     <center>
-                                        <table style={{border:"none",position:"relative",top:"-21px"}} class="filter-container" border="0">
-                                            {/* <tr>
-                                                <td colspan="4">
-                                                    <p style={{fontSize: "20px",fontWeight:"600",paddingLeft: "12px",paddingTop: "0px"}}>Summary</p>
-                                                </td>
-                                            </tr> */}
-                                            <tr>
-                                                <td style={{width: "25%"}}>
-                                                    <div class="dashboard-items"  style={{padding:"20px",paddingBottom:"0px",paddingTop:"0px",margin:"auto",width:"95%",display: "flex",backgroundColor:"#D8EBFA"}}>
-                                                        
-                                                    <PieChart style={{height:"248px"}} animation animationDuration={500} animationEasing="ease-out"
-   center={[50, 50]}
-//    label={({ dataEntry }) => dataEntry.title}
-//     labelStyle={
-//         {
-//             fill: "white",
-//             fontSize: "3px",
-//             fontFamily: "Helvetica Neue,sans-serif",
-//             textShadow: "1px 1px 5px #000"
-//         }
-//     }
-   data={[
-     {
-     color: "#0a76d8",
-     title: "Total patients",
-     value: data.length,
-     },
-     {
-     color: "green",
-     title: "Patient bookings",
-     value: bookingdata.length,
-     },
-     {
-     color: "#6A2135",
-     title: "Today's Followups",
-     value: 3,
-     },
-     {
-     color: "orange",
-     title: "Today's Followups",
-     value: 1,
-     },
-   ]}
-//    labelPosition={70}
-   lengthAngle={360}
-   lineWidth={65}
-   paddingAngle={0}
-   radius={50}
-   startAngle={0}
-   viewBoxSize={[104, 110]}
-      />
-      <ul style={{listStyleType:"none", marginTop:"48px",width:"420px",lineHeight:"33px",color:"black"}}>
-      <li style={{display:"flex",gap:"5px",alignItems:"center"}}><div style={{width:"20px", height:"20px",backgroundColor:"#0a76d8"}}></div> Total patients</li>
-      <li style={{display:"flex",gap:"5px",alignItems:"center"}}><div style={{width:"20px", height:"20px",backgroundColor:"green"}}></div> Patient bookings</li>
-      <li style={{display:"flex",gap:"5px",alignItems:"center"}}><div style={{width:"20px", height:"20px",backgroundColor:"#6A2135"}}></div> Today's Followups</li>
-      <li style={{display:"flex",gap:"5px",alignItems:"center"}}><div style={{width:"20px", height:"20px",backgroundColor:"orange"}}></div> Revenue Generated</li>
-      </ul>
-                                                                
-                                                    </div>
-                                                </td>
-                                                
-                                                </tr>
-                                                
-                                        </table>
-                                    </center>
-
-
-
-
-
-
-
-
-                                </td>
-                                <td width="50%">
-
-
-                            
-                                    
-                                    <center>
                                     <table class="filter-container" style={{border: "none"}} border="0">
                                     <tr>
                                                 <td colspan="4"><p id="anim" style={{fontSize: "20px",fontWeight:"600"}}>Patient Bookings</p></td>
@@ -306,13 +272,91 @@ const DoctorDash=()=>{
                                                     </tr> */}
                                             { bookingdata && bookingdata.map((booking)=>( 
                                                <tr>
-                                                        <td style={{padding:"15px",textAlign:"center"}}> {booking.name}
+                                                        <td style={{padding:"15px",textAlign:"center",color:"#1b62b3"}}> {booking.name}
                                                         </td>
                                                         
                                                         <td style={{padding:"15px",textAlign:"center"}}>{booking.date}
                                                         </td>
                                                         
                                                         <td style={{textAlign:"center"}}><button class="btn-primary-soft1 btn1" onClick={()=>{navigate(`/editappointment/${booking._id}`)}}>Details</button> 
+                                                        </td>
+                                                        
+
+                
+                                                       
+                                                    </tr>))} 
+                                                
+                 
+                                            </tbody>
+                
+                                        </table>
+                                        </div></td></tr></table> 
+                                    </center>
+
+
+
+
+
+
+
+
+                                </td>
+                                <td width="50%">
+
+
+                            
+                                    
+                                    <center>
+                                    <table class="filter-container" style={{border: "none"}} border="0">
+                                    <tr>
+                                                <td colspan="4"><p id="anim" style={{fontSize: "20px",fontWeight:"600"}}>Patient Followups</p></td>
+                                    </tr>
+                                    <tr><td>
+                                        <div class="abc scroll" style={{height: "250px",padding: "0",margin: "0"}}>
+                                        <table width="100%" class="sub-table scrolldown" border="0" >
+                                        <thead>
+                                            
+                                        <tr>
+                                                <th class="table-headin">
+                                                Patient Name
+                                                </th>
+                                                
+                                                <th class="table-headin">
+                                                Booking Date
+                                                </th>
+                                                <th class="table-headin">
+                                                    
+                                                Action
+                                                    
+                                                </th>
+                                                    
+                                                </tr>
+                                        </thead>
+                                        <tbody>
+                                        
+                                            {/* <tr>
+                                                    <td colspan="4">
+                                                    <br/><br/><br/><br/>
+                                                    <center>
+                                                    <img src="../images/notfound.svg" width="25%"/>
+                                                    
+                                                    <br/>
+                                                    <p class="heading-main12" style={{marginLeft: "45px",fontSize:"20px",color:"rgb(49, 49, 49)"}}>We  couldnt find anything related to your keywords !</p>
+                                                    <a class="non-style-link"><button  class="login-btn btn-primary-soft btn"  style={{display:"flex",justifyContent:"center",alignItems: "center",marginLeft:"20px"}}>&nbsp; Show all Sessions &nbsp;</button>
+                                                    </a>
+                                                    </center>
+                                                    <br/><br/><br/><br/>
+                                                    </td>
+                                                    </tr> */}
+                                            { followupdata && followupdata.map((followup)=>( 
+                                               <tr>
+                                                        <td style={{padding:"15px",textAlign:"center",color:"#1b62b3"}}> {followup.name}
+                                                        </td>
+                                                        
+                                                        <td style={{padding:"15px",textAlign:"center"}}>{followup.date}
+                                                        </td>
+                                                        
+                                                        <td style={{textAlign:"center"}}><button class="btn-primary-soft1 btn1" onClick={()=>{navigate(`/editappointment/${followup._id}`)}}>Details</button> 
                                                         </td>
                                                         
 

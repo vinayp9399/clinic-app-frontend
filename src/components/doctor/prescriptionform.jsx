@@ -100,7 +100,8 @@ const Prescriptionform=()=>{
                 getname(response.data.message.name)
                 getage(response.data.message.age)
                 getphoneno(response.data.message.phoneno)
-                getgender(response.data.message.gender)
+                getsymptoms(response.data.message.symptoms)
+                getprescription(response.data.message.prescription)
         })
         }
     })
