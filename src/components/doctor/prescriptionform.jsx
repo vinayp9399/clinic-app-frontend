@@ -65,7 +65,7 @@ const Prescriptionform=()=>{
         }
 
         else{
-        let datefollow = String(date3).slice(0,15)    
+        let datefollow = String(date3).slice(0,15);
         let date1 = new Date();
         let time = `${date1.getHours()}:${date1.getMinutes()}`
         let date = `${date1.getDate()}/${date1.getMonth()+1}/${date1.getFullYear()}`
