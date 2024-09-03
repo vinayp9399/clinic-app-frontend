@@ -17,6 +17,7 @@ const Prescriptionform=()=>{
     const [phoneno,getphoneno] = useState('');
     const [prescription,getprescription]= useState('');
     const [symptoms,getsymptoms]= useState('');
+    const [date3,getdate3]= useState('');
 
     const prescriptionHandler = (event)=>{
         getprescription(event.target.value)
@@ -37,14 +38,18 @@ const Prescriptionform=()=>{
     const genderHandler = (event)=>{
         getgender(event.target.value)
     }
+    const dateHandler = (event)=>{
+        getdate3(event.target.value)
+    }
     const submitHandler= (event)=>{
         event.preventDefault();
 
         if(params.id){
+            let datefollow = String(date3).slice(0,15)
             let date1 = new Date();
             let time = `${date1.getHours()}:${date1.getMinutes()}`
             let date = `${date1.getDate()}/${date1.getMonth()+1}/${date1.getFullYear()}`
-            let registrationData1 ={doctorid:doctorid,name:name,age:age,phoneno:phoneno,gender:gender,symptoms:symptoms,prescription:prescription,time:time,date:date,status:"visited"}
+            let registrationData1 ={doctorid:doctorid,name:name,age:age,phoneno:phoneno,gender:gender,symptoms:symptoms,prescription:prescription,time:time,date:date,status:"visited",followupdate:datefollow}
             axios.put(`https://clinic-app-backend.vercel.app/appointments/updateappointment/${params.id}`,registrationData1).then((response)=>{
                 console.log(response.message);
             })
@@ -60,10 +65,11 @@ const Prescriptionform=()=>{
         }
 
         else{
+        let datefollow = String(date3).slice(0,15)    
         let date1 = new Date();
         let time = `${date1.getHours()}:${date1.getMinutes()}`
         let date = `${date1.getDate()}/${date1.getMonth()+1}/${date1.getFullYear()}`
-        let appointmentData ={doctorid:doctorid,name:name,age:age,phoneno:phoneno,gender:gender,symptoms:symptoms,prescription:prescription,time:time,date:date}
+        let appointmentData ={doctorid:doctorid,name:name,age:age,phoneno:phoneno,gender:gender,symptoms:symptoms,prescription:prescription,time:time,date:date,followupdate:datefollow}
         axios.post(`https://clinic-app-backend.vercel.app/appointments/addappointment`,appointmentData).then((response)=>{
             getallpatientData();
         })
@@ -182,6 +188,13 @@ const Prescriptionform=()=>{
                             <tr>
                                 <td class="label-td" colspan="3">
                                     <textarea rows="4" type="text" name="nop" class="input-text" placeholder="Prescription" value={prescription} onChange={prescriptionHandler} required/><br/>
+                                </td>
+                            </tr>
+                            <tr>
+                            <td class="label-td" colspan="1">
+                                <div style={{display:"flex"}}>
+                                <label style={{width:"182px", display:"flex",alignItems:"center"}}>Followup date: </label>
+                                    <input type="date" class="input-text" value={date3} onChange={dateHandler} required/></div><br/>
                                 </td>
                             </tr>
                            

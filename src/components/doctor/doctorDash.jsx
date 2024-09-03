@@ -8,6 +8,7 @@ const DoctorDash=()=>{
 
     const [data, setdata] = useState('');
     const [bookingdata, setbookingdata] = useState('');
+    const [followupdata, setfollowupdata] = useState('');
 
     const [register1,setregister1]=useState(false);
     const doctorid = localStorage.getItem('id');
@@ -58,6 +59,14 @@ const DoctorDash=()=>{
 
     }
 
+    const getfollowupData =()=>{
+        axios.get(`https://clinic-app-backend.vercel.app/appointments/docfollowups/${doctorid}`).then((response)=>{
+            setfollowupdata(response.data.message)
+            setIsLoading(false);
+            console.log(followupdata.length)
+        })
+    }
+
     const getbookingData =()=>{
         axios.get(`https://clinic-app-backend.vercel.app/appointments/findstatus/${doctorid}`).then((response)=>{
             setbookingdata(response.data.message)
@@ -75,6 +84,7 @@ const DoctorDash=()=>{
     useEffect(()=>{
         getallpatientData();
         getbookingData();
+        getfollowupData();
     })
 
     return(
@@ -119,7 +129,7 @@ const DoctorDash=()=>{
                                                     <div class="dashboard-items" style={{padding:"20px", margin:"auto",width:"95%",display: "flex"}}>
                                                         <div>
                                                                 <div class="h1-dashboard">
-                                                                0 
+                                                                {followupdata.length}
                                                                 </div><br/>
                                                                 <div class="h3-dashboard">
                                                                 Today's Followups 
