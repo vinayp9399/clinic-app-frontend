@@ -23,6 +23,19 @@
     text-align: left;
     top: -14px;
     position: relative;
+    animation-name: move2;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes move2 {
+    from{
+        transform:translateX(-200px);
+    }
+    /* to{
+        transform:translateY(-50px);
+    } */
+    
 }
 
 .container_14 {
@@ -30,6 +43,19 @@
     margin: auto;
     overflow: hidden;
     text-align: left;
+    animation-name: move1;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes move1 {
+    from{
+        transform:translateY(100px);
+    }
+    /* to{
+        transform:translateY(-50px);
+    } */
+    
 }
 
 /* Header Styles */
