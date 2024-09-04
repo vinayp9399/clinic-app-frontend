@@ -11,9 +11,9 @@ const Aboutus=()=>{
         <>
         <section id="about">
 
-        <div class="about_banner"><h2 style={{margin:"0px",position:"relative",top:"182px",fontSize:"41px",color:"black",zIndex:3}}>About Us</h2>
+        <div class="about_banner"><div class="abbancont"><h2 style={{margin:"0px",position:"relative",top:"182px",fontSize:"41px",color:"black",zIndex:3}}>About Us</h2>
         <div style={{position:"relative",textAlign:"center",top:"212px",left:"107px",height:"109px",width: "1031px",fontSize:"21px",backgroundColor:"white",padding: "8px",opacity:"0.5",borderRadius:"20px"}}></div>
-        <p style={{position:"relative",textAlign:"center",top:"99px",left:"-8px",height:"109px",width: "771px",fontSize:"19px",padding: "18px"}}>Welcome to Online Clinic, where your health and well-being are our top priorities. Our clinic is dedicated to providing comprehensive healthcare services from the comfort of your home.</p>
+        <p style={{position:"relative",textAlign:"center",top:"99px",left:"-8px",height:"109px",width: "771px",fontSize:"19px",padding: "18px"}}>Welcome to Online Clinic, where your health and well-being are our top priorities. Our clinic is dedicated to providing comprehensive healthcare services from the comfort of your home.</p></div>
         </div>
         <div class="container24" style={{display:"flex"}}>
 

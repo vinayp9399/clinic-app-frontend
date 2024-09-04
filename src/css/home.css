@@ -515,6 +515,25 @@ footer a {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
+.docbancont{
+    animation-name: move2;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+.servbancont{
+    animation-name: move2;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+.abbancont{
+    animation-name: move2;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+
 
 
 

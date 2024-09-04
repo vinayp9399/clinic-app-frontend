@@ -60,12 +60,14 @@ const Doctorlist=()=>{
     return(
         <>
         <section id="doctors">
+            
         <div style={{position:"absolute",textAlign:"center",top:"312px",left:"277px",height:"176px",width: "747px",fontSize:"21px",backgroundColor:"white",padding: "8px",opacity:"0.5",borderRadius:"20px"}}></div>
-        <div class="doctor_banner"><h2 style={{margin:"0px",position:"relative",top:"228px",fontSize:"41px",color:"black",zIndex:3}}>Book Our Doctors</h2>
+        <div class="doctor_banner"><div class="docbancont"><h2 style={{margin:"0px",position:"relative",top:"228px",fontSize:"41px",color:"black",zIndex:3}}>Book Our Doctors</h2>
         <div style={{position:"relative",top:"263px",left:"350px",display:"flex", gap:"10px", width: "610px",height: "49px"}}>
                                 <input type="search" name="search" class="input-text " placeholder="Search Doctor and We will Find The Session Available" list="doctors" style={{width:"100%"}}/>
                            
                                 <input type="Submit" value="Search" class="login-btn btn-primary btn" style={{paddingLeft:"25px",paddingRight:"25px",paddingTop: "10px",paddingBottom:"10px"}}/></div>
+        </div>
         </div>
         <div class="container_12">
             

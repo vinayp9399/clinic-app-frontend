@@ -2,9 +2,9 @@ const Services=()=>{
     return(
         <>
         <section id="services">
-        <div class="services_banner"><h2 style={{margin:"0px",position:"relative",top:"182px",fontSize:"41px",color:"black",zIndex:3}}>Our Services</h2>
+        <div class="services_banner"><div class="servbancont"><h2 style={{margin:"0px",position:"relative",top:"182px",fontSize:"41px",color:"black",zIndex:3}}>Our Services</h2>
         <div style={{position:"relative",textAlign:"center",top:"212px",left:"107px",height:"109px",width: "1031px",fontSize:"21px",backgroundColor:"white",padding: "8px",opacity:"0.5",borderRadius:"20px"}}></div>
-        <p style={{position:"relative",textAlign:"center",top:"99px",left:"92px",height:"109px",width: "1031px",fontSize:"19px",padding: "8px"}}>At Online Clinic, we offer a wide range of healthcare services to meet your needs. Our team of experienced medical professionals is dedicated to providing high-quality care in the comfort of your home.</p>
+        <p style={{position:"relative",textAlign:"center",top:"99px",left:"92px",height:"109px",width: "1031px",fontSize:"19px",padding: "8px"}}>At Online Clinic, we offer a wide range of healthcare services to meet your needs. Our team of experienced medical professionals is dedicated to providing high-quality care in the comfort of your home.</p></div>
         </div>
         <div class="container24">
             
