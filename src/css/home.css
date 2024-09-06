@@ -23,6 +23,7 @@
     text-align: left;
     top: -14px;
     position: relative;
+    /* animation: fadeIn 5s; */
     animation-name: move2;
     animation-duration: 1.5s;
     animation-iteration-count: 1;
@@ -31,10 +32,12 @@
 @keyframes move2 {
     from{
         transform:translateX(-200px);
+        opacity: 0;
     }
-    /* to{
-        transform:translateY(-50px);
-    } */
+    to{
+        /* transform:translateY(-50px); */
+        opacity: 1;
+    }
     
 }
 
@@ -51,10 +54,11 @@
 @keyframes move1 {
     from{
         transform:translateY(100px);
+        opacity: 0;
     }
-    /* to{
-        transform:translateY(-50px);
-    } */
+    to{
+        opacity: 1;
+    }
     
 }
 
@@ -516,19 +520,19 @@ footer a {
 }
 
 .docbancont{
-    animation-name: move2;
+    animation-name: move1;
     animation-duration: 1.5s;
     animation-iteration-count: 1;
 }
 
 .servbancont{
-    animation-name: move2;
+    animation-name: move1;
     animation-duration: 1.5s;
     animation-iteration-count: 1;
 }
 
 .abbancont{
-    animation-name: move2;
+    animation-name: move1;
     animation-duration: 1.5s;
     animation-iteration-count: 1;
 }
