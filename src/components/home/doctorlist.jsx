@@ -139,7 +139,7 @@ const Doctorlist=()=>{
                             <tr>
                                 <td>
                                 
-                                    <input type="reset" onClick={submitHandler} value="Submit" style={{marginTop:"20px"}} class="login-btn btn-primary-soft btn" name="shedulesubmit"/>
+                                    <input type="reset" onClick={submitHandler} value="Submit" style={{marginTop:"20px",width:"600px"}} class="login-btn btn-primary-soft btn" name="shedulesubmit"/>
                                     
                                 </td>
                 
