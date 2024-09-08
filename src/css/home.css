@@ -537,6 +537,12 @@ footer a {
     animation-iteration-count: 1;
 }
 
+.loginimg{
+    animation-name: move2;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
 
 
 

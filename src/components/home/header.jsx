@@ -39,7 +39,13 @@ const Header=()=>{
                     {location.pathname!="/aboutus" &&
                     <a style={{cursor:"pointer"}} onClick={()=>navigate("/aboutus")}>About Us</a>}
                     </li>
-                    <li><a style={{cursor:"pointer"}} href="#contact">Contact Us</a></li>
+                    <li>
+                    {location.pathname=="/contactus" &&
+                    <a style={{cursor:"pointer",color:"rgb(40, 176, 226)"}} onClick={()=>navigate("/contactus")}>Contact Us</a>}
+                    {location.pathname!="/contactus" &&
+                    <a style={{cursor:"pointer"}} onClick={()=>navigate("/contactus")}>Contact Us</a>}
+                        
+                    </li>
                     <li style={{cursor:"pointer"}}><a onClick={()=>navigate("/login")}>Login</a></li>
                 </ul>
             </nav>

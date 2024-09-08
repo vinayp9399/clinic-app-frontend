@@ -5,7 +5,6 @@ const Footer=()=>{
         <>
         <section id="contact">
         <div class="container_12">
-            <h2>Contact Us</h2>
             <p>Have questions or need to book an appointment? Get in touch with us today.</p>
             <ul>
                 <li><i class="fas fa-phone-alt"></i> (123) 456-7890</li>

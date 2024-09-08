@@ -77,7 +77,7 @@ const Login = ()=>{
         <>
 <div class="container1">
 
-<img style={{borderRadius:"0 25px 25px 0",width:"659px"}} src="../images/loginpage.jpg" alt="" />
+<img class="loginimg" style={{borderRadius:"0 25px 25px 0",width:"659px"}} src="../images/loginpage.jpg" alt="" />
 
 <table border="0" style={{paddingLeft:"200px",width:"100%"}}>
 <tr>

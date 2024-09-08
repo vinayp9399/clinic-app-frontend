@@ -17,6 +17,7 @@ import Revenuepage from './pages/doctor/revenuepage.js';
 import Docprofilepage from './pages/doctor/docprofilepage.js';
 import Reviewspage from './pages/doctor/reviewspage.js';
 import Doctorlistpage from './pages/home/doctorlistpage.js';
+import Contactuspage from './pages/home/contactuspage.js';
 
 
 function App() {
@@ -26,12 +27,13 @@ function App() {
     <Routes>
       <Route path="/" element={<Landingpage/>}></Route>
       <Route path="/aboutus" element={<Aboutuspage/>}></Route>
+      <Route path="/contactus" element={<Contactuspage/>}></Route>
       <Route path="/services" element={<Servicespage/>}></Route>
       <Route path="/login" element={<Loginpage/>}></Route>
       <Route path="/doctorlist" element={<Doctorlistpage/>}></Route>
       <Route path="/doctorregistration" element={<Doctorregistrationpage/>}></Route>
       <Route path="/doctorprofile" element={<Doctorprofilepage/>}></Route>
-
+      
       <Route path="/doctordashboard" element={<DoctorDashboard/>}></Route>
       <Route path="/appointmentmanager" element={<Appointmentmanagerpage/>}></Route>
       <Route path="/prescriptionform" element={<Prescriptionformpage/>}></Route>
