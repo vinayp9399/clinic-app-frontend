@@ -8,42 +8,20 @@ const PatientDash=()=>{
         <div class="dash-body">
             <table border="0" width="100%" style={{ borderSpacing:"0", margin:"0", padding:"0"}}>
                         
-                        <tr>
-                            
-                            <td colspan="1" class="nav-bar">
-                            <p style={{fontSize: "23px",paddingLeft:"12px",fontWeight: "600",marginLeft:"20px"}}>Home</p>
-                          
-                            </td>
-                            <td width="25%">
-
-                            </td>
-                            <td width="15%">
-                                <p style={{fontSize:"14px",color:"rgb(119, 119, 119)",padding: "0",margin: "0",textAlign:"right"}}>
-                                    Today's Date
-                                </p>
-                                <p class="heading-sub12" style={{padding: "0", margin: "0"}}>
-                                    {date.getDate()}/{date.getUTCMonth()+1}/{date.getFullYear()}
-                                </p>
-                            </td>
-                            <td width="10%">
-                                <button  class="btn-label"  style={{display: "flex", justifyContent:"center",alignItems:"center"}}><img src="../images/calendar.svg" width="100%"/></button>
-                            </td>
-        
-        
-                        </tr>
+                        
                 <tr>
                     <td colspan="4">
                         
                     <center>
-                    <table class="filter-container doctor-header patient-header" style={{border: "none",width:"95%", border:"0", rowGap:"2px"}}>
+                    <table class="filter-container doctor-header patient-header" style={{border: "none",width:"95%", border:"0", rowGap:"2px",marginTop:"20px"}}>
                     <tr>
                         <td rowSpan={2}>
                             <h3>Welcome!</h3>
                             <h1>{firstname}</h1>
-                            <p>Haven't any idea about doctors? no problem let's jump to <br />
+                            <p>Haven't any idea about doctors? no problem let's jump to 
                                 <a class="non-style-link"><b> "All Doctors"</b></a> section or 
                                 <a class="non-style-link"><b> "Sessions"</b>. </a>
-                                Track your past and future appointments history. Also find out the expected arrival time of your doctor or medical consultant.<br/><br/>
+                                Track your past and future appointments history. Also find out the expected arrival time of your doctor or medical consultant.
                             </p>
                             
                             <h3>Channel a Doctor Here</h3>
@@ -64,7 +42,7 @@ const PatientDash=()=>{
                                                                    0
                                                                 </div><br/>
                                                                 <div class="h3-dashboard">
-                                                                    All Doctors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                    All Doctors 
                                                                 </div>
                                                         </div>
                                                                 <div class="btn-icon-back dashboard-icons" style={{backgroundImage: "url('../images/icons/doctors-hover.svg')"}}></div>
@@ -77,7 +55,7 @@ const PatientDash=()=>{
                                                                     0
                                                                 </div><br/>
                                                                 <div class="h3-dashboard">
-                                                                    All Followups &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                    All Followups 
                                                                 </div>
                                                         </div>
                                                                 <div class="btn-icon-back dashboard-icons" style={{backgroundImage: "url('../images/icons/patients-hover.svg')"}}></div>
@@ -92,7 +70,7 @@ const PatientDash=()=>{
                                                                    0
                                                                 </div><br/>
                                                                 <div class="h3-dashboard" >
-                                                                    New Booking &nbsp;&nbsp;
+                                                                    New Booking 
                                                                 </div>
                                                         </div>
                                                                 <div class="btn-icon-back dashboard-icons" style={{marginLeft:"0px",backgroundImage:"url('../images/icons/book-hover.svg')"}}></div>

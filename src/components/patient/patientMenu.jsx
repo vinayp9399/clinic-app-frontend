@@ -54,12 +54,6 @@ const PatientMenu=(props)=>{
                         <a style={{cursor:"pointer"}} onClick={()=>{navigate("/doctors")}} class="non-style-link-menu"><p class="menu-text">All Doctors</p></a>
                     </td>}
                 </tr>
-                
-                <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-session">
-                        <a class="non-style-link-menu"><div><p class="menu-text">Scheduled Sessions</p></div></a>
-                    </td>
-                </tr>
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-appoinment">
                         <a class="non-style-link-menu"><p class="menu-text">My Bookings</p></a>
@@ -73,11 +67,6 @@ const PatientMenu=(props)=>{
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-settings">
                         <a href="" class="non-style-link-menu"><p class="menu-text">Profile</p></a>
-                    </td>
-                </tr>
-                <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-settings">
-                        <a href="" class="non-style-link-menu"><p class="menu-text">Settings</p></a>
                     </td>
                 </tr>
                 
