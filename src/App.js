@@ -18,6 +18,9 @@ import Docprofilepage from './pages/doctor/docprofilepage.js';
 import Reviewspage from './pages/doctor/reviewspage.js';
 import Doctorlistpage from './pages/home/doctorlistpage.js';
 import Contactuspage from './pages/home/contactuspage.js';
+import Mybookingspage from './pages/patient/mybookingspage.js';
+import ReviewDoctorpage from './pages/patient/reviewdoctorpage.js';
+import Patientprofilepage from './pages/patient/patientprofilepage.js';
 
 
 function App() {
@@ -45,6 +48,9 @@ function App() {
 
       <Route path="/patientdashboard" element={<PatientDashboard/>}></Route>
       <Route path="/doctors" element={<Doctorspage/>}></Route>
+      <Route path="/mybookings" element={<Mybookingspage/>}></Route>
+      <Route path="/reviewdoctor" element={<ReviewDoctorpage/>}></Route>
+      <Route path="/patientprofile" element={<Patientprofilepage/>}></Route>
 
 
     </Routes>

@@ -81,7 +81,7 @@ const Doctors=()=>{
                 
                 <tr>
                     <td colspan="4" style={{paddingTop:"10px"}}>
-                        <p class="heading-main12" style={{marginLeft:"45px",fontSize:"18px",color:"rgb(49, 49, 49)"}}>All Doctors</p>
+                        <p class="heading-main12" style={{fontSize:"23px", paddingLeft:"12px", fontWeight:"600", marginLeft:"20px"}}>All Doctors</p>
                     </td>
                     
                 </tr>

@@ -365,6 +365,7 @@ input[type=search]:focus {
 
 .menu-active{
   /* color: var(--primarycolor); */
+  color: var(--primarycolor);
   border-right: 7px solid rgb(40, 176, 226);
   background-color: var();
 }
@@ -442,7 +443,7 @@ input[type=search]:focus {
   background-image: url('../../public/images/icons/schedule-hover.svg');
 }
 .menu-icon-appoinment:hover,.menu-icon-appoinment-active{
-  color: var(--primarycolor);
+  color: rgb(40, 176, 226);
   
   background-image: url('../../public/images/icons/book-hover.svg');
 }
