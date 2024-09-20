@@ -8,12 +8,13 @@ const Header=()=>{
         <>
         <header>
         <div class="container_12">
-            <div class="logo" style={{display:"flex", gap:"10px",top:"4px",position: "relative"}}>
+            <div class="logo">
                 <img style={{width:"9%"}} src="../images/blue-plus-icon-12.png" alt=""/>                
                 <h1 style={{color:"rgb(40 176 226)"}}>E-Clinic</h1>
                 
             </div>
-            <nav>
+            <label for="checkbox-toggle" class="hamburger1">☰</label>
+            <nav class="navhome">
                 <ul>
                     <li>
                     {location.pathname=="/" &&

@@ -54,3 +54,23 @@
     margin-bottom: 15px;
     width: 100%;
 }
+
+.loginimg{
+    border-radius:0 25px 25px 0;
+    width:659px;
+}
+.loginform1{
+    padding-left:200px;
+    width:100%;
+}
+
+@media screen and (max-width: 700px){
+    .loginimg{
+        /* border-radius:0 25px 25px 0; */
+        width:0px;
+    }
+    .loginform1{
+        padding-left:130px;
+        width:100%;
+    }
+  }

@@ -551,7 +551,34 @@ footer a {
     animation-iteration-count: 1;
 }
 
+.logo{
+    display:flex;
+    gap:10px;
+    top:4px;
+    position:relative;
+}
+.hamburger1{
+    display: none;
+    float: right;
+    font-size: 30px;
+    position: absolute;
+    left: 434px;
+}
 
+@media screen and (max-width: 700px){
+    .navhome{
+        display:none;
+    }
+    .logo{
+        top:0px;
+        /* margin-left:100px; */
+        /* font-size:18px; */
+    }
+    .hamburger1{
+        display:block;
+     }
+
+  }
 
 
 
