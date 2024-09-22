@@ -27,13 +27,36 @@ const Landing=()=>{
 
     return(
         <>
-    <section id="home" class="hero" style={{backgroundImage: `url('${image}')`}}>
-        <div class="container_13">
-            <h2>Welcome to E-Clinic</h2>
+    <div class="slider-frame"> 
+        <div class="slide-images">
+                <div class="img-container1">
+                    {/* <img class="image1" src="https://cdn.pixabay.com/photo/2012/08/27/14/19/mountains-55067_640.png"/> */}
+                    <div class="container_13" style={{position:"absolute",top:"93px",zIndex:1}}>
+            <h2>Book a Doctor Today</h2>
             <p>Your health is our priority. Book an appointment with our <br/>experienced doctors today.</p>
             <a onClick={()=>navigate('/doctorlist')} class="btn">Book Appointment</a>
         </div>
-    </section>
+                    
+                </div>
+                <div class="img-container2">
+                    {/* <img class="image1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrKuVwMrUoV7aQ9te4RWh4h63ZwQ1c2nGkxw&s"/> */}
+                    <div class="container_13" style={{position:"absolute",top:"93px",zIndex:1}}>
+            <h2>Get 12% Discount</h2>
+            <p>Your health is our priority. Book an appointment with our <br/>experienced doctors today.</p>
+            <a onClick={()=>navigate('/doctorlist')} class="btn">Book Appointment</a>
+        </div>
+                    
+                </div>
+                <div class="img-container3">
+                    {/* <img class="image1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF9W9vwDNn5X7zAVeDHXgUKo0nBy0pqCaDcw&s"/> */}
+                    <div class="container_13" style={{position:"absolute",top:"93px",zIndex:1}}>
+            <h2>Choose your Doctor</h2>
+            <p>Your health is our priority. Book an appointment with our <br/>experienced doctors today.</p>
+            <a onClick={()=>navigate('/doctorlist')} class="btn">Book Appointment</a>
+        </div>
+                </div>
+        </div>
+    </div>
 
     <section style={{top:"-198px", position:"relative", zIndex: 1,height:"200px"}} className="why-us mt-5 mt-md-0">
             <div className="container_14">

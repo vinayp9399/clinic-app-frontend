@@ -592,5 +592,133 @@ footer a {
 
 
 
+  .slider-frame{
+    overflow: hidden;
+    /* height: 800px; */
+    height:562px;
+    width: 1275px;
+    /* margin-left: 360px;
+    margin-top: 20px; */
+}
+
+.slider-frame h2 {
+    margin-top: 0;
+    font-size: 48px;
+}
+
+.slider-frame p {
+    font-size: 20px;
+    margin: 20px 0;
+    position: relative;
+    top: -32px;
+}
+
+.slider-frame .btn {
+    color: #ffffff;
+    background: var(--primarycolor);
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    position: relative;
+    top: -23px;
+}
+
+/*---------- SLIDE ANIMATION --------------*/
+
+
+@keyframes slide_animation{
+    0% {left:0px;}
+    10% {left:0px;}
+    20% {left:1275px;}
+    30% {left:1275px;}
+    40% {left: 2550px;}
+    50% {left: 2550px;}
+    60% {left: 1275px;}
+    70% {left: 1275px;}
+    80% {left: 0px;}
+    90% {left: 0px;}
+    100% {left:0px;}
+}
+
+@-webkit-keyframes slide_animation{
+    0% {left:0px;}
+    10% {left:0px;}
+    20% {left:1275px;}
+    30% {left:1275px;}
+    40% {left: 2550px;}
+    50% {left: 2550px;}
+    60% {left: 1275px;}
+    70% {left: 1275px;}
+    80% {left: 0px;}
+    90% {left: 0px;}
+    100% {left:0px;}
+}
+
+.slide-images{
+    width: 4600px;
+    height: 1200px;
+    margin: 0 0 0 -2550px;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    animation-name: slide_animation;
+    -webkit-animation-duration: 33s;
+    animation-duration: 33s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+.img-container1{
+    /* height: 800px; */
+    width: 1275px;
+    position: relative;
+    float: left;
+    background-image: url('../../public/images/web-banner-male-doctor-takes-260nw-2150598651.png');
+    height:562px;
+    padding: 100px 0;
+    text-align: center;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+
+}
+
+.img-container2{
+    /* height: 800px; */
+    width: 1275px;
+    position: relative;
+    float: left;
+    background-image: url('../../public/images/happy-doctor-glasses-holding-clipboard-260nw-2051958542.png');
+    height:562px;
+    padding: 100px 0;
+    text-align: center;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+}
+
+.img-container3{
+    /* height: 800px; */
+    width: 1275px;
+    position: relative;
+    float: left;
+    background-image: url('../../public/images/healthcare-banner-portrait-doctors-consultation-260nw-2260731979.png');
+    height:562px;
+    padding: 100px 0;
+    text-align: center;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+}
+
+.image1{
+    height: 800px;
+    width: 1275px;
+}
+
 
 
