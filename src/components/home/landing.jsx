@@ -15,6 +15,7 @@ const Landing=()=>{
             if(imageno >= images.length-1){ 
                 imageno = 0;
             }else{
+                // document.getElementById("hero").style.backgroundRepeat="repeat";
                 imageno = imageno + 1;
             }
             
@@ -26,7 +27,7 @@ const Landing=()=>{
 
     return(
         <>
-    <section id="home" class="hero" style={{backgroundImage: `url('${image}')`,backgroundRepeat:"no-repeat",backgroundPosition:"center",backgroundSize:"cover"}}>
+    <section id="home" class="hero" style={{backgroundImage: `url('${image}')`}}>
         <div class="container_13">
             <h2>Welcome to E-Clinic</h2>
             <p>Your health is our priority. Book an appointment with our <br/>experienced doctors today.</p>
