@@ -103,7 +103,7 @@ const Login = ()=>{
     </tr>
     <tr>
         <td class="label-td">
-            <input id="mob_no" type="email" name="useremail" class="input-text" placeholder="Phone No." value={phoneno} onChange={phonenoHanadler} required/>
+            <input id="mob_no" type="Password" name="useremail" class="input-text" placeholder="Phone No." value={phoneno} onChange={phonenoHanadler} required/>
         </td>
     </tr>
     <tr>
