@@ -73,7 +73,7 @@ const Landing=()=>{
                             
                         </div>
                     </div>
-                    <div className="col-lg-8 d-flex align-items-stretch">
+                    <div id="extras" className="col-lg-8 d-flex align-items-stretch">
                         <div className="icon-boxes d-flex flex-column justify-content-center">
                             <div style={{display:"flex", justifyContent:"space-around", width:"740px"}} className="row">
                                 <div style={{width:"200px"}} className="col-xl-4 d-flex align-items-stretch">

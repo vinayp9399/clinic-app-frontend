@@ -812,8 +812,8 @@ footer a {
 
 }
 
-.container_14{
-    width: 495.33px;
+.container_14 .row #extras{
+    display:none;
 }
 
 .img-container2{
