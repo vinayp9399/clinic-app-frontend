@@ -142,7 +142,7 @@ const Landing=()=>{
     </section>
 
     <section style={{display:"flex",padding:"63px",gap:"100px"}} id="about1">
-        <div><img style={{borderRadius:"10px"}} src="https://lh5.googleusercontent.com/proxy/D9U14usXzmBtcFV5EAMM4RuvPeVhPc5zaIXoV2ahGY_RDWNyzgbSwr0EIoqM93DLUcEia4u4YJQfjYZQI4yQK6VzA12lMZfA_0C6mN-wxH_gsVukHPbCOMraqlE" alt="" /></div>
+        <div><img style={{borderRadius:"10px"}} src="../images/aboutUsimg.jpg" alt="" /></div>
         <div class="container_12">
             <h2>About Us</h2>
             <p>E-Clinic has been provides top-notch healthcare services through easy appouintment booking. Our team of experienced doctors are dedicated to ensuring the best possible care for our patients. We provide best leading medicle service. <br /><br />
@@ -158,7 +158,7 @@ const Landing=()=>{
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
             <button onClick={()=>navigate('/doctorlist')} style={{cursor:"pointer",marginTop:"20px"}} class="btnp">Book Appointment</button>
         </div>        
-        <div><img style={{borderRadius:"10px"}} width="500px" height="330px" src="https://longislandneuro.com/wp-content/uploads/2023/01/handsome-male-doctor-explaining-medical-treatment-2022-12-15-18-17-30-utc.webp" alt="" /></div>
+        <div><img style={{borderRadius:"10px"}} width="500px" height="330px" src="../images/handsome-male-doctor-explaining-medical-treatment.jpeg" alt="" /></div>
     </section>
 
     

@@ -4,7 +4,7 @@ const Footer=()=>{
     return(
         <>
         <section id="contact">
-        <div class="container_12">
+        <div class="container_12" style={{textAlign:"center"}}>
             <p>Have questions or need to book an appointment? Get in touch with us today.</p>
             <ul>
                 <li><i class="fas fa-phone-alt"></i> (123) 456-7890</li>
@@ -14,7 +14,7 @@ const Footer=()=>{
     </section>
 
     <footer>
-        <div class="container_12">
+        <div class="container_12" style={{textAlign:"center"}}>
             <p>&copy; 2024 Professional Clinic. All rights reserved.</p>
             <p><a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a> | <a href="#contact">Contact Us</a></p>
         </div>
