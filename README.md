@@ -15,6 +15,10 @@
 
 •	Live project link- https://clinic-app-frontend.vercel.app/
 
+•	Project video demo- https://www.youtube.com/watch?v=nAycOJvWw0k
+
+
+
 
 
 
