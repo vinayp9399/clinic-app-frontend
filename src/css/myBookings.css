@@ -1,0 +1,149 @@
+/* MyBookings Page Layout */
+.mybookings-page {
+  min-height: 77vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 76vw;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.mybookings-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(60, 72, 100, 0.13);
+  padding: 36px 32px 28px 32px;
+  width: 100%;
+  max-width: 600px;
+  min-width: 320px;
+  border: 1.5px solid #e0e7ff;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  height: auto;
+}
+
+.mybookings-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.mybookings-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin: 0 0 4px 0;
+}
+
+.mybookings-summary {
+  font-size: 1.15rem;
+  color: #374151;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.mybookings-total {
+  font-size: 1.08rem;
+  color: #2563eb;
+}
+
+.mybookings-table-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.mybookings-table-title {
+  font-size: 1.08rem;
+  color: #2563eb;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.mybookings-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  font-size: 1.08rem;
+  min-width: 400px;
+}
+
+.mybookings-table th, .mybookings-table td {
+  padding: 14px 16px;
+  text-align: left;
+}
+
+.mybookings-table th {
+  background: #e0e7ff;
+  color: #2563eb;
+  font-weight: 600;
+  border-bottom: 2px solid #d8ebfa;
+  font-size: 1.08rem;
+}
+
+.mybookings-table tbody tr {
+  border-bottom: 1px solid #e0e7ff;
+  transition: background 0.2s;
+}
+
+.mybookings-table tbody tr:hover {
+  background: #f5f7fa;
+}
+
+.mybookings-status {
+  padding: 5px 18px;
+  border-radius: 14px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.mybookings-status-confirmed {
+  background: #d8ebfa;
+  color: #1b62b3;
+}
+
+.mybookings-status-completed {
+  background: #e6fbe6;
+  color: #1b8b3b;
+}
+
+.mybookings-status-cancelled {
+  background: #ffeaea;
+  color: #d32f2f;
+}
+
+.mybookings-row-cancelled td {
+  text-decoration: line-through;
+  color: #bdbdbd;
+}
+
+@media (max-width: 900px) {
+  .mybookings-card {
+    padding: 18px 4vw 18px 4vw;
+    max-width: 98vw;
+  }
+  .mybookings-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .mybookings-card {
+    padding: 8px 0 8px 0;
+    border-radius: 0;
+    box-shadow: none;
+    max-width: 100vw;
+  }
+  .mybookings-title {
+    font-size: 1rem;
+  }
+} 

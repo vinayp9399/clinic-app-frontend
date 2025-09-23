@@ -1,35 +1,86 @@
-const Reviewdoctor =()=>{
-    return(
-        <>
-        <div class="dash-body">
-            <table border="0" width="100%" style={{borderSpacing:"0", margin:"0", padding:"0", marginTop:"20px"}}>
-                <tr>
-                    
-                    <td>
-                        
-                        <form action="" method="post" class="header-search">
+import React, { useState } from 'react';
+import '../../css/reviewDoctor.css';
 
-                            <input type="search" name="search" class="input-text header-searchbar" placeholder="Search Doctor name or Email" list="doctors"/>&nbsp;&nbsp;
-                            
-                            
-                            
-                       
-                            <button class="login-btn btn-primary btn" style={{paddingLeft:"25px",paddingRight:"25px",paddingTop:"10px",paddingBottom:"10px"}}>Search</button>
-                        
-                        </form>
-                        
-                    </td>
-                </tr>
-               
-                
-                <tr>
-                    <td colspan="4" style={{paddingTop:"10px"}}>
-                        <p class="heading-main12" style={{fontSize:"23px", paddingLeft:"12px", fontWeight:"600", marginLeft:"20px"}}>Review doctor</p>
-                    </td>
-                    
-                </tr></table></div>
-        </>
-    )
-}
+const mockDoctors = [
+  'Dr. Smith',
+  'Dr. Patel',
+  'Dr. Lee',
+  'Dr. Gupta',
+  'Dr. Kumar',
+];
 
-export default Reviewdoctor
+const ReviewDoctor = () => {
+  const [doctor, setDoctor] = useState('');
+  const [rating, setRating] = useState(0);
+  const [comment, setComment] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Here you would send the review to the backend
+    setSubmitted(true);
+    setTimeout(() => setSubmitted(false), 2500);
+    setDoctor('');
+    setRating(0);
+    setComment('');
+  };
+
+  return (
+    <div className="reviewdoctor-page">
+      <div className="reviewdoctor-card">
+        <h2 className="reviewdoctor-title">Review a Doctor</h2>
+        <form className="reviewdoctor-form" onSubmit={handleSubmit}>
+          <label className="reviewdoctor-label">
+            Doctor:
+            <select
+              className="reviewdoctor-select"
+              value={doctor}
+              onChange={e => setDoctor(e.target.value)}
+              required
+            >
+              <option value="" disabled>Select Doctor</option>
+              {mockDoctors.map((d, idx) => (
+                <option key={idx} value={d}>{d}</option>
+              ))}
+            </select>
+          </label>
+          <label className="reviewdoctor-label">
+            Rating:
+            <div className="reviewdoctor-stars">
+              {[1,2,3,4,5].map(star => (
+                <span
+                  key={star}
+                  className={star <= rating ? 'star filled' : 'star'}
+                  onClick={() => setRating(star)}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`Rate ${star} star${star > 1 ? 's' : ''}`}
+                  onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && setRating(star)}
+                >
+                  ★
+                </span>
+              ))}
+            </div>
+          </label>
+          <label className="reviewdoctor-label">
+            Comment:
+            <textarea
+              className="reviewdoctor-textarea"
+              value={comment}
+              onChange={e => setComment(e.target.value)}
+              rows={4}
+              placeholder="Write your feedback..."
+              required
+            />
+          </label>
+          <button className="reviewdoctor-btn" type="submit" disabled={!doctor || !rating || !comment}>
+            Submit Review
+          </button>
+          {submitted && <div className="reviewdoctor-success">Thank you for your review!</div>}
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default ReviewDoctor;

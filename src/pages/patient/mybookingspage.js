@@ -4,7 +4,7 @@ import PatientMenu from "../../components/patient/patientMenu"
 const Mybookingspage=()=>{
     return(
         <>
-        <div class="container" style={{height:"157vh"}}>
+        <div class="container">
         {<PatientMenu nav={"mybookings"}/>}
         {<Mybookings/>}
         </div>

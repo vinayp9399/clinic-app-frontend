@@ -1,0 +1,132 @@
+/* Review Doctor Page Layout */
+.reviewdoctor-page {
+  min-height: 77vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 76vw;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.reviewdoctor-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(60, 72, 100, 0.13);
+  padding: 36px 32px 28px 32px;
+  width: 100%;
+  max-width: 480px;
+  min-width: 320px;
+  border: 1.5px solid #e0e7ff;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  height: auto;
+}
+
+.reviewdoctor-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin: 0 0 18px 0;
+  text-align: center;
+}
+
+.reviewdoctor-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.reviewdoctor-label {
+  font-size: 1.08rem;
+  color: #374151;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.reviewdoctor-select {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1.5px solid #e0e7ff;
+  font-size: 1rem;
+  color: #2563eb;
+  background: #f8fafc;
+  margin-top: 2px;
+}
+
+.reviewdoctor-stars {
+  display: flex;
+  gap: 4px;
+  font-size: 1.5rem;
+  margin-top: 2px;
+}
+
+.star {
+  color: #e0e7ff;
+  cursor: pointer;
+  transition: color 0.2s;
+  user-select: none;
+}
+
+.star.filled {
+  color: #fbbf24;
+}
+
+.reviewdoctor-textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1.5px solid #e0e7ff;
+  font-size: 1rem;
+  resize: vertical;
+  background: #f8fafc;
+  color: #374151;
+  margin-top: 2px;
+}
+
+.reviewdoctor-btn {
+  background: linear-gradient(90deg, #6366f1 0%, #2563eb 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(60, 72, 100, 0.10);
+}
+.reviewdoctor-btn:disabled {
+  background: #e0e7ff;
+  color: #bdbdbd;
+  cursor: not-allowed;
+}
+
+.reviewdoctor-success {
+  margin-top: 10px;
+  color: #1b8b3b;
+  background: #e6fbe6;
+  border-radius: 6px;
+  padding: 8px 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 600px) {
+  .reviewdoctor-card {
+    padding: 8px 0 8px 0;
+    border-radius: 0;
+    box-shadow: none;
+    max-width: 100vw;
+  }
+  .reviewdoctor-title {
+    font-size: 1.2rem;
+  }
+} 
