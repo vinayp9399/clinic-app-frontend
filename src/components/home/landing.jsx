@@ -143,7 +143,7 @@ const Landing=()=>{
 
     <section style={{display:"flex",padding:"63px",gap:"100px"}} id="about1">
         <div><img style={{borderRadius:"10px"}} src="https://lh5.googleusercontent.com/proxy/D9U14usXzmBtcFV5EAMM4RuvPeVhPc5zaIXoV2ahGY_RDWNyzgbSwr0EIoqM93DLUcEia4u4YJQfjYZQI4yQK6VzA12lMZfA_0C6mN-wxH_gsVukHPbCOMraqlE" alt="" /></div>
-        <div style={{textAlign:"left"}} class="container_12">
+        <div class="container_12">
             <h2>About Us</h2>
             <p>E-Clinic has been provides top-notch healthcare services through easy appouintment booking. Our team of experienced doctors are dedicated to ensuring the best possible care for our patients. We provide best leading medicle service. <br /><br />
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
@@ -152,7 +152,7 @@ const Landing=()=>{
         <button onClick={()=>navigate('/aboutus')} style={{cursor:"pointer",marginTop:"30px"}} class="btnp">Know More</button></div>
     </section>
     <section style={{backgroundColor:"white",display:"flex",padding:"63px",gap:"150px"}} id="doctors1">
-        <div style={{textAlign:"left"}}>
+        <div class="container_12">
             <h2>Our Doctors</h2>
             <p>Our team of experienced doctors are dedicated to ensuring the best possible care for our patients. Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover Various versions have evolved over the years, sometimes. <br/><br />
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>

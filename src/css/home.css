@@ -13,6 +13,7 @@
     width: 93%;
     margin-left: 47px;
     overflow: hidden;
+    text-align: left;
 }
 
 .container_13 {
@@ -731,26 +732,6 @@ footer a {
         display: flex;
         flex-direction: column;
     }
-    /* .slider-frame{
-        display:block;
-        width:500px;
-    }
-    .slide-images{
-        display:block;
-        width:500px;
-    }
-    .img-container1{
-        display:relative;
-        width:500px;
-    }
-     .img-container2{
-        display:relative;
-        width:500px;
-    }
-     .img-container3{
-        display:relative;
-        width:500px;
-    } */
 
       .slider-frame{
     overflow: hidden;
@@ -790,17 +771,17 @@ footer a {
 @keyframes slide_animation{
     0% {left:0px;}
     10% {left:0px;}
-    15% {left:500px;}
-    20% {left:500px;}
-    30% {left:500px;}
-    35% {left:500px;}
-    40% {left: 1000px;}
-    50% {left: 1000px;}
-    60% {left: 1000px;}
-    65% {left: 1000px;}
-    70% {left: 500px;}
-    80% {left: 500px;}
-    85% {left: 500px;}
+    15% {left:495.33px;}
+    20% {left:495.33px;}
+    30% {left:495.33px;}
+    35% {left:495.33px;}
+    40% {left: 990.66px;}
+    50% {left: 990.66px;}
+    60% {left: 990.66px;}
+    65% {left: 990.66px;}
+    70% {left: 495.33px;}
+    80% {left: 495.33px;}
+    85% {left: 495.33px;}
     90% {left: 0px;}
     100% {left:0px;}
 }
@@ -808,79 +789,81 @@ footer a {
 @-webkit-keyframes slide_animation{
     0% {left:0px;}
     10% {left:0px;}
-    20% {left:500px;}
-    30% {left:500px;}
-    40% {left: 1000px;}
-    50% {left: 1000px;}
-    60% {left: 1000px;}
-    70% {left: 500px;}
-    80% {left: 500px;}
+    20% {left:495.33px;}
+    30% {left:495.33px;}
+    40% {left: 990.66px;}
+    50% {left: 990.66px;}
+    60% {left: 990.66px;}
+    70% {left: 495.33px;}
+    80% {left: 495.33px;}
     90% {left: 0px;}
     100% {left:0px;}
 }
 
 .slide-images{
-    width: 1500px;
+    width: 1485.99px;
     height: 1200px;
-    margin: 0 0 0 -1000px;
-    position: relative;
-    -webkit-animation-name: slide_animation;
-    animation-name: slide_animation;
-    -webkit-animation-duration: 20s;
-    animation-duration: 20s;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-direction: alternate;
-    animation-direction: alternate;
-    -webkit-animation-play-state: running;
-    animation-play-state: running;
+    margin: 0 0 0 -990.66px;
 }
 
 .img-container1{
     /* height: 800px; */
-    width: 500px;
-    position: relative;
-    float: left;
-    background-image: url('../../public/images/web-banner-male-doctor-takes-260nw-2150598651.png');
-    height:562px;
-    padding: 100px 0;
-    text-align: center;
-    background-repeat:no-repeat;
-    background-position:center;
-    background-size:cover;
+    width: 495.33px;
 
+}
+
+.container_14{
+    width: 495.33px;
 }
 
 .img-container2{
     /* height: 800px; */
-    width: 500px;
-    position: relative;
-    float: left;
-    background-image: url('../../public/images/happy-doctor-glasses-holding-clipboard-260nw-2051958542.png');
-    height:562px;
-    padding: 100px 0;
-    text-align: center;
-    background-repeat:no-repeat;
-    background-position:center;
-    background-size:cover;
+    width: 495.33px;
 }
 
 .img-container3{
     /* height: 800px; */
-    width: 500px;
-    position: relative;
-    float: left;
-    background-image: url('../../public/images/healthcare-banner-portrait-doctors-consultation-260nw-2260731979.png');
-    height:562px;
-    padding: 100px 0;
-    text-align: center;
-    background-repeat:no-repeat;
-    background-position:center;
-    background-size:cover;
+    width: 495.33px;
 }
 
 .container_13{
     height:270px;
+}
+
+.container_12{
+    margin:auto;
+    text-align:center
+}
+
+#doctors1{
+    display:grid;
+}
+
+#about1{
+}
+
+*{
+    text-align: center;
+}
+
+#doctor1 div{
+    text-align:center;
+}
+
+div .container_13{
+    text-align: center;
+}
+
+section .doctors1{
+    text-align: center;
+}
+
+img{
+    width:380px;
+}
+
+.services-grid{
+    display:grid;
 }
 
   }
