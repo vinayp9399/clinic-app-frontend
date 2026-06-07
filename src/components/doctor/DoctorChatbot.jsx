@@ -3,7 +3,7 @@ import axios from "axios";
 
 const GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions";
 const GROQ_API_KEY = process.env.REACT_APP_GROQ_API_KEY;
-const MODEL = "llama3-8b-8192";
+const MODEL = "llama-3.3-70b-versatile";
 const BASE_URL = "https://clinic-app-backend.vercel.app";
 
 const DoctorChatbot = () => {
