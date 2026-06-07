@@ -163,7 +163,7 @@ RULES:
             {isOpen && (
                 <div style={{
                     position: "fixed", bottom: "92px", right: "24px",
-                    width: "355px", height: "520px", background: "#fff",
+                    width: "355px", height: "420px", background: "#fff",
                     borderRadius: "16px", boxShadow: "0 8px 32px rgba(0,0,0,0.15)",
                     display: "flex", flexDirection: "column", zIndex: 999,
                     overflow: "hidden", border: "1px solid #e2e8f0"
