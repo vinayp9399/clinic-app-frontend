@@ -6,12 +6,6 @@ const GROQ_API_KEY = process.env.REACT_APP_GROQ_API_KEY;
 const MODEL = "llama3-8b-8192";
 const BASE_URL = "https://clinic-app-backend.vercel.app";
 
-// ─────────────────────────────────────────────
-// What Groq AI receives:
-//   ✅ symptoms, prescriptions, dates, times, status, slot numbers, symptom frequency
-//   ❌ patient names, phone numbers, ages, genders, patient IDs
-// ─────────────────────────────────────────────
-
 const DoctorChatbot = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState([
@@ -81,7 +75,7 @@ const DoctorChatbot = () => {
             } else if (isStats || isPending) {
                 relevantContext = `STATS:\nTotal patients: ${chatData.totalPatients}\nVisited: ${chatData.visitedPatients}\nPending: ${chatData.pendingPatients}\nToday's appointments: ${chatData.todaysAppointments.length}\nToday's follow-ups: ${chatData.todaysFollowups.length}`;
             } else if (isPrescription) {
-                relevantContext = `RECENT CASES (anonymised — no patient names):\n${
+                relevantContext = `RECENT CASES (anonymised):\n${
                     chatData.recentCases
                         .filter(a => a.prescription)
                         .map(a => `- Case ${a.caseNumber}, Date: ${a.date}, Symptoms: ${a.symptoms}, Prescribed: ${a.prescription}, Status: ${a.status}`)
@@ -98,15 +92,15 @@ const DoctorChatbot = () => {
 
         return `You are a clinical assistant for Dr. ${doctorName || "the Doctor"} at an online clinic.
 
-PRIVACY RULES — STRICTLY FOLLOW:
-- Patient data has been anonymised — you have NO patient names, phone numbers, ages, or genders
+PRIVACY RULES:
+- Patient data is anonymised — you have NO patient names, phone numbers, ages, or genders
 - Refer to patients only by slot number or case number
-- Never ask for or reference patient personal identifiers
-- Only use the data provided below — do not make up records
+- Never ask for patient personal identifiers
+- Only use the data provided below
 
 ${relevantContext ? `RELEVANT DATA (anonymised):\n${relevantContext}` : "No database context needed for this question."}
 
-APP GUIDE FOR DOCTOR:
+APP GUIDE:
 - View all patients: Appointment Manager
 - Add new patient: Add Patient button on dashboard
 - Edit prescription: Click patient in Appointment Manager
@@ -116,8 +110,6 @@ APP GUIDE FOR DOCTOR:
 
 RULES:
 - Be professional and concise
-- For unusual clinical decisions advise consulting clinical references
-- If asked about a specific named patient say: patient identity is not available for privacy
 - Only answer clinic-related questions`;
     };
 
@@ -131,27 +123,40 @@ RULES:
         setInput("");
         setIsLoading(true);
 
+        // Only send user/assistant turns — strip any leading assistant message
+        // Groq requires the first message in history to be from user
+        const historyToSend = updatedMessages
+            .filter(m => m.role === "user" || m.role === "assistant")
+            .slice(-6);
+
+        const firstUserIdx = historyToSend.findIndex(m => m.role === "user");
+        const cleanHistory = firstUserIdx >= 0 ? historyToSend.slice(firstUserIdx) : historyToSend;
+
+        const payload = {
+            model: MODEL,
+            messages: [
+                { role: "system", content: buildPrompt(text) },
+                ...cleanHistory
+            ],
+            max_tokens: 450,
+            temperature: 0.5
+        };
+
+        console.log("KEY CHECK:", GROQ_API_KEY ? "Key found: " + GROQ_API_KEY.slice(0, 8) + "..." : "KEY IS UNDEFINED — check .env file");
+        console.log("PAYLOAD MESSAGES:", payload.messages.map(m => ({ role: m.role, preview: m.content.slice(0, 60) })));
+
         try {
-            const response = await axios.post(
-                GROQ_API_URL,
-                {
-                    model: MODEL,
-                    messages: [
-                        { role: "system", content: buildPrompt(text) },
-                        // Filter out leading assistant messages — Groq requires conversation to start with user
-                        ...updatedMessages.slice(-6).filter((m, i, arr) => {
-                            const firstUserIndex = arr.findIndex(x => x.role === "user");
-                            return arr.indexOf(m) >= firstUserIndex;
-                        })
-                    ],
-                    max_tokens: 450,
-                    temperature: 0.5
-                },
-                { headers: { Authorization: `Bearer ${GROQ_API_KEY}`, "Content-Type": "application/json" } }
-            );
+            const response = await axios.post(GROQ_API_URL, payload, {
+                headers: {
+                    Authorization: `Bearer ${GROQ_API_KEY}`,
+                    "Content-Type": "application/json"
+                }
+            });
             setMessages(prev => [...prev, { role: "assistant", content: response.data.choices[0].message.content }]);
-        } catch (err){
-            setMessages(prev => [...prev, { role: "assistant", content: "Sorry, I'm having trouble connecting. Please try again. "+ err }]);
+        } catch (err) {
+            const groqError = err.response?.data?.error?.message || err.message;
+            console.error("GROQ ERROR FULL:", err.response?.data);
+            setMessages(prev => [...prev, { role: "assistant", content: "Error: " + groqError }]);
         } finally {
             setIsLoading(false);
         }
