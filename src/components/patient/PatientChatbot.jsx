@@ -134,8 +134,8 @@ RULES:
                 { headers: { Authorization: `Bearer ${GROQ_API_KEY}`, "Content-Type": "application/json" } }
             );
             setMessages(prev => [...prev, { role: "assistant", content: response.data.choices[0].message.content }]);
-        } catch {
-            setMessages(prev => [...prev, { role: "assistant", content: "Sorry, I'm having trouble connecting. Please try again." }]);
+        } catch (err){
+            setMessages(prev => [...prev, { role: "assistant", content: "Sorry, I'm having trouble connecting. Please try again. "+ err }]);
         } finally {
             setIsLoading(false);
         }
