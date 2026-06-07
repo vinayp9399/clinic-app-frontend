@@ -1,10 +1,12 @@
 import '../../css/dashboard.css';
+import PatientChatbot from './PatientChatbot';
 
 const PatientDash=()=>{
     const firstname = localStorage.getItem('name');
     const date = new Date();
     return(
         <>
+        <div>
         <div class="dash-body">
             <table border="0" width="100%" style={{ borderSpacing:"0", margin:"0", padding:"0"}}>
                         
@@ -239,6 +241,9 @@ const PatientDash=()=>{
                     </td>
                 </tr>
             </table>
+        </div>
+
+        <PatientChatbot /> 
         </div>
         </>
     )

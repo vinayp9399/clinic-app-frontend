@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react"
 import axios from 'axios';
 import { PieChart } from "react-minimal-pie-chart";
+import DoctorChatbot from './DoctorChatbot';
 
 const DoctorDash=()=>{
     const firstname = localStorage.getItem('name');
@@ -89,6 +90,7 @@ const DoctorDash=()=>{
 
     return(
         <>
+        <div>
         
             <table border="0" width="100%" style={{borderSpacing: "0", margin:"0", marginTop:"25px", padding:"0"}}>
                         
@@ -384,7 +386,8 @@ const DoctorDash=()=>{
                 </tr>
             </table>
 
-        
+        <DoctorChatbot /> 
+        </div>
         </>
     )
 }
