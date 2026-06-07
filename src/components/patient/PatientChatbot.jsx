@@ -126,7 +126,11 @@ RULES:
                     model: MODEL,
                     messages: [
                         { role: "system", content: buildPrompt(text) },
-                        ...updatedMessages.slice(-6)
+                        // Filter out leading assistant messages — Groq requires conversation to start with user
+                        ...updatedMessages.slice(-6).filter((m, i, arr) => {
+                            const firstUserIndex = arr.findIndex(x => x.role === "user");
+                            return arr.indexOf(m) >= firstUserIndex;
+                        })
                     ],
                     max_tokens: 400,
                     temperature: 0.6
@@ -134,8 +138,8 @@ RULES:
                 { headers: { Authorization: `Bearer ${GROQ_API_KEY}`, "Content-Type": "application/json" } }
             );
             setMessages(prev => [...prev, { role: "assistant", content: response.data.choices[0].message.content }]);
-        } catch (err){
-            setMessages(prev => [...prev, { role: "assistant", content: "Sorry, I'm having trouble connecting. Please try again. "+ err }]);
+        } catch {
+            setMessages(prev => [...prev, { role: "assistant", content: "Sorry, I'm having trouble connecting. Please try again." }]);
         } finally {
             setIsLoading(false);
         }
