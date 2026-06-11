@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import axios from 'axios';
+import axiosInstance from '../../axiosInstance';
 import { useNavigate } from "react-router-dom";
 
 const Patientdetails=()=>{
@@ -9,7 +9,7 @@ const Patientdetails=()=>{
     const navigate=useNavigate();
 
     const searchPatient=()=>{
-        axios.get(`https://clinic-app-backend.vercel.app/appointments/findpatient/${doctorid}/${patientphone}`).then((response)=>{
+        axiosInstance.get(`https://clinic-app-backend.vercel.app/appointments/findpatient/${doctorid}/${patientphone}`).then((response)=>{
             setpatientdata(response.data.message)
         })
     }

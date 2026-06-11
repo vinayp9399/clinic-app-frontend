@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axiosInstance from '../../axiosInstance';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import '../../css/docprofile.css';
@@ -17,7 +17,7 @@ const Docprofile = () => {
   const [revHover, setRevHover] = useState(false);
 
   const currentImage = () => {
-    axios.get(`https://clinic-app-backend.vercel.app/users/singleuser/${id}`).then((response) => {
+    axiosInstance.get(`https://clinic-app-backend.vercel.app/users/singleuser/${id}`).then((response) => {
       setImage1(response.data.message.image);
     });
   };
@@ -39,7 +39,7 @@ const Docprofile = () => {
         'content-type': 'multipart/form-data',
       },
     };
-    axios.put(`https://clinic-app-backend.vercel.app/image/${id}`, imageData, config).then((response) => {
+    axiosInstance.put(`https://clinic-app-backend.vercel.app/image/${id}`, imageData, config).then((response) => {
       currentImage();
       setImage({ preview: '', data: '' });
     });

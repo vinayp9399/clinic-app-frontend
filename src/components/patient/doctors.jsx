@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import '../../css/home.css';
-import axios from 'axios'
+import axiosInstance from '../../axiosInstance'
 import { useEffect, useState } from 'react'
 
 
@@ -40,13 +40,13 @@ const Doctors=()=>{
         let time = `${date1.getHours()}:${date1.getMinutes()}`
         let date = `${date1.getDate()}/${date1.getMonth()+1}/${date1.getFullYear()}`
         let appointmentData ={doctorid:doctorid,name:name,age:age,phoneno:phoneno,symptoms:"",prescription:"",time:time,date:date,status:"not visited"}
-        axios.post(`https://clinic-app-backend.vercel.app/appointments/addappointment`,appointmentData).then((response)=>{
+        axiosInstance.post(`https://clinic-app-backend.vercel.app/appointments/addappointment`,appointmentData).then((response)=>{
            setenquiry(false);
         })
     }
 
     const getalldoctorData = ()=>{
-        axios.get('https://clinic-app-backend.vercel.app/users/finddoctors/').then((response)=>{
+        axiosInstance.get('https://clinic-app-backend.vercel.app/users/finddoctors/').then((response)=>{
             setdoctordata(response.data.message)
         })
     }

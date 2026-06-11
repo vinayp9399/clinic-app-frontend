@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import axios from 'axios';
+import axiosInstance from '../../axiosInstance';
 import { useNavigate } from "react-router-dom";
 
 const Appointmentmanager=()=>{
@@ -33,7 +33,7 @@ const Appointmentmanager=()=>{
             setshowpatients(true);
             alert("Please enter phone no.")
         }
-        else{axios.get(`https://clinic-app-backend.vercel.app/appointments/findpatient/${doctorid}/${patientphone}`).then((response)=>{
+        else{axiosInstance.get(`https://clinic-app-backend.vercel.app/appointments/findpatient/${doctorid}/${patientphone}`).then((response)=>{
             if(response.data.message == 'no record found'){
                 setnotfound(true);
                 setIsLoading(false);
@@ -49,7 +49,7 @@ const Appointmentmanager=()=>{
     const getallpatientData =()=>{
 
         
-        axios.get(`https://clinic-app-backend.vercel.app/appointments/findappointments/${doctorid}`).then((response)=>{
+        axiosInstance.get(`https://clinic-app-backend.vercel.app/appointments/findappointments/${doctorid}`).then((response)=>{
             setdata(response.data.message)
             setIsLoading(false);
             setshowpatients(true);
@@ -61,7 +61,7 @@ const Appointmentmanager=()=>{
     },[])
 
     const handleDelete = (patientId)=>{
-        axios.delete(`https://clinic-app-backend.vercel.app/appointments/deleteappointment/${patientId}`).then((response)=>{
+        axiosInstance.delete(`https://clinic-app-backend.vercel.app/appointments/deleteappointment/${patientId}`).then((response)=>{
             getallpatientData();
         })
     }

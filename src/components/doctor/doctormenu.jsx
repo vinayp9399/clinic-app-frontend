@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import '../../css/dashboard.css';
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+import axiosInstance from '../../axiosInstance';
 
 const DoctorMenu=(props)=>{
     const navigate = useNavigate();
@@ -14,7 +14,7 @@ const DoctorMenu=(props)=>{
     
     
     const profileImage =()=>{
-        axios.get(`https://clinic-app-backend.vercel.app/users/singleuser/${id}`).then((response)=>{
+        axiosInstance.get(`https://clinic-app-backend.vercel.app/users/singleuser/${id}`).then((response)=>{
           setImage1(response.data.message.image);
         })
       }

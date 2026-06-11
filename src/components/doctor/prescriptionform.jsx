@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import axios from 'axios';
+import axiosInstance from '../../axiosInstance';
 import { useNavigate, useParams } from "react-router-dom";
 
 const Prescriptionform=()=>{
@@ -50,13 +50,13 @@ const Prescriptionform=()=>{
             let time = `${date1.getHours()}:${date1.getMinutes()}`
             let date = `${date1.getDate()}/${date1.getMonth()+1}/${date1.getFullYear()}`
             let registrationData1 ={doctorid:doctorid,name:name,age:age,phoneno:phoneno,gender:gender,symptoms:symptoms,prescription:prescription,time:time,date:date,status:"visited",followupdate:datefollow}
-            axios.put(`https://clinic-app-backend.vercel.app/appointments/updateappointment/${params.id}`,registrationData1).then((response)=>{
+            axiosInstance.put(`https://clinic-app-backend.vercel.app/appointments/updateappointment/${params.id}`,registrationData1).then((response)=>{
                 console.log(response.message);
             })
         
             let newpassword= phoneno.slice(-3,);
             let registrationData ={phoneno:phoneno,name:name,email:"",password:newpassword,usertype:"patient"}
-        axios.post('https://clinic-app-backend.vercel.app/users/registration',registrationData).then((response)=>{
+        axiosInstance.post('https://clinic-app-backend.vercel.app/users/registration',registrationData).then((response)=>{
                 console.log(response);
                 alert("Registration Done");
                 navigate("/doctordashboard")
@@ -70,13 +70,13 @@ const Prescriptionform=()=>{
         let time = `${date1.getHours()}:${date1.getMinutes()}`
         let date = `${date1.getDate()}/${date1.getMonth()+1}/${date1.getFullYear()}`
         let appointmentData ={doctorid:doctorid,name:name,age:age,phoneno:phoneno,gender:gender,symptoms:symptoms,prescription:prescription,time:time,date:date,followupdate:datefollow}
-        axios.post(`https://clinic-app-backend.vercel.app/appointments/addappointment`,appointmentData).then((response)=>{
+        axiosInstance.post(`https://clinic-app-backend.vercel.app/appointments/addappointment`,appointmentData).then((response)=>{
             getallpatientData();
         })
 
             let newpassword= phoneno.slice(-3,);
             let registrationData ={phoneno:phoneno,name:name,email:"",password:newpassword,usertype:"patient"}
-        axios.post('https://clinic-app-backend.vercel.app/users/registration',registrationData).then((response)=>{
+        axiosInstance.post('https://clinic-app-backend.vercel.app/users/registration',registrationData).then((response)=>{
                 console.log(response);
                 alert("Registration Done");
                 navigate("/doctordashboard")
@@ -87,7 +87,7 @@ const Prescriptionform=()=>{
     }
 
     const getallpatientData =()=>{
-        axios.get(`https://clinic-app-backend.vercel.app/appointments/findappointments/${doctorid}`).then((response)=>{
+        axiosInstance.get(`https://clinic-app-backend.vercel.app/appointments/findappointments/${doctorid}`).then((response)=>{
             setdata(response.data.message)
             setIsLoading(false);
         })
@@ -96,7 +96,7 @@ const Prescriptionform=()=>{
     useEffect(()=>{
         getallpatientData();
         if(params.id){
-            axios.get(`https://clinic-app-backend.vercel.app/appointments/singleappointmentlist/${params.id}`).then((response)=>{
+            axiosInstance.get(`https://clinic-app-backend.vercel.app/appointments/singleappointmentlist/${params.id}`).then((response)=>{
                 getname(response.data.message.name)
                 getage(response.data.message.age)
                 getphoneno(response.data.message.phoneno)
@@ -107,7 +107,7 @@ const Prescriptionform=()=>{
     })
 
     // const handleDelete = (patientId)=>{
-    //     axios.delete(`https://clinic-app-backend.vercel.app/appointments/deleteappointment/${patientId}`).then((response)=>{
+    //     axiosInstance.delete(`https://clinic-app-backend.vercel.app/appointments/deleteappointment/${patientId}`).then((response)=>{
     //         getallpatientData();
     //     })
     // }

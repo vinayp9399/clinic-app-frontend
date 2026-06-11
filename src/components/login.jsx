@@ -57,6 +57,8 @@ const Login = ()=>{
                     localStorage.setItem('id',response.data.message._id)
                     localStorage.setItem('usertype',response.data.message.usertype)
                     localStorage.setItem('image',response.data.message.image)
+                    localStorage.setItem('accessToken', response.data.accessToken)
+                    localStorage.setItem('refreshToken', response.data.refreshToken)
 
                     let usertype = localStorage.getItem("usertype");
                     if(usertype=="doctor"){

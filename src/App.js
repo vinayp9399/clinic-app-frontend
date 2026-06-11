@@ -21,13 +21,14 @@ import Contactuspage from './pages/home/contactuspage.js';
 import Mybookingspage from './pages/patient/mybookingspage.js';
 import ReviewDoctorpage from './pages/patient/reviewdoctorpage.js';
 import Patientprofilepage from './pages/patient/patientprofilepage.js';
+import ProtectedRoute from './components/ProtectedRoute.js';
 
 
 function App() {
-  const usertype = localStorage.getItem('usertype');
   return (
     <BrowserRouter>
     <Routes>
+      {/* Public routes */}
       <Route path="/" element={<Landingpage/>}></Route>
       <Route path="/aboutus" element={<Aboutuspage/>}></Route>
       <Route path="/contactus" element={<Contactuspage/>}></Route>
@@ -36,22 +37,22 @@ function App() {
       <Route path="/doctorlist" element={<Doctorlistpage/>}></Route>
       <Route path="/doctorregistration" element={<Doctorregistrationpage/>}></Route>
       <Route path="/doctorprofile" element={<Doctorprofilepage/>}></Route>
-      
-      <Route path="/doctordashboard" element={<DoctorDashboard/>}></Route>
-      <Route path="/appointmentmanager" element={<Appointmentmanagerpage/>}></Route>
-      <Route path="/prescriptionform" element={<Prescriptionformpage/>}></Route>
-      <Route path='/editappointment/:id' element={<Prescriptionformpage/>}/>
-      <Route path="/patientdetails" element={<Patientdetailspage/>}></Route>
-      <Route path="/docprofile" element={<Docprofilepage/>}></Route>
-      <Route path="/revenue" element={<Revenuepage/>}></Route>
-      <Route path="/reviews" element={<Reviewspage/>}></Route>
 
-      <Route path="/patientdashboard" element={<PatientDashboard/>}></Route>
-      <Route path="/doctors" element={<Doctorspage/>}></Route>
-      <Route path="/mybookings" element={<Mybookingspage/>}></Route>
-      <Route path="/reviewdoctor" element={<ReviewDoctorpage/>}></Route>
-      <Route path="/patientprofile" element={<Patientprofilepage/>}></Route>
+      {/* Protected routes */}
+      <Route path="/doctordashboard" element={<ProtectedRoute element={<DoctorDashboard/>}/>}></Route>
+      <Route path="/appointmentmanager" element={<ProtectedRoute element={<Appointmentmanagerpage/>}/>}></Route>
+      <Route path="/prescriptionform" element={<ProtectedRoute element={<Prescriptionformpage/>}/>}></Route>
+      <Route path='/editappointment/:id' element={<ProtectedRoute element={<Prescriptionformpage/>}/>}/>
+      <Route path="/patientdetails" element={<ProtectedRoute element={<Patientdetailspage/>}/>}></Route>
+      <Route path="/docprofile" element={<ProtectedRoute element={<Docprofilepage/>}/>}></Route>
+      <Route path="/revenue" element={<ProtectedRoute element={<Revenuepage/>}/>}></Route>
+      <Route path="/reviews" element={<ProtectedRoute element={<Reviewspage/>}/>}></Route>
 
+      <Route path="/patientdashboard" element={<ProtectedRoute element={<PatientDashboard/>}/>}></Route>
+      <Route path="/doctors" element={<ProtectedRoute element={<Doctorspage/>}/>}></Route>
+      <Route path="/mybookings" element={<ProtectedRoute element={<Mybookingspage/>}/>}></Route>
+      <Route path="/reviewdoctor" element={<ProtectedRoute element={<ReviewDoctorpage/>}/>}></Route>
+      <Route path="/patientprofile" element={<ProtectedRoute element={<Patientprofilepage/>}/>}></Route>
 
     </Routes>
     </BrowserRouter>

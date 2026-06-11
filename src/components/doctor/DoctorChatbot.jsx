@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
+import axiosInstance from "../../axiosInstance";
 
 const GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions";
 const GROQ_API_KEY = process.env.REACT_APP_GROQ_API_KEY;
@@ -33,7 +34,7 @@ const DoctorChatbot = () => {
 
     const fetchSafeData = async () => {
         try {
-            const res = await axios.get(`${BASE_URL}/chatbot/doctor-chat-data/${doctorId}`);
+            const res = await axiosInstance.get(`/chatbot/doctor-chat-data/${doctorId}`);
             if (res.data.message) {
                 setChatData(res.data.message);
             }
