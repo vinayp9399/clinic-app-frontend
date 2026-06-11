@@ -28,7 +28,7 @@ const PatientMenu=(props)=>{
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                    <a onClick={()=>{localStorage.clear(); navigate("/login")}}><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"/></a>
+                                    <a onClick={()=>{localStorage.clear(); navigate("/")}}><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"/></a>
                                 </td>
                             </tr>
                     </table>
